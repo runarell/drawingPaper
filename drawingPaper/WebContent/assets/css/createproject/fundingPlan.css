@@ -1,0 +1,381 @@
+@charset "UTF-8";
+@import url("variables.css");
+@import url("default__create-project.css");
+
+#admheader {
+  background-color: white;
+  border: none;
+  margin-bottom: 78px;
+}
+body {
+  background-color: white;
+}
+
+.sec1 {
+  background-color: var(--background);
+}
+.user-input__tittle {
+  margin-top: 0em;
+}
+
+.user-input__result-box--ticket,
+.user-input__result-box {
+  background-color: white;
+  border: 4px;
+  padding: 25px 22px 15px;
+  margin-top: 8px;
+  background-color: var(--background);
+}
+
+.user-input__result-box--ticket > div:nth-child(1),
+.user-input__result-box > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  color: var(--black);
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+  margin-bottom: 11px;
+}
+.user-input__result-box--ticket > div:nth-child(1) > span,
+.user-input__result-box > div:nth-child(1) > span {
+  padding-bottom: 0px;
+  padding-top: 5px;
+}
+
+.user-input__result-box--ticket > div:nth-child(1) > em,
+.user-input__result-box > div:nth-child(1) > em {
+  font-style: normal;
+  color: var(--red);
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.02em;
+  font-weight: bold;
+}
+
+.user-input__result-box > div:nth-child(n + 2) {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(158, 158, 158);
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  margin-bottom: 3px;
+}
+
+.user-input__result-box > div:nth-child(n + 2) > em {
+  font-style: normal;
+  color: var(--black);
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+}
+/* -- */
+li {
+  list-style: none;
+}
+.user-input__form > .line > li {
+  position: relative;
+  padding: 0 0 38px 18px;
+  color: var(--light-gray);
+  font-size: 12px !important;
+  line-height: 20px !important;
+}
+.user-input__form > .line > li::before {
+  position: absolute;
+  top: 4px;
+  left: 0px;
+  z-index: 1;
+  content: "";
+  border: 3px solid rgb(0, 0, 0);
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+}
+
+.user-input__form > .line > li:not(.last)::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: 100%;
+  border-left: 1px solid rgb(228, 228, 228);
+}
+
+.user-input__row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.user-input__row > div {
+  width: 100%;
+}
+
+.user-input__col {
+  width: 50%;
+  margin-right: 12px;
+}
+
+.user-input__col > p {
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: rgb(13, 13, 13);
+  display: flex;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+}
+
+.cal-button__box {
+  width: 100%;
+}
+
+.cal-button {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 40px;
+  border-radius: 4px;
+  padding: 0 14px;
+  border: 1px solid rgb(240, 240, 240);
+  background-color: white;
+  color: var(--black);
+  font-size: 14px;
+  line-height: 24px;
+}
+/* ---------------------- */
+.select__box > span {
+  padding: 0 18px;
+  display: flex;
+  border: 1px solid rgb(240, 240, 240);
+  background-color: white;
+  letter-spacing: -0.015em;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--black);
+  align-items: center;
+  border-radius: 4px;
+  height: 40px;
+}
+
+.select__box input {
+  cursor: default;
+  width: 100%;
+  border: 0px;
+  outline: none;
+  margin: 0;
+}
+
+.funding-period {
+  padding-top: 46px;
+  font-weight: 400;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+}
+
+.funding-period p {
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: rgb(13, 13, 13);
+  display: flex;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+}
+
+.user-input__row__title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+  color: var(--black);
+}
+
+/* =============================================================================== */
+.icon__i-box {
+  position: absolute;
+  left: -23px;
+  top: 3px;
+}
+.sub-notice__title {
+  position: relative;
+  color: var(--red);
+  font-weight: 700;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+}
+.sub-notice__explain {
+  color: var(--gray);
+  font-weight: 400;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+}
+.sub-notice__explain > p {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 5px;
+  z-index: 2;
+}
+.sub-notice__explain > p::before {
+  content: "*";
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  z-index: 2;
+}
+
+.user-input__form__white {
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 32px 24px 24px;
+  width: 100%;
+}
+
+.user-input__title {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 18px;
+  letter-spacing: -0.005em;
+  margin-bottom: 8px;
+  color: rgb(61, 61, 61);
+  display: flex;
+}
+
+.user-input__input-box--ticket,
+.user-input__input-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 4px;
+  background-color: white;
+
+  border: 1px solid var(--border);
+  height: 54px;
+}
+.user-input__input-box--ticket > span,
+.user-input__input-box > span {
+  width: 100%;
+  border: 0px;
+  padding: 0px;
+  display: flex;
+  /* flex: 1 1 0%; */
+  text-align: right;
+  align-items: center;
+  padding: 0 18px;
+  font-size: 14px;
+}
+
+.user-input__input-box--ticket input,
+.user-input__input-box input {
+  border: 0;
+  width: 100%;
+  text-align: right;
+  font-size: 14px;
+  align-items: center;
+  padding: 8px 0 5px 0;
+  /* padding값 수정하여 글자 위치 조절함 */
+  cursor: auto;
+  color: var(--black);
+}
+
+.user-input__input-box--ticket input::placeholder,
+.user-input__input-box input::placeholder {
+  color: var(--black);
+  opacity: 0.4;
+  text-align: inherit;
+  font-weight: 400;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+}
+
+.user-input__input-box--ticket input:focus,
+.user-input__input-box input:focus {
+  outline: 0px;
+}
+
+.money-range--ticket,
+.money-range {
+  color: var(--red);
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.date-picker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: default;
+}
+
+.date {
+  color: var(--black);
+  opacity: 0.4;
+}
+
+/* ----------------------------------------------------- */
+/* 시간박스 */
+.time-box::placeholder {
+  color: var(--black);
+  opacity: 0.4;
+}
+
+.list-place {
+  position: relative;
+}
+
+.list-box {
+  width: 100%;
+  margin: 0;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  z-index: 10;
+  /* transform: translateY(48px); */
+  position: absolute;
+  top: 5px;
+  max-height: 500px;
+}
+.list-box li {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+.list-box button {
+  width: 100%;
+  height: 44px;
+  text-align: left;
+  padding: 0 16px;
+  color: var(--black);
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  font-size: 14px;
+}
+
+.on-off {
+  display: none;
+}
