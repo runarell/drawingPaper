@@ -5,6 +5,7 @@
 <meta charset="UTF-8" />
 
 <title></title>
+<link type="text/css" rel="stylesheet" href="../../assets/css/createproject/cpHeader.css" />
 <link type="text/css" rel="stylesheet" href="../../assets/css/createproject/default.css" />
 <link type="text/css" rel="stylesheet" href="../../assets/css/createproject/defaultInfo.css" />
 
@@ -536,4 +537,5 @@
    </div>
 </body>
 <script src="../../assets/js/createproject/defaultInfo.js"></script>
+<script src="../../assets/js/createproject/cpHeader.js"></script>
 </html>
