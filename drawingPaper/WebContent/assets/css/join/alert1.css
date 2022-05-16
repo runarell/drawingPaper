@@ -1,0 +1,38 @@
+.alert-header {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 130px;
+    font-size: 14px;
+
+}
+
+section{
+    padding-bottom: 20px;
+    position: relative;
+    font-size: 10px;
+}
+
+
+h2{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+#all_wrap{
+max-height: 75vh;
+overflow: hidden auto;
+}
+
+p,  ol,  ul,  dl,  dt,  dd,  th,  td {
+    font-size: 10px;
+    color: rgb(117, 117, 117);
+    overflow-wrap: break-word;
+    word-break: keep-all;
+    word-spacing: 0.05em;
+}

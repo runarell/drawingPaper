@@ -1,0 +1,10 @@
+@charset "UTF-8";
+:root {
+  --red: rgb(248, 100, 83);
+  --black: rgb(61, 61, 61);
+  --gray: rgb(109, 109, 109);
+  --pink: rgb(253, 244, 243);
+  --border: rgb(234, 234, 234);
+  --background: rgb(252, 252, 252);
+  --light-gray: rgb(158, 158, 158);
+}
