@@ -5,6 +5,11 @@
 <!-- MyBatis Config File -->
 <configuration> <!-- 구성(DB 연결) -->
 	<typeAliases>
+		<typeAlias type="com.drawingpaper.app.project.vo.ProjectVO" alias="project"/>
+		<typeAlias type="com.drawingpaper.app.user.vo.UserVO" alias="user"/>
+		<typeAlias type="com.drawingpaper.app.payment.vo.PaymentVO" alias="payment"/>
+		<typeAlias type="com.drawingpaper.app.support.vo.SupportVO" alias="support"/>
+		<typeAlias type="com.drawingpaper.app.like.vo.LikeVO" alias="like"/>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development"> <!-- development 이름 임시로 지어줌 -->
@@ -19,5 +24,10 @@
 	</environments>
 	
 	<mappers> <!-- SQL구문 파일 연결 -->
+		<mapper resource="com/drawingpaper/app/mybatis/sql/project.xml"/>
+		<mapper resource="com/drawingpaper/app/mybatis/sql/user.xml"/>
+		<mapper resource="com/drawingpaper/app/mybatis/sql/payment.xml"/>
+		<mapper resource="com/drawingpaper/app/mybatis/sql/support.xml"/>
+		<mapper resource="com/drawingpaper/app/mybatis/sql/like.xml"/>
 	</mappers>
 </configuration>

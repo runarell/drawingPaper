@@ -7,23 +7,23 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-// SqlSession Factory Builder (¼¼¼Ç¿¡ ´ã¾ÆÁÖ´Â ¿ªÇÒ)
+
 public class MyBatisConfig {
 	private static SqlSessionFactory sqlSession_f;
 	
 	static {
 		try {
-			String resource = "./config/config.xml";	// °æ·Î ¼³Á¤ (configÆÄÀÏÀ» ÅëÇØ °øÀåÀ» Áþ´Â´Ù.)
-			Reader reader = Resources.getResourceAsReader(resource); // ÇØ´ç °æ·Î ÆÄÀÏÀ» ÀÐ¾î¿Â´Ù.
-			sqlSession_f = new SqlSessionFactoryBuilder().build(reader); // ÆÑÅä¸®¸¦ ¸¸µçÈÄ, °æ·Î¸¦ ÀÐ¾î¿À°í °øÀåÀ» ¸¸µç´Ù.
-			reader.close(); // ÀÐ±â¸¦ ´Ý´Â´Ù.
+			String resource = "/com/drawingpaper/app/mybatis/config/config.xml";	
+			Reader reader = Resources.getResourceAsReader(resource); 
+			sqlSession_f = new SqlSessionFactoryBuilder().build(reader); 
+			reader.close(); 
 		} catch (IOException e) {
 			e.printStackTrace();
-			throw new RuntimeException("ÃÊ±âÈ­ ¹®Á¦ ¹ß»ý, MyBatisConfig.java");
+			throw new RuntimeException("ì´ˆê¸°í™” ë¬¸ì œ ë°œìƒ, MybatisConfig.java");
 		}
 	}
 
-	public static SqlSessionFactory getSqlsession_f() {	// getter »ý¼º -> °¡Á®¿À±â¸¸ ÇÏ¸é ‰Î
+	public static SqlSessionFactory getSqlsession_f() {
 		return sqlSession_f;
 	}
 	
