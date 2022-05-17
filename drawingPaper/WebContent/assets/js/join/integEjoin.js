@@ -15,148 +15,79 @@ $(document).ready(function (){
         document.getElementById('btn1checked').style.display = style4;
     
       }
-
-     
-
-
-
-//이름 비었으면 검정색으로 변경
-$('#inputname').on('keyup',function(){
-    if(!$('#inputname').val()){
-        $('.checkArea').empty(); //경고문구 제거
-        $(this).closest(".inputwrapper").css({ border: "1px solid rgb(13, 13, 13)" });
-        //색 검정색 변경
-    }
-
-    if($('#inputname').val()){ //인풋값 비었다면
-        $(this).closest(".inputwrapper").css({ border: "1px solid rgb(13, 13, 13)" }); //검정색 변경
-        $('.checkArea3').hide(); //경고문구 제거
-
-    }
-
-})
+    
+// 이름 선택시 경고문구 제거하기    
+ $('#inputname').on('focus' ,function(event) {
+        		$('.checkArea3').empty(); // 경고문구 제거
+        		$(this).closest(".inputwrapper").css({ border: "1px solid rgb(230, 230, 230)" }); // 검정색 변경
+    });
 
 // 이메일 형식 유효성 검사 
-$('#email').on('keyup' ,function() {
-   
+$('#email').on('blur' ,function() {
         if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test($('#email').val())) { // 이메일 형식 검사
             $(this).closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); //빨간색 변경
-            $('.checkArea').html("<div class='warning'> 유효하지 않은 이메일 형식입니다.</div>"); 
-            $('.checkArea').show(); // 경고문구 추가
-
-            return;
+            $('.checkArea').eq(0).html("<div class='warning'> 유효하지 않은 이메일 형식입니다.</div>"); 
+            $('.checkArea').eq(0).show(); // 경고문구 추가
         } else {
-            if ($('#emailCheck').val() != $('#email').val()) { //check와 같은지 확인
-                $(this).closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); //빨간색 변경
-                $('.checkArea').html("<div class='warning'> 이메일 주소가 일치하지 않습니다</div>"); 
-                $('.checkArea').show(); // 경고문구 추가
-
-                return;
-            }
-            $('.checkArea').empty(); // 경고문구 제거
-            $(this).closest(".inputwrapper").css({ border: "1px solid rgb(13, 13, 13)" }); // 검정색 변경
-
-
+        	$('.checkArea').eq(0).empty(); // 경고문구 제거
+            $(this).closest(".inputwrapper").css({ border: "1px solid rgb(230, 230, 230)" }); // 회색 변경
           }
-
-          
-
-        if(!$('#email').val()){ // 비었을때
-            $('.checkArea').empty(); //경고문구 제거
-            $(this).closest(".inputwrapper").css({ border: "1px solid rgb(13, 13, 13)" }); // 검정색 변경
- 
+        
+        if(!$(this).val()){ // 아무 값도 없으면 정상
+        	$(this).closest(".inputwrapper").css({ border: "1px solid rgb(230, 230, 230)" });
+            $('.checkArea').eq(0).empty(); //경고문구 제거
+            //색 검정색 변경
         }
-     
+ 
 });
 
 
 // 이메일 일치 검사 
-$('#emailCheck').on('keyup' ,function() {
+$('#emailCheck').on('blur' ,function() {
         if ($('#emailCheck').val() != $('#email').val()) { //같은지 체크
             $(this).closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); //빨간색 변경
-            $('.checkArea').html("<div class='warning'> 이메일 주소가 일치하지 않습니다</div>");
-            $('.checkArea').show(); // 경고문구 추가
-            return;
-        } else {
-            if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test($('#email').val())) { // 이메일 형식 검사
-                $(this).closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); //빨간색 변경
-                $('.checkArea').html("<div class='warning'> 유효하지 않은 이메일 형식입니다.</div>");
-                $('.checkArea').show(); // 경고문구 추가
-          
-                return;
-            }else{
-                $('.checkArea').empty(); //경고문구 제거
-                $(this).closest(".inputwrapper").css({ border: "1px solid rgb(13, 13, 13)" }); // 검정색 변경
-                $('#email').closest(".inputwrapper").css({ border: "1px solid rgb(230, 230, 230)" }); // 위 문장도 정상처리
-          
+            $('.checkArea').eq(1).html("<div class='warning'> 이메일 주소가 일치하지 않습니다</div>");
+            $('.checkArea').eq(1).show(); // 경고문구 추가
+        } else{
+        	$('.checkArea').eq(1).empty(); //경고문구 제거
+            $(this).closest(".inputwrapper").css({ border: "1px solid rgb(230, 230, 230)" }); // 검정색 변경
             }
-        }  
 
-        if(!$('#emailCheck').val()){ // 비었을때
-            $('.checkArea').empty(); // 경고문구 제거
-            $(this).closest(".inputwrapper").css({ border: "1px solid rgb(13, 13, 13)" });
-       
-        }
 });
 
 // 비밀번호 수 제한
-$('#password').on('keyup' ,function() {
-   
+$('#password').on('blur' ,function() {
     if (!/^.{6,20}$/g.test($('#password').val())) { //PW 형식 검사
         $(this).closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); // 빨간색 변경
-        $('.checkArea2').html("<div class='warning'> 비밀번호는 6자 이상, 20자 이하로 입력하세요.</div>");
-        $('.checkArea2').show(); // 경고문구 추가
-    
-        return;
+        $('.checkArea').eq(2).html("<div class='warning'> 비밀번호는 6자 이상, 20자 이하로 입력하세요.</div>");
+        $('.checkArea').eq(2).show(); // 경고문구 추가
     } else {
-
-        if ($('#passwordCheck').val() != $('#password').val()) { // PW 같은지 체크
-            $(this).closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); // 빨간색 변경
-            $('.checkArea2').html("<div class='warning'> 비밀번호가 일치하지 않습니다.</div>");
-            $('.checkArea2').show(); // 경고문구 추가
-        
-            return;
-        }
-
-        $('.checkArea2').empty(); // 경고문구 제거
-        $(this).closest(".inputwrapper").css({ border: "1px solid rgb(13, 13, 13)" }); // 검정색 변경
-      
+    	$('.checkArea').eq(2).empty(); // 경고문구 제거
+        $(this).closest(".inputwrapper").css({ border: "1px solid rgb(230, 230, 230)" }); // 검정색 변경
      }
-
-    if(!$('#password').val()){ // 비었을떄
-        $('.checkArea2').empty(); // 경고문구 제거
-        $(this).closest(".inputwrapper").css({ border: "1px solid rgb(13, 13, 13)" });
-        
+    
+    if(!$(this).val()){ // 아무 값도 없으면 정상
+    	$(this).closest(".inputwrapper").css({ border: "1px solid rgb(230, 230, 230)" });
+        $('.checkArea').eq(2).empty(); //경고문구 제거
+        //색 검정색 변경
     }
- 
 });
 
+
 // 비밀번호 일치 검사
-$('#passwordCheck').on('keyup' ,function(event) {
+$('#passwordCheck').on('blur' ,function(event) {
     if ($('#passwordCheck').val() != $('#password').val()) { // 패스워드 체크
         $(this).closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); // 빨간색 변경
-        $('.checkArea2').html("<div class='warning'> 비밀번호가 일치하지 않습니다.</div>");
-        $('.checkArea2').show(); // 경고문구 추가
+        $('.checkArea').eq(3).html("<div class='warning'> 비밀번호가 일치하지 않습니다.</div>");
+        $('.checkArea').eq(3).show(); // 경고문구 추가
      
         return;
     } else {
-        if (!/^.{6,20}$/g.test($('#password').val())) { // 패스워드 형식 체크
-            $(this).closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); // 빨간색 변경
-            $('.checkArea2').html("<div class='warning'> 비밀번호는 6자 이상, 20자 이하로 입력하세요.</div>");
-            $('.checkArea2').show(); // 경고문구 추가
-            return;
-        }else{
-            $('.checkArea2').empty(); // 경고문구 제거
-            $(this).closest(".inputwrapper").css({ border: "1px solid rgb(13, 13, 13)" }); // 검정색 변경
-            $('#password').closest(".inputwrapper").css({ border: "1px solid rgb(230, 230, 230)" }); // 위 문장도 정상처리
-    
-        }
-    }  
-    if(!$('#passwordCheck').val()){ // 비었을때
-        $('.checkArea2').empty(); // 경고문구 제거
-        $(this).closest(".inputwrapper").css({ border: "1px solid rgb(13, 13, 13)" });
- 
+    		$('.checkArea').eq(3).empty(); // 경고문구 제거
+    		$(this).closest(".inputwrapper").css({ border: "1px solid rgb(230, 230, 230)" }); // 검정색 변경
     }
+    
+
 });
 
 
@@ -180,10 +111,20 @@ $('#passwordCheck').on('keyup' ,function(event) {
         return;
       }else{
         $(this).closest(".inputwrapper").css({ border: "1px solid rgb(230, 230, 230)"}); //에러가 아닐때는 회색
-      }
+    }
  }) 
- 
 
+ 
+ 
+//다 지우면 검정색
+$('.inputDetail').on('keyup',function(){
+    if(!$(this).val()){
+    	$(this).closest(".inputwrapper").css({ border: "1px solid rgb(13, 13, 13)" });
+        $(this).closest('.checkArea').empty(); //경고문구 제거
+        //색 검정색 변경
+    }
+
+})
 
 
   //체크박스 전체선택
@@ -241,15 +182,15 @@ function submitCheck() {
 
     if(!$('#email').val()){ //공백일떄
         $('#email').closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); //에러는 빨간색
-        $('.checkArea').html("<div class='warning'> 이메일을 확인해주세요.</div>");
-        $('.checkArea').show(); //경고문구 출력
+        $('.checkArea').eq(1).html("<div class='warning'> 이메일을 확인해주세요.</div>");
+        $('.checkArea').eq(1).show(); //경고문구 출력
         submitResult=false //submit false
     }
 
     if(!$('#emailCheck').val()){ //공백일떄
         $('#emailCheck').closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); //에러는 빨간색
-        $('.checkArea').html("<div class='warning'> 이메일을 확인해주세요.</div>");
-        $('.checkArea').show(); //경고문구 출력
+        $('.checkArea').eq(1).html("<div class='warning'> 이메일을 확인해주세요.</div>");
+        $('.checkArea').eq(1).show(); //경고문구 출력
         submitResult=false //submit false
     }
 
@@ -264,15 +205,15 @@ function submitCheck() {
 
     if(!$('#password').val()){ //공백일떄
         $('#password').closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); //에러는 빨간색
-        $('.checkArea2').html("<div class='warning'> 비밀번호를 확인해주세요.</div>");
-        $('.checkArea2').show(); //경고문구 출력
+        $('.checkArea').eq(3).html("<div class='warning'> 비밀번호를 확인해주세요.</div>");
+        $('.checkArea').eq(3).show(); //경고문구 출력
         submitResult=false //submit false
     }
 
     if(!$('#passwordCheck').val()){ //공백일떄
         $('#passwordCheck').closest(".inputwrapper").css({ border: "1px solid rgb(255, 87, 87)" }); //에러는 빨간색
-        $('.checkArea2').html("<div class='warning'> 비밀번호를 확인해주세요.</div>");
-        $('.checkArea2').show(); //경고문구 출력
+        $('.checkArea').eq(3).html("<div class='warning'> 비밀번호를 확인해주세요.</div>");
+        $('.checkArea').eq(3).show(); //경고문구 출력
         submitResult=false //submit false
         
     }
@@ -292,7 +233,7 @@ function submitCheck() {
     
         //메인페이지 또는 어딘가로 주소 바꿀것
         if(!submitResult){return;}
-        $("#joinForm").attr("action","Kjoin.html").submit();
+        $("#joinForm").attr("action","/").submit();
 
 }
 
