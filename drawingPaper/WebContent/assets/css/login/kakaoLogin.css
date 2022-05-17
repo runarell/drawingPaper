@@ -1,0 +1,170 @@
+*{
+    margin:0; 
+    padding:0;
+}
+
+.logo{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0px auto;
+    height: 20px;
+}
+
+.cover{
+    display: flex; 
+    align-items: center; 
+    justify-content: 
+    center;
+    width:100%; 
+    height: 100vh;
+    margin: 0px auto;
+}
+
+@media only screen and (min-width: 1080px){
+    .cover {
+        margin: 6px;
+        max-width: 414px;
+        justify-content: center;
+    }
+}
+
+.left{
+    display:flex; 
+    align-items:center; 
+    justify-content:
+    flex-end; 
+    width:50%; 
+    height:100%
+}
+
+.right{
+    position:relative; 
+    width: 50%; 
+    height:100%; 
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 1080px){
+    .rightimg{
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 50%;
+        height: 105%;
+        background-image: url(https://tumblbug-assets.s3.ap-northeast-1.amazonaws.com/static_assets/login/bg_login_kakao.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    }
+
+.left .contents{
+    position:relative; 
+    width:545px; 
+    height:100%; 
+    padding-left:30px
+}
+
+.left .contents header{
+    display:flex; 
+    align-items:center; 
+    width:100%; 
+    height: 80px;
+}
+
+.left .contents .loginArea{
+    position: absolute; 
+    top:50%; 
+    left:30px; 
+    transform: 
+    translateY(-50%);
+}
+
+.left .contents .loginArea .top{
+    width:414px; 
+}
+
+.left .contents .loginArea .top .title1{
+    margin: 0px;
+    font-weight: 300;
+    font-size: 16px;
+    color: rgb(13, 13, 13);
+    line-height: 1.7em;
+}
+
+.left .contents .loginArea .top .title2{
+    line-height: 28px;
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(13, 13, 13);
+}
+
+.left .contents .loginArea .top a{
+    display: block; 
+    width: 100%; 
+    height: 60px; 
+    margin: 50px 0; 
+    background: rgb(254, 229, 0) 
+    url(kakao.png) 20px 50% no-repeat; 
+    background-size: 24px; 
+    text-align: center; 
+    line-height: 60px; 
+    text-decoration: none; 
+    color: #222;
+}
+
+.left .contents .bottom {
+    text-align: center;
+}
+.left .contents .bottom .gray_bar{
+    position:relative; 
+    width: 100%; 
+    height: 1px;
+    margin-bottom: 30px;  
+    background: rgb(240, 240, 240);
+}
+
+.left .contents .bottom .gray_bar span{
+    position: absolute; 
+    top:50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: #fff; 
+    padding: 0 15px; 
+    color:rgb(158, 158, 158); 
+    font-size: 12px;
+}
+
+.left .contents .bottom .snslogin{
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    margin-bottom: 50px;
+}
+
+.left .contents .bottom .snslogin a{
+    display: block; 
+    width: 42px; 
+    height: 42px; 
+    margin-right: 15px;
+    text-align: center;
+}
+
+.left .contents .bottom .join{
+    text-align: left; 
+    font-size: 12px;
+    color:rgb(158, 158, 158)
+}
+
+.left .contents .bottom .join a{
+    color:rgb(39, 163, 255)
+}
+
+div>input{
+    width: 100%;
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>drawingPaper</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>LikeFrontController</servlet-name>
+		<servlet-class>com.drawingpaper.app.like.controller.LikeFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LikeFrontController</servlet-name>
+		<url-pattern>*.lk</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PaymentFrontController</servlet-name>
+		<servlet-class>com.drawingpaper.app.payment.controller.PaymentFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PaymentFrontController</servlet-name>
+		<url-pattern>*.pm</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ProjectFrontController</servlet-name>
+		<servlet-class>com.drawingpaper.app.project.controller.ProjectFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ProjectFrontController</servlet-name>
+		<url-pattern>*.pj</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SupporterFrontController</servlet-name>
+		<servlet-class>com.drawingpaper.app.supporter.controller.SupporterFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SupporterFrontController</servlet-name>
+		<url-pattern>*.sp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserFrontController</servlet-name>
+		<servlet-class>com.drawingpaper.app.user.controller.UserFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserFrontController</servlet-name>
+		<url-pattern>*.us</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+
+
+</web-app>

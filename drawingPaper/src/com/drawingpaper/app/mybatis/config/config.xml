@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<!-- MyBatis Config File -->
+<configuration> <!-- 구성(DB 연결) -->
+	<typeAliases>
+		<typeAlias type="com.drawingpaper.app.project.vo.ProjectVO" alias="project"/>
+		<typeAlias type="com.drawingpaper.app.user.vo.UserVO" alias="user"/>
+		<typeAlias type="com.drawingpaper.app.payment.vo.PaymentVO" alias="payment"/>
+		<typeAlias type="com.drawingpaper.app.support.vo.SupportVO" alias="support"/>
+		<typeAlias type="com.drawingpaper.app.like.vo.LikeVO" alias="like"/>
+	</typeAliases>
+	<environments default="development">
+		<environment id="development"> <!-- development 이름 임시로 지어줌 -->
+			<transactionManager type="JDBC"/> <!-- 서비스를 제공하기위해 사용될 DML들 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.cj.jdbc.Driver"/> <!-- 드라이버 경로 -->
+				<property name="url" value="jdbc:mysql://localhost/drawingpaper?serverTimezone=UTC"/> <!-- jdbc 경로 -->
+				<property name="username" value="root"/> <!-- id -->
+				<property name="password" value="0000"/> <!-- pw -->			
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers> <!-- SQL구문 파일 연결 -->
+		<mapper resource="com/drawingpaper/app/mybatis/sql/project.xml"/>
+		<mapper resource="com/drawingpaper/app/mybatis/sql/user.xml"/>
+		<mapper resource="com/drawingpaper/app/mybatis/sql/payment.xml"/>
+		<mapper resource="com/drawingpaper/app/mybatis/sql/support.xml"/>
+		<mapper resource="com/drawingpaper/app/mybatis/sql/like.xml"/>
+	</mappers>
+</configuration>
