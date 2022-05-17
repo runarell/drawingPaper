@@ -1,0 +1,177 @@
+*{
+    margin:0; 
+    padding:0;
+}
+
+.logo{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0px auto;
+    height: 20px;
+}
+
+.cover{
+    display: flex; 
+    align-items: center; 
+    justify-content: 
+    center;
+    width:100%; 
+    height: 100vh;
+    margin: 0px auto;
+}
+
+@media only screen and (min-width: 1080px){
+    .cover {
+        margin: 6px;
+        max-width: 414px;
+        justify-content: center;
+    }
+}
+
+.left{
+    display:flex; 
+    align-items:center; 
+    justify-content:
+    flex-end; 
+    width:50%; 
+    height:100%
+}
+
+
+.rightimg{
+    display: none;
+}
+
+.left .contents{
+    position:relative; 
+    width:545px; 
+    height:100%; 
+    padding-left:30px
+}
+
+.left .contents header{
+    display:flex; 
+    align-items:center; 
+    width:100%; 
+    height: 80px;
+}
+
+.left .contents .loginArea{
+    position: absolute; 
+    top:50%; 
+    left:30px; 
+    transform: 
+    translateY(-50%);
+    
+}
+
+.left .contents .loginArea .top{
+    width:414px; 
+}
+
+.left .contents .loginArea .top .title1{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(61, 61, 61);
+    margin: 0px 0px 10px;
+}
+
+.left .contents .loginArea .top .title2{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(61, 61, 61);
+    margin: 0px 0px 10px;
+}
+
+.left .contents .loginArea .top a{
+    display: block; 
+    width: 100%; 
+    height: 60px; 
+    margin: 50px 0; 
+    background: rgb(248, 100, 83);
+    background-size: 24px; 
+    text-align: center; 
+    line-height: 60px; 
+    text-decoration: none; 
+    color: rgb(255, 255, 255);
+}
+
+.left .contents .bottom {
+    text-align: center;
+}
+.left .contents .bottom .gray_bar{
+    position:relative; 
+    width: 100%; 
+    height: 1px;
+    margin-bottom: 30px;  
+    background: rgb(240, 240, 240);
+}
+
+.left .contents .bottom .gray_bar span{
+    position: absolute; 
+    top:50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: #fff; 
+    padding: 0 15px; 
+    color:rgb(158, 158, 158); 
+    font-size: 12px;
+}
+
+.left .contents .bottom .snslogin{
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    margin-bottom: 50px;
+}
+
+.left .contents .bottom .snslogin a{
+    display: block; 
+    width: 42px; 
+    height: 42px; 
+    margin-right: 15px;
+}
+
+.left .contents .bottom .findPW{
+    text-align: left; 
+    font-size: 12px;
+    color:rgb(158, 158, 158)
+}
+
+.left .contents .bottom .findPW a{
+    color:rgb(39, 163, 255)
+}
+
+div>input{
+    width: 100%;
+    background: transparent;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0px;
+    padding: 13px 0px;
+    outline: none;
+    border: 0.1px solid rgb(158, 158, 158);
+}
+
+.log{
+    margin-top: 30px
+}
+
+@media only screen and (min-width: 1080px){
+    .rightimg{
+        display: block;
+        position: absolute;
+        right: 0px;
+        width: 50%;
+        height: 105%;
+        background-image: url(https://tumblbug-assets.s3.ap-northeast-1.amazonaws.com/static_assets/login/bg_login_kakao.jpg);
+        background-size: cover;
+        background-position: center center;
+        object-fit: cover;
+        top: 0px;
+    }
+    }
