@@ -11,13 +11,13 @@ img {
     width: 100%;
 }
 .quickFilger{
+    width: 100%;
+    padding: 10px 0;	
     display: inline-flex;
-    padding-right: 50px;
-    padding-left: 1rem;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    justify-content: space-between;
+    /* background: #e5e5e5; */
 }
-.quickFilger>span{
+.quickFilger>div{
     display: flex;
     position: relative;
     height: 34px;
@@ -27,35 +27,49 @@ img {
     border-radius: 3px;
     border: 1px solid rgb(230, 230, 230);
     color: rgb(72, 72, 72);
-    overflow: hidden;
 }
-.quickFilger>span>button{
+.quickFilger>div>.filterBtn{
     outline: none;
     cursor: pointer;
     position: relative;
-    padding: 0px 8px;
+    padding: 0px 30px 0 10px;
     border: 0px;
     height: 100%;
     background: rgb(255, 255, 255);
     color: rgb(85, 85, 85);
     font-weight: normal;
 }
+.quickFilger .filterBtn > span{
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    width: 10px;
+    height: 10px;
+    border-top:3px solid;
+    border-left:3px solid;
+    transform: rotate(-135deg);
+    transform-origin: center center;
+}
+.quickFilger .filterBtn > span.on{
+    transform: rotate(45deg);
+    top: 45%;
+}
 
+
+.totalProject{
+	padding: 10px 0 20px;
+}
 
 .filter{
-    position: absolute;
-    right: 0px;
-    bottom: 35px;
-    z-index: 1;
 }
-.selectFilter{
-}
+
 .fliterList>div{
     font-size: 14px;
     height: 34px;
     line-height: 34px;
     min-width: 130px;
     padding: 0px 16px 0px 12px;
+	cursor: pointer;
 }
 .fliterList>div:hover{
     background: rgb(245, 245, 245);
@@ -67,10 +81,15 @@ img {
     border: 1px solid rgb(230, 230, 230);
     box-shadow: rgb(0 0 0 / 15%) 0px 2px 4px 0px;
     border-radius: 4px;
-    padding: 4px 0px;
-    color: rgb(61, 61, 61);
-    right: 0px;
+    background: #ffffff;
+    top: 105%;
     display: none;
+}
+.fliterList.left{
+    left: 0;
+}
+.fliterList.right{
+    right: 0;
 }
 
 
@@ -152,9 +171,8 @@ section{
     overflow: hidden;
 }
 
-.bar::after {
-    content: "";
-    width: 44%;
+.bar > div {
+    min-width: 0%;
     display: block;
     height: 100%;
     background: rgb(255, 87, 87);
@@ -197,11 +215,11 @@ section{
     width: 24px;
     height: 24px;
     z-index: 10;
-    background: url(../../images/project/icon/icons-heart-white.png) no-repeat center center;
+    background: url(/images/project/icon/icons-heart-white.png) no-repeat center center;
     background-size: cover;
 }
 .imgCell>a.heartcon.on {
-    background: url(../../images/project/icon/icons-heart-pink.png) no-repeat center center;
+    background: url(/images/project/icon/icons-heart-pink.png) no-repeat center center;
 }
 
 /* */

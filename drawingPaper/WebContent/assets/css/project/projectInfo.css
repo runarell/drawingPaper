@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 section{
     width: 1080px;
     margin: auto;
@@ -54,11 +52,87 @@ section{
 }
 
 .top_img{
+    position: relative;
     width: 594px;
     height: auto;
     order: 2;
+    
+    padding: 10px 20px;
 }
+
+.top_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgList {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgListWrap {
+    height: 100%;
+    position: absolute;
+    display: flex;
+    left: 0;
+}
+
+.imgListWrap>figure:nth-child(2n) {
+    background: #e5e5e5;
+}
+
+.imgListWrap>figure {
+    width: 100%;
+    /* width: 100px; */
+    height: 100%;
+    text-align: center;
+}
+.slidBtn {
+    position: absolute;
+    border: none;
+    background: none;
+    padding: 5px;
+    top: 50%;
+    transform: translate(0, -50%);
+    opacity: 0.5;
+}
+
+.slidBtn:hover {
+    opacity: 1;
+}
+
+.leftBtn {
+    left: -10px;
+}
+
+.rightBtn {
+    right: -10px;
+}
+
+.leftBtn>span {
+    display: block;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+}
+
+.rightBtn>span {
+    display: block;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+}
+
 .info_data{
+    padding: 0 20px;
     order: 3;
     flex: 1 1 0px;
     /* margin: 0px 0px 0px 86px; */
@@ -134,14 +208,29 @@ section{
     background: rgb(255, 255, 255);
     cursor: pointer;
 }
-.dataCell3 > div:nth-child(2) button{
+/* .dataCell3 > div:nth-child(2) button{
     border: 1px solid rgb(228, 228, 228);
     background: rgb(255, 255, 255);
     border-radius: 4px;
     width: 52px;
     height: 52px;
+} */
+.dataCell3 .heartcon {
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    z-index: 10;
+    background: url(/images/project/icon/icons-heart-black.png) no-repeat center center;
+    background-size: cover;
+    /* background: #e5e5e5; */
 }
-.dataCell3 > div:nth-child(3) button{
+
+.dataCell3 .heartcon.on {
+    background: url(/images/project/icon/icons-heart-pink.png) no-repeat center center;
+}
+
+
+.dataCell3 > div:nth-child(2) button{
     cursor: pointer;
     display: inline-block;
     min-height: 1em;
@@ -161,6 +250,9 @@ section{
     background-color: rgb(250, 100, 98);
     color: rgb(255, 255, 255);
     padding: 1.2em 2em;
+}
+.dataCell3 button.linkBtn:hover{
+	background-color: rgb(255, 69, 67);
 }
 .dataCell3 img{
     width: 50%;
@@ -205,7 +297,10 @@ section{
 .tap1 {
     display: flex;
     justify-content: space-between;
+    margin-right: 1rem;
+    width: 65%;
 }
+
 .scrollBtnlist {
     display: flex; 
     width: 650px;
@@ -240,20 +335,28 @@ section{
     border-radius: 4px;
     transition: box-shadow 0.2s ease-in-out 0s;
 }
-.tapContent > div:nth-child(1){
+.tapContent > div img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.tapContent > div{
+    padding: 32px 0px;
+    margin: 0px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+.tapContent > div.storyContent{
+    padding: 0 20px;
+}
+/* .tapContent > div:nth-child(1){
     padding: 24px 19px;
     border: 1px solid rgb(240, 240, 240);
     box-sizing: border-box;
     box-shadow: rgb(0 0 0 / 5%) 0px 2px 8px, rgb(0 0 0 / 4%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 1px 0px;
     border-radius: 4px;
     margin: 0px 3.5px 36px;
-}
+} */
 
-.tapContent > div{
-    padding: 32px 0px;
-    margin: 0px;
-    border-bottom: 1px solid rgb(230, 230, 230);
-}
 
 .sideBox{
     border: 1px solid rgb(239, 239, 239);
@@ -274,7 +377,7 @@ section{
 
 .imgHeader> a>span{
     display: inline-block;
-    background-image: url(/assets/image/bg/indi05.webp);
+    /*background-image: url(../../images/project/bg/indi05.webp);*/
     background-size: cover;
     background-position: 50% 38%;
     width: 40px;
@@ -283,6 +386,11 @@ section{
     box-shadow: rgb(208 208 208) 0px 0px 1px 0px inset, rgb(208 208 208) 0px 0px 1px 0px;
     margin-right: 1rem;
     margin-top: 5px;
+    overflow:hidden;
+}
+.imgHeader> a img {
+	width: 100%;
+    height: 100%;
 }
 
 .contentCell{
@@ -353,12 +461,16 @@ section{
 }
 
 
+.cashLinkBox:hover{
+    border: 1px solid rgb(0, 0, 0);	
+}
 .cashLinkBox{
     margin: 10px 0px 14px;
     box-shadow: rgb(0 0 0 / 10%) 0px 1px 0px, rgb(0 0 0 / 4%) 0px 2px 4px;
     order-radius: 4px;
     padding: 20px;
-    border: 1px solid rgb(228, 228, 228) !important;
+    border: 1px solid rgb(228, 228, 228);
+    cursor: pointer;
 }
 .cashLinkBox .cash{
     font-size: 24px;
@@ -375,9 +487,7 @@ section{
     color: rgb(109, 109, 109);
 }
 
-.tap1 {
-    margin-right: 1rem;
-}
+
 
 .sidecontent {
     margin-left: 1rem;
