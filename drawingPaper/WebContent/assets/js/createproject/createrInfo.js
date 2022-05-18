@@ -58,3 +58,82 @@ $(".creater-introduction__text-box textarea").on("input", function () {
 });
 
 $("#admheader").load("cpHeader.jsp");
+
+/////////////////추가부분/////////////////
+
+function pnCert() {
+    let innerArea = document.getElementById("certInputTarget");
+    let btnArea1 = document.getElementById("certInputBtnTarget1");
+    let btnArea2 = document.getElementById("certInputBtnTarget2");
+    let timer = document.getElementById("timer");
+    let sendBtn = document.getElementById('certSendBtn');
+    let certBtn = document.getElementById('certBtn');
+    
+
+    ////////////////타이머 부분///////////////////////////////////
+    let time = 179;
+    processID = setInterval(function () {
+        if (time < 0) {
+            certBtn.disabled=true;
+            certBtn.style.pointerEvents = "none";
+            certBtn.style.backgroundColor = "grey";
+            clearInterval(processID);
+            return;
+        }
+        let mm = String(Math.floor(time / 60)).padStart(2, "0");
+        let ss = String(time % 60).padStart(2, "0");
+        let result = mm + ":" + ss;
+        document.getElementById("timeLimit").innerText = result;
+        time--;
+    }, 1000);
+
+    sendBtn.style.pointerEvents = "none";
+    sendBtn.disabled = true;
+    sendBtn.style.backgroundColor = "grey";
+
+    innerArea.innerHTML = "<div class='certInput'><input type='text' placeholder='인증번호 입력' onfocus='this.placeholder=\"\"' onblur='this.placeholder=\"인증번호 입력\"'></div>";
+    btnArea1.innerHTML = "<button class='certOutBtn' onclick='reSend()'>재전송</button>";
+    btnArea2.innerHTML = "<button class='certOutBtn' id='certBtn'>인증</button>";
+    timer.innerHTML = "<div id='timeLimit'>03:00</div>";
+    
+};
+
+function reSend(){
+    // 인증번호 재 전송
+    if(confirm('인증번호를 재 전송 하시겠습니까?')==true){
+    ////////////////////재 전송 타이머 부분//////////////////////////
+    document.getElementById("timeLimit").innerHTML = "03:00";
+    let time = 179;
+    clearInterval(processID);
+    processID = setInterval(function () {
+        if (time < 0) {
+            certBtn.disabled = true;
+            certBtn.style.pointerEvents = "none";
+            certBtn.style.backgroundColor = "grey";
+            clearInterval(processID);
+            return;
+        }
+        let mm = String(Math.floor(time / 60)).padStart(2, "0");
+        let ss = String(time % 60).padStart(2, "0");
+        let result = mm + ":" + ss;
+        document.getElementById("timeLimit").innerText = result;
+        time--;
+    }, 1000);
+
+    }else{
+    }
+}
+
+let certArea = document.getElementById("auth-wrap");
+let certAreaOri = document.getElementById("auth-wrap").innerHTML;
+
+function auth__btn() {
+	certArea.innerHTML = "<div class='certForm'><div class='certInput'><input type='text' placeholder='전화번호 입력 (-를 제외하고 입력해 주세요)' onfocus='this.placeholder=\"\"' onblur='this.placeholder=\"전화번호 입력 (-를 제외하고 입력해 주세요)\"'></div><div class='certBtnWrap'><button onclick='pnCert()' class='certInputBtn' id='certSendBtn'>인증번호 전송</button></div></div><div class='certBtnOut'><div id=\"certInputTarget\"></div><div class='timer' id='timer'></div><div id=\"certInputBtnTarget1\"></div><div id=\"certInputBtnTarget2\"></div><div><button class='certOutBtn' onclick='reSetBtn()'>취소</button></div></div>";
+};
+
+function reSetBtn(){   
+    certArea.innerHTML = certAreaOri;
+    if(processID){
+        clearInterval(processID);
+    }
+};

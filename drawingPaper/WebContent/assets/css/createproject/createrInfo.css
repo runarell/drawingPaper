@@ -280,3 +280,83 @@ body {
   background-color: white;
   border: none;
 }
+
+/********** 추가부분 **********/
+.certForm,
+.certBtnOut{
+    display: flex;
+    width:90%;
+    margin:auto;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.certInput{
+    width:100%;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin-top: 2px;
+}
+
+.certInput input[type='text']{
+    cursor: default;
+    width: 100%;
+    background: transparent;
+    border: 0px;
+    padding: 11px 0px;
+    box-sizing: border-box;
+    height: 100%;
+    outline: none;
+    margin: 0px;
+    appearance: none !important;
+    caret-color: red;
+    cursor: auto;
+}
+
+.certBtnWrap{
+    align-items: center;
+    width: 100px;
+    height: 37px;
+}
+
+.certBtnWrap > button,
+.certBtnOut > div > button{
+    width: 100px;
+    height: 36px;
+    background-color: red;
+    color : white;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.certBtnOut > div > .certOutBtn{
+    width: 70px;
+    background-color: black;
+}
+
+#certInputTarget{
+    width: 100%;
+    margin-right: 10px;
+}
+
+.certInputBtn:hover,
+.certOutBtn:hover{
+    opacity: 0.7;
+}
+
+.inputTimer{
+    display:flex;
+    position: relative;
+}
+
+.timer{
+    position:relative;
+}
+#timeLimit{
+    position:absolute;
+    color:red;
+    top : -10px;
+    left: -55px;
+}
