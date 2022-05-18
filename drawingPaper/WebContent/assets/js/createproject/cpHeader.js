@@ -2,16 +2,20 @@
  * 
  */
 
-$(window).scroll(() => {
-  let scrollTop = $(window).scrollTop();
-  if (Math.round(scrollTop) > 105) {
-    $(".tab_menu").css({ position: "fixed" });
-    $(".tab_menu").css({ top: 64 });
-    $(".tab_menu").css({ transition: "0.1s" });
-  } else {
-    $(".tab_menu").css({ position: "static" });
-  }
-});
+$(function () {
+	
+	$(window).scroll(() => {
+		let scrollTop = $(window).scrollTop();
+		if (Math.round(scrollTop) > 105) {
+			$(".tab-menu--box").css({ position: "fixed" });
+			$(".tab-menu--box").css({ top: 64 });
+			$(".tab-menu--box").css({ transition: "0.1s" });
+		} else {
+			$(".tab-menu--box").css({ position: "static" });
+		}
+	});
+})
+
 
 $(function () {
   let $info = $(location).attr("href");
