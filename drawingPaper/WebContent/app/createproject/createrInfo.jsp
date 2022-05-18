@@ -294,7 +294,7 @@
                             ></path>
                           </svg>
                         </div>
-                        <p>본인인증을 완료해주세요</p>
+                        <p>본인인증을 완료해주세요!</p>
                       </div>
                       <div class="creater-auth__col">
                         <button class="creater-auth__btn" onclick="auth__btn()">인증하기</button>
