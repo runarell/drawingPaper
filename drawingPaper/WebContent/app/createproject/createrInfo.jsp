@@ -277,7 +277,7 @@
                 </div>
                 <div class="content-col">
                   <!-- 2열(입력 양식) -->
-                  <div class="creater-auth-wrap">
+                  <div class="creater-auth-wrap"  id="auth-wrap">
                     <div class="creater-auth__box flex">
                       <div class="creater-auth__col">
                         <div class="icon__exclamation">
@@ -292,7 +292,7 @@
                         <p>본인인증을 완료해주세요</p>
                       </div>
                       <div class="creater-auth__col">
-                        <button class="creater-auth__btn">인증하기</button>
+                        <button class="creater-auth__btn" onclick="auth__btn()">인증하기</button>
                       </div>
                     </div>
                   </div>
@@ -346,7 +346,7 @@
                             ></path>
                           </svg>
                         </div>
-                        <p>본인인증을 완료해주세요</p>
+                        <p>입금 받으실 계좌를 등록해 주세요</p>
                       </div>
                       <div class="creater-acount__col">
                         <button class="creater-acount__btn">인증하기</button>
