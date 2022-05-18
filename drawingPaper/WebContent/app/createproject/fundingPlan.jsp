@@ -31,13 +31,14 @@
     />
     <link rel="stylesheet" href="./api-datepicker/jquery-ui.css" />
     <script src="./api-datepicker/jquery-ui.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../assets/css/createproject/cpHeader.css" />
   </head>
 
   <body>
     <div class="wrap">
       <!-- header-->
       <header id="admheader">
-        <link rel="import" href="createProject.jsp " />
+        <link rel="import" href="cpHeader.jsp"/>
       </header>
 
       <!-- hidden nav-->
@@ -386,4 +387,5 @@
     </div>
   </body>
   <script src="../../assets/js/createproject/fundingPlan.js"></script>
+  <script src="../../assets/js/createproject/cpHeader.js"></script>
 </html>

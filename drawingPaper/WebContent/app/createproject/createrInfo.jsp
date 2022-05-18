@@ -5,6 +5,9 @@
   <head>
     <meta charset="UTF-8" />
     <title></title>
+    <link type="text/css" rel="stylesheet"
+   href="../../assets/css/createproject/cpHeader.css" />
+    
     <link type="text/css" rel="stylesheet" href="../../assets/css/createproject/default.css" />
     <link
       type="text/css"
@@ -15,6 +18,7 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
+    
   </head>
 
   <body>
@@ -368,5 +372,6 @@
     </div>
     <script src="../../assets/js/createproject/createrInfo.js"></script>
     <script src="../../assets/js/createproject/area.js"></script>
+    <script src="../../assets/js/createproject/cpHeader.js"></script>
   </body>
 </html>
