@@ -3,7 +3,7 @@ package com.drawingpaper.app.user.vo;
 public class UserVO {
 	private int user_no;
 	private String user_name;
-	private String user_emall;
+	private String user_email;
 	private String user_pw;
 	private boolean user_kakao;
 	private boolean user_status;
@@ -32,12 +32,12 @@ public class UserVO {
 		this.user_name = user_name;
 	}
 
-	public String getUser_emall() {
-		return user_emall;
+	public String getUser_email() {
+		return user_email;
 	}
 
-	public void setUser_emall(String user_emall) {
-		this.user_emall = user_emall;
+	public void setUser_email(String user_email) {
+		this.user_email = user_email;
 	}
 
 	public String getUser_pw() {
@@ -111,7 +111,5 @@ public class UserVO {
 	public void setUser_secret(boolean user_secret) {
 		this.user_secret = user_secret;
 	}
-	
-	
 
 }
