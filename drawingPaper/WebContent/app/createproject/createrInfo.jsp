@@ -330,7 +330,7 @@
                 </div>
                 <div class="content-col">
                   <!-- 2열(입력 양식) -->
-                  <div class="creater-acount-wrap">
+                  <div class="creater-acount-wrap" id="account-wrap">
                     <div class="creater-acount__box flex">
                       <div class="creater-acount__col">
                         <div class="icon__w">
@@ -351,10 +351,10 @@
                             ></path>
                           </svg>
                         </div>
-                        <p>입금 받으실 계좌를 등록해 주세요</p>
+                        <p>입금 받으실 계좌를 등록해 주세요!</p>
                       </div>
                       <div class="creater-acount__col">
-                        <button class="creater-acount__btn">인증하기</button>
+                        <button class="creater-acount__btn"  onclick="account__btn()">계좌등록</button>
                       </div>
                     </div>
                   </div>
