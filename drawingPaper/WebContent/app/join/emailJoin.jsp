@@ -33,6 +33,7 @@
                     <!--Form start-->
                     <form autocomplete="on" class="joinForm" id="joinForm">
                         <!-- Input area -->
+                        <div id="inputwrapper">
                         <div class="inputdiv">
                             <div class="inputkey">이름</div>
                             <div class="wrappermargin"><span class="inputwrapper">
@@ -48,6 +49,7 @@
                                 <input type="text" inputmode="text" id="email" placeholder="이메일 주소를 입력해주세요." autocapitalize="off" autocomplete="off"
                                         class="inputDetail">
                             </span></div>
+                            <div class="checkArea"></div>
                             <div class="wrappermargin"><span class="inputwrapper">
                                 <input type="text" inputmode="text" id="emailCheck" placeholder="이메일 주소를 확인합니다." autocapitalize="off" autocomplete="off"
                                         class="inputDetail">
@@ -61,11 +63,13 @@
                                 <input type="password" inputmode="password" id="password" placeholder="비밀번호를 입력해주세요." autocapitalize="off" autocomplete="off"
                                         class="inputDetail">
                             </span></div>
+                            <div class="checkArea"></div>
                             <div class="wrappermargin passwordcheckdiv"><span class="inputwrapper">
                                 <input type="password" inputmode="password" id="passwordCheck" placeholder="비밀번호를 확인합니다." autocapitalize="off" autocomplete="off"
                                         class="inputDetail">
                             </span></div>
-                            <div class="checkArea2"></div>
+                            <div class="checkArea"></div>
+                        </div>
                         </div>
                         <!-- Input area -->
 
