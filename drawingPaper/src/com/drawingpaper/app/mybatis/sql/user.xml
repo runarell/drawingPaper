@@ -4,4 +4,10 @@
 <!-- SqlSssion Factory -->
 <mapper namespace="User">
 
+	<!-- 일반 로그인 -->
+	<select id="login" parameterType="string" resultType="_int">
+		SELECT COUNT(user_email) FROM user
+		WHERE user_email = #{user_email} AND user_pw = #{user_pw}
+	</select>
+	
 </mapper>

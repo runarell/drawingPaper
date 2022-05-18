@@ -336,8 +336,10 @@ function kakaoPay(data) {
     }, function (rsp) { // 콜백
         if (rsp.success) { // 결제 성공 시: 결제 승인 또는 가상계좌 발급에 성공한 경우
             alert("완료 -> imp_uid : " + rsp.imp_uid + "/ merchant_uid(orderKey" + rsp.merchant_uid);
+            location.href='../../app/project/projectinfo.jsp?pro_no=' + pro_no; // 결제 성공 후 펀딩 상세페이지 이동
         } else {
             alert("실패 : 코드(" + rsp.error_code + ") / 메세지(" + rsp.error_msg + ")");
+            history.back(); // 다시 결제 페이지로 이동
         }
     });
 }
