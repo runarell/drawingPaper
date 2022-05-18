@@ -1,4 +1,5 @@
-window.onload = () => {
+//window.onload = () => 
+$(document).ready(function (){
     $('.style_UserButtonWrapper').on("click", function () {
         if ($(".SNB_Wrapper").is(":hidden")) {
             $(".SNB_Wrapper").css("display", "flex");
@@ -29,4 +30,4 @@ window.onload = () => {
         $(".style_CategoryContainer")                      
         .slideUp(500);
     });
-}
+});

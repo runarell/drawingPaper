@@ -1,21 +1,20 @@
+   <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <lang lang="ko-KR"></lang>
 
 <head>
     <meta charset="utf-8">
     <title data-react-helmet="true">펀딩</title>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            $("#headers").load("header.jsp");
-        });
-    </script>
+    <script type="text/javascript" src="../../assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/join/deleteCheck.js"></script>
+    
 </head>
 
 <body>
     <div id="headers"></div>
-    <link rel="stylesheet" href="css/deleteCheck.css">
+    <link rel="stylesheet" href="../../assets/css/join/deleteCheck.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    
     <section>
         <div id="react-view" class="tbb-only-ff">
             <div class="style_DcWJD"></div>
@@ -25,7 +24,7 @@
                         <div class="style_dwSooV">
                             <div class="margin Container_RImG">
                                 <span class="style_fnt-lt">
-                                    회원 탈퇴
+                                   	 회원 탈퇴
                                 </span>
                             </div>
                         </div>
@@ -49,8 +48,8 @@
                                         <div class="style_content">계정이 카카오, 페이스북, 네이버, 애플 계정과 연동돼 있었다면 연동이 모두 해제됩니다.
                                         </div>
                                         <div class="style_content"><strong><!-- 백엔드 --></strong> 계정으로 수신하던 모든
-                                            알림(이메일, 카카오 알림톡, 앱 푸시)가 해제됩니다. 뉴스레터 구독은 이메일 하단 Unsubscribe 버튼을 눌러 취소할 수
-                                            있습니다.</div>
+			                                            알림(이메일, 카카오 알림톡, 앱 푸시)가 해제됩니다. 뉴스레터 구독은 이메일 하단 Unsubscribe 버튼을 눌러 취소할 수
+			                                            있습니다.</div>
                                     </div>
                                     <div class="style_lixiAB">
                                         <div class="style_content_title">후원 및 결제</div>
@@ -75,7 +74,7 @@
                                                 <strong>창작자의 의무와 책임 조항은 그 효력을 유지합니다.</strong>
                                             </div>
                                         </div>
-                                        <form action="deleteUser.html">
+                                        <form action="deleteUser.jsp">
                                             <div class="style_boxs">
                                                 <div class="style_boxs_check">
                                                     <label class="Checkbox_fcsWyW">

@@ -1,3 +1,4 @@
+   <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <lang lang="ko-KR"></lang>
 <html>
@@ -5,20 +6,16 @@
 <head>
     <meta charset="utf-8">
     <title data-react-helmet="true">펀딩</title>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            $("#headers").load("header.jsp");
-
-        });
-    </script>
+    <script type="text/javascript" src="../../assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/join/deleteCheck.js"></script>
+    
 
 </head>
 
 <body>
     <div id="headers"></div>
-    <link rel="stylesheet" href="css/deleteUser.css">
+    <link rel="stylesheet" href="../../assets/css/join/deleteUser.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
     <section>
         <div class="style_gmYOwM">
             <div class="style_JLshK tbb">
@@ -42,7 +39,7 @@
                                 </div>
                                 <div class="style_dkrpFR">
                                     <button class="iuECHq style_button style_eMFJtN fnt-p1" color="gray80"><span>회원
-                                            탈퇴</span></button>
+                                            	탈퇴</span></button>
                                 </div>
                                 <div class="style_kDPxVR">혹시 비밀번호를 잊으셨나요?</div>
                             </div>
@@ -66,20 +63,6 @@
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
 
-    $(document).ready(function () {
-        $('.style_dkrpFR').on("click", function () {
-
-            swal({
-                text: "회원탈퇴가 완료되었습니다",
-                closeOnClickOutside: false,
-                button: "확인"
-            });
-
-        });
-    });
-
-</script>
 
 </html>
