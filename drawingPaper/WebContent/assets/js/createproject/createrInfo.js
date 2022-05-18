@@ -155,5 +155,7 @@ function acreSetBtn(){
 function acCert(){
     if(confirm('계좌를 등록하시겠습니까?')){
 
-    }else{}
+    }else{
+    	
+    }
 }

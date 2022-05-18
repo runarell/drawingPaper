@@ -364,6 +364,7 @@ body {
 .timer{
     position:relative;
 }
+
 #timeLimit{
     position:absolute;
     color:red;

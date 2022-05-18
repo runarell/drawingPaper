@@ -346,7 +346,7 @@
                             ></path>
                           </svg>
                         </div>
-                        <p>입금 받으실 계좌를 등록해 주세요</p>
+                        <p>입금 받으실 계좌를 등록해 주세요!</p>
                       </div>
                       <div class="creater-acount__col">
                         <button class="creater-acount__btn"  onclick="account__btn()">계좌등록</button>
