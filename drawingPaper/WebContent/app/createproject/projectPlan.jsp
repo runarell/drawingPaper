@@ -33,6 +33,7 @@
 		<!-- <nav id="admnav"></nav> -->
 
 		<main>
+		<form method="post" action="${pageContext.request.contextPath}/project/ProjectPlanCreateOk.pj" name="projectPlanSave" id="projectPlanSave">
 		<div class="mainWrap">
 			<section class="sec1">
 				<!-- 메인 컨텐츠 -->
@@ -84,6 +85,7 @@
 				
 			</section>
 		</div>
+		</form>
 		</main>
 
 		<!-- <footer id="footer"></footer> -->
@@ -93,7 +95,8 @@
 <!-- Include the Quill library -->
 <script src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
 <script src="${pageContext.request.contextPath}/assets/js/createproject/projectPlan.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/createproject/projectPlanSubmit.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
+
 </html>

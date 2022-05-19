@@ -24,6 +24,8 @@
       <nav id="admnav"></nav>
 
       <main>
+      <!-- 크리에이터 DAO 및 다른거 만들고 수정할 것 -->
+      <form action="${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" name="creatorSave" method="post" id="creatorSave" >
         <div class="mainWrap">
           <section class="sec1">
             <!-- 메인 컨텐츠 -->
@@ -358,12 +360,14 @@
             <!--=================================================================-->
           </section>
         </div>
+        </form>
       </main>
 
       <!-- <footer id="footer"></footer> -->
     </div>
     <script src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/createproject/createrInfo.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/createproject/createrInfoSubmit.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/createproject/area.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
   </body>

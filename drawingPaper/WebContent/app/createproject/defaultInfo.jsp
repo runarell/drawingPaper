@@ -41,6 +41,7 @@
       <nav id="admnav"></nav>
 
       <main>
+      <form action="${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" name="defaultSave" method="post" id="defaultSave" >
       <div class="mainWrap">
          <section class="sec1">
             <!-- 메인 컨텐츠 -->
@@ -70,7 +71,7 @@
                               <p>카테고리</p>
                               <div>
                                  <span class="select_box"> <input type="text"
-                                    value="연극" readonly />
+                                    value="연극" name="pro_category" readonly />
                                     <div class="arrow ready">
                                        <svg viewBox="0 0 48 48">
                                 <path fill-rule="evenodd"
@@ -85,16 +86,16 @@
                                     <div>
                                        <ul>
                                           <li>
-                                             <button type="button" value="연극">연극</button>
+                                             <button type="button" value="연극" name="pro_category">연극</button>
                                           </li>
                                           <li>
-                                             <button type="button" value="뮤지컬">뮤지컬</button>
+                                             <button type="button" value="뮤지컬" name="pro_category">뮤지컬</button>
                                           </li>
                                           <li>
-                                             <button type="button" value="노래">노래</button>
+                                             <button type="button" value="노래" name="pro_category">노래</button>
                                           </li>
                                           <li>
-                                             <button type="button" value="마술">마술</button>
+                                             <button type="button" value="마술" name="pro_category">마술</button>
                                           </li>
                                        </ul>
                                     </div>
@@ -171,7 +172,7 @@
                               <p>제목</p>
                               <div>
                                  <span class="title_box input_box"> <input type="text"
-                                    placeholder="제목을 입력해주세요" />
+                                    placeholder="제목을 입력해주세요" name="pro_title" id="pro_title" />
                                  </span>
                                  <div class="length">0/32</div>
                               </div>
@@ -232,8 +233,7 @@
                                     <p>최소 1개, 최대 5개까지 업로드 가능</p>
                                     <p>파일 형식: jpg 또는 png / 사이즈: 가로 1,240px, 세로 930px 이상)</p>
                                     <strong>※ 이미지를 등록하면
-                                       즉시 반영됩니다. </strong> <input type="file" id="multiple-img-input" accept=".jpg, .jpeg, .png"
-                                       multiple>
+                                       즉시 반영됩니다. </strong> <input type="file" id="multiple-img-input" accept=".jpg, .jpeg, .png" multiple>
                                  </div>
                               </div>
 
@@ -251,17 +251,21 @@
                   </div>
                </div>
             </div>
+      </section>
       </div>
       <!--=================================================================-->
-      </section>
-   </div>
+   </form>
    </main>
+   </div>
 
    <!-- <footer id="footer"></footer> -->
    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
 <%-- <script src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script> --%>
 <script src="${pageContext.request.contextPath}/assets/js/createproject/defaultInfo.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/createproject/defaultInfoSubmit.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
+
 </html>

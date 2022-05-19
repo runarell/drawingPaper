@@ -30,6 +30,7 @@
       <nav id="admnav"></nav>
 
       <main>
+      <form action="${pageContext.request.contextPath}/project/ProjectFundingCreateOk.pj" name="fundingPlanSave" method="post" id="fundingPlanSave" >
         <div class="mainWrap">
           <section class="sec1">
             <!-- 메인 컨텐츠 -->
@@ -103,6 +104,7 @@
                           autocomplete="off"
                           autocapitalize="off"
                           class="input-goal"
+                          name="pro_goalprice"
                           numberonly
                           comma
                         />
@@ -175,6 +177,7 @@
                           autocomplete="off"
                           autocapitalize="off"
                           class="input-goal--ticket"
+                          name="pro_ticketprice"
                           comma
                         />
                         원
@@ -242,7 +245,7 @@
                                   <div class="date">
                                     시작 날짜를 선택해주세요
                                   </div>
-                                  <input class="date-picker start" />
+                                  <input class="date-picker start" name="pro_start"/>
                                 </button>
                               </div>
                               <!-- 달력의 위치 달력이 포함된 가장 밖의 div에 속한다 -->
@@ -328,7 +331,7 @@
                                 </div>
                                 <!-- 선택된 날짜가 들어감 -->
                                 <div class="date">종료 날짜를 선택해주세요</div>
-                                <input class="date-picker" />
+                                <input class="date-picker" name="pro_end" />
                               </button>
                             </div>
                           </div>
@@ -366,6 +369,7 @@
             <!--=================================================================-->
           </section>
         </div>
+        </form>
       </main>
 
       <!-- <footer id="footer"></footer> -->
@@ -388,4 +392,5 @@
    <script src="${pageContext.request.contextPath}/app/createproject/api-datepicker/jquery-ui.min.js"></script>
   <script src="${pageContext.request.contextPath}/assets/js/createproject/fundingPlan.js"></script>
   <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
+  <script src="${pageContext.request.contextPath}/assets/js/createproject/fundingPlanSubmit.js"></script>
 </html>

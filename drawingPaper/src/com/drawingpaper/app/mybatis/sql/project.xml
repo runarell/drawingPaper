@@ -31,7 +31,7 @@
 <insert id="createDefaultPjt" parameterType="project">
 	UPDATE `project` SET   
 		
-	`user_no`=#{user_no},`pro_title`=#{pro_title}, `pro_category`=#{pro_category}, `pro_images`=#{pro_images}
+	`pro_title`=#{pro_title}, `pro_category`=#{pro_category}, `pro_images`=#{pro_images}
 	
 	WHERE `pro_no`=#{pro_no};
 	
