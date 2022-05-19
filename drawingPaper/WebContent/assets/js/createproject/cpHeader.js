@@ -21,19 +21,21 @@ $(function () {
   let $info = $(location).attr("href");
   let arr = $info.split("/");
   let page = arr[arr.length - 1];
-//  console.log('aa')
-//  console.log(page);
+
   switch (page) {
     case "defaultInfo.jsp":
       $(".default-info").addClass("cur-page");
       break;
-    case "fundingPlan.jsp":
+    case "defaultInfo.pj":
+        $(".default-info").addClass("cur-page");
+        break;  
+    case "fundingPlan.pj":
       $(".funding-plan").addClass("cur-page");
       break;
-    case "projectPlan.jsp":
+    case "projectPlan.pj":
       $(".project-plan").addClass("cur-page");
       break;
-    case "createrInfo.jsp":
+    case "createrInfo.pj":
       $(".creater-info").addClass("cur-page");
       break;
   }

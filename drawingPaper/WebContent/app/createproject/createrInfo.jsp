@@ -1,31 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>    
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <title></title>
-    <link type="text/css" rel="stylesheet"
-   href="../../assets/css/createproject/cpHeader.css" />
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/cpHeader.css" />
     
-    <link type="text/css" rel="stylesheet" href="../../assets/css/createproject/default.css" />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="../../assets/css/createproject/createrInfo.css"/>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/default.css" />
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/createrInfo.css"/>
   </head>
 
   <body>
     <div class="wrap">
       <!-- header-->
       <header id="admheader">
-        <link rel="import" href="cpHeader.jsp" />
+        <jsp:include page="cpHeader.jsp"/>
       </header>
 
       <!-- hidden nav-->
@@ -36,7 +28,6 @@
           <section class="sec1">
             <!-- 메인 컨텐츠 -->
             <!--=================================================================-->
-             <form method="post" action="${pageContext.request.contextPath}/project/ProjectCreateOk.pj" name="createPj">
             <div class="main-content">
               <!-- ================================================================== -->
               <div class="content-row">
@@ -72,7 +63,6 @@
                           placeholder="창작자님의 이름을 입력해주세요"
                           autocomplete="off"
                           autocapitalize="off"
-                          name=""
                         />
                       </span>
                     </div>
@@ -128,7 +118,7 @@
                               ></path>
                             </svg>
                           </div>
-                          <input type="file" accept=".jpg, .png, .gif, .jpeg" name="pro_repimage" />
+                          <input type="file" accept=".jpg, .png, .gif, .jpeg" />
                           이미지 파일 업로드
                         </button>
                       </div>
@@ -364,7 +354,7 @@
               </div>
               <!-- ==================================================================== -->
             </div>
-			</form>
+
             <!--=================================================================-->
           </section>
         </div>
@@ -372,8 +362,9 @@
 
       <!-- <footer id="footer"></footer> -->
     </div>
-    <script src="../../assets/js/createproject/createrInfo.js"></script>
-    <script src="../../assets/js/createproject/area.js"></script>
-    <script src="../../assets/js/createproject/cpHeader.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/createproject/createrInfo.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/createproject/area.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
   </body>
 </html>

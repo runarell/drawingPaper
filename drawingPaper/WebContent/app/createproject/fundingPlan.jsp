@@ -1,55 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>    
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <title></title>
-    <link type="text/css" rel="stylesheet" href="../../assets/css/createproject/default.css" />
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/default.css" />
     <link
       type="text/css"
       rel="stylesheet"
-      href="../../assets/css/createproject/fundingPlan.css"
+      href="${pageContext.request.contextPath}/assets/css/createproject/fundingPlan.css"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
-      integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
-      integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./api-datepicker/jquery-ui.css" />
-    <script src="./api-datepicker/jquery-ui.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="../../assets/css/createproject/cpHeader.css" />
+
+    
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/app/createproject/api-datepicker/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/cpHeader.css" />
   </head>
 
   <body>
     <div class="wrap">
       <!-- header-->
       <header id="admheader">
-        <link rel="import" href="cpHeader.jsp"/>
+      	<jsp:include page="${pageContext.request.contextPath}/app/createproject/cpHeader.jsp"/>
       </header>
 
       <!-- hidden nav-->
       <nav id="admnav"></nav>
 
       <main>
-        <div class="mainWrap" >
+        <div class="mainWrap">
           <section class="sec1">
             <!-- 메인 컨텐츠 -->
             <!--=================================================================-->
-            <form method="post" action="${pageContext.request.contextPath}/project/ProjectCreateOk.pj" name="createPj">
             <div class="main-content">
               <div class="content-row">
                 <!-- 목표 금액 행 -->
@@ -119,7 +103,6 @@
                           autocomplete="off"
                           autocapitalize="off"
                           class="input-goal"
-                          nmae="pro_goalprice"
                           numberonly
                           comma
                         />
@@ -192,7 +175,6 @@
                           autocomplete="off"
                           autocapitalize="off"
                           class="input-goal--ticket"
-                          name="pro_ticketprice"
                           comma
                         />
                         원
@@ -260,7 +242,7 @@
                                   <div class="date">
                                     시작 날짜를 선택해주세요
                                   </div>
-                                  <input class="date-picker start" name="pro_start" />
+                                  <input class="date-picker start" />
                                 </button>
                               </div>
                               <!-- 달력의 위치 달력이 포함된 가장 밖의 div에 속한다 -->
@@ -346,7 +328,7 @@
                                 </div>
                                 <!-- 선택된 날짜가 들어감 -->
                                 <div class="date">종료 날짜를 선택해주세요</div>
-                                <input class="date-picker" name="pro_end" />
+                                <input class="date-picker" />
                               </button>
                             </div>
                           </div>
@@ -380,7 +362,7 @@
                 </div>
               </div>
             </div>
-			</form>
+
             <!--=================================================================-->
           </section>
         </div>
@@ -389,6 +371,21 @@
       <!-- <footer id="footer"></footer> -->
     </div>
   </body>
-  <script src="../../assets/js/createproject/fundingPlan.js"></script>
-  <script src="../../assets/js/createproject/cpHeader.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+      integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+      integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+   <script src="${pageContext.request.contextPath}/app/createproject/api-datepicker/jquery-ui.min.js"></script>
+  <script src="${pageContext.request.contextPath}/assets/js/createproject/fundingPlan.js"></script>
+  <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
 </html>

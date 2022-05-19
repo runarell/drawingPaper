@@ -44,17 +44,15 @@
 			<div class="tab-menu">
 				<ul>
 					<!-- 현재 페이지 cur_page로 변경 -->
-					<li class="default-info"><a href="defaultInfo.jsp">기본정보</a></li>
-					<li class="funding-plan"><a href="fundingPlan.jsp">펀딩 계획</a></li>
-					<li class="project-plan"><a href="projectPlan.jsp">프로젝트 계획</a></li>
-					<li class="creater-info"><a href="createrInfo.jsp">창작자 정보</a></li>
+					<li class="default-info"><a href="${pageContext.request.contextPath}/project/defaultInfo.pj">기본정보</a></li>
+					<li class="funding-plan"><a href="${pageContext.request.contextPath}/project/fundingPlan.pj">펀딩 계획</a></li>
+					<li class="project-plan"><a href="${pageContext.request.contextPath}/project/projectPlan.pj">프로젝트 계획</a></li>
+					<li class="creater-info"><a href="${pageContext.request.contextPath}/project/createrInfo.pj">창작자 정보</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </div>
-
-
 
 
 

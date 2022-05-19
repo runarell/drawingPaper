@@ -46,15 +46,19 @@ public class ProjectFrontController extends HttpServlet {
 				System.out.println("ProjectFrontController_ProjectPlanCreateOk오류, " + e);
 			}
 			
-		}else if(command.equals("/project/ProjectCreatorInfoOk.pj")){
+		}
+		
+			////////////미완성/////////////////
+		else if(command.equals("/project/ProjectCreatorInfoOk.pj")){
 			try {
-				//////////// 미완성/////////////////
+				
 				af = new ProjectCreatorInfoOk().execute(req, resp);
 			} catch (Exception e) {
 				System.out.println("ProjectFrontController_ProjectCreatorInfoOk오류, " + e);
 			
 			}
 			////////////////////////미완성/////////////////
+			
 		}else if(command.equals("/project/defaultInfo.pj")){
 			try {
 				af = new ActionForward();
@@ -87,6 +91,13 @@ public class ProjectFrontController extends HttpServlet {
 				af = new ActionForward();
 				af.setRedirect(false);
 				af.setPath("/app/createproject/createrInfo.jsp");
+			} catch (Exception e) {
+				System.out.println("ProjectFrontController_createrInfo오류, " + e);
+			}
+			
+		}else if(command.equals("/project/NewProjectCreateOK.pj")){
+			try {
+				af = new NewProjectCreateOK().execute(req, resp);
 			} catch (Exception e) {
 				System.out.println("ProjectFrontController_createrInfo오류, " + e);
 			}

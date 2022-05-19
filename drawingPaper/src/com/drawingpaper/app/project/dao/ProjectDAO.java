@@ -15,16 +15,23 @@ public class ProjectDAO {
 		sqlSession = sessionFactory.openSession(true); //오토 커밋
 	}
 	
-	//디폴트프젝 업데이트
-	public void createDefaultPjt(ProjectVO project) {
-		sqlSession.insert("Project.createDefaultPjt", project);  
-		// 지금은 INSERT지만 프로젝트 생성하기 버튼 생기면 UPDATE로 바꿀것!! WHERE =Pro_no로 구분
+	//새로운 프로젝트 만들기
+	public void createNewPjt(int user_no ){
+		sqlSession.insert("Project.createNewPjt",user_no);
 	}
-	
+	//유저 넘버 가져오기
+	public int getProNum(int user_no) {
+		return (Integer)sqlSession.selectOne("Project.getProNum",user_no);
+	}
+	//디폴트 업데이트
+	public void createDefaultPjt(ProjectVO project) {
+		sqlSession.update("Project.createDefaultPjt", project);  	
+	}
+	//펀딩계획 업데이트
 	public void createFundingPlan(ProjectVO project) {
 		sqlSession.update("Project.createFundingPlan", project);  
 	}
-	
+	//프로젝트 계획 업데이트
 	public void createProjectPlan(ProjectVO project) {
 		sqlSession.update("Project.createProjectPlan", project);  
 	}

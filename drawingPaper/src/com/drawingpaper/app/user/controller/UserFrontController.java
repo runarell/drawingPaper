@@ -26,25 +26,19 @@ public class UserFrontController extends HttpServlet {
 		String command = requestURI.substring(contextPath.length());
 		ActionForward af = null;
 		
+		if(command.equals("/test/Test.us")) {
+			af = new ActionForward();
+			af.setRedirect(false);
+			af.setPath("/test/test2.jsp");
+		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		if(af != null) {// af°¡ nullÀÌ ¾Æ´Ï¶ó¸é
-			if(af.isRedirect()) {//redirect ¹æ½ÄÀÌ¶ó¸é
-				resp.sendRedirect(af.getPath());//redirect·Î Àü¼Û
+		if(af != null) {// afï¿½ï¿½ nullï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ï¿½
+			if(af.isRedirect()) {//redirect ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½
+				resp.sendRedirect(af.getPath());//redirectï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 				
-			}else {//forward ¹æ½ÄÀÌ¶ó¸é
+			}else {//forward ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½
 				RequestDispatcher dispatcher = req.getRequestDispatcher(af.getPath());
-				dispatcher.forward(req, resp);//forward·Î Àü¼Û
+				dispatcher.forward(req, resp);//forwardï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			}
 		}
 	}

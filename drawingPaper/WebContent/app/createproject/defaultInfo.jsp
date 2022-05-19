@@ -1,17 +1,16 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <html>
 <head>
 <meta charset="UTF-8" />
 
 <title></title>
-<link type="text/css" rel="stylesheet" href="../../assets/css/createproject/cpHeader.css" />
-<link type="text/css" rel="stylesheet" href="../../assets/css/createproject/default.css" />
-<link type="text/css" rel="stylesheet" href="../../assets/css/createproject/defaultInfo.css" />
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/cpHeader.css" />
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/default.css" />
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/defaultInfo.css" />
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"
-   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-   crossorigin="anonymous"></script>
 
 </head>
 
@@ -19,7 +18,6 @@
 
 
    <!-- 확대이미지 div 시작 -->
-   <form method="post" action="${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" name="createPj">
    <div class="large-img large-img--ready">
       <div class="large-img__box">
          <div class="large-img__x" onclick="exit();">
@@ -36,7 +34,7 @@
    <div class="wrap">
       <!-- header-->
       <header id="admheader">
-         <link rel="import" href="cpHeader.jsp" />
+         <jsp:include page="/app/createproject/cpHeader.jsp"/>
       </header>
 
       <!-- hidden nav-->
@@ -72,7 +70,7 @@
                               <p>카테고리</p>
                               <div>
                                  <span class="select_box"> <input type="text"
-                                    value="연극" name="pro_category" readonly />
+                                    value="연극" readonly />
                                     <div class="arrow ready">
                                        <svg viewBox="0 0 48 48">
                                 <path fill-rule="evenodd"
@@ -172,7 +170,7 @@
                            <div class="title_div input_div">
                               <p>제목</p>
                               <div>
-                                 <span class="title_box input_box"> <input type="text" name="pro_title"
+                                 <span class="title_box input_box"> <input type="text"
                                     placeholder="제목을 입력해주세요" />
                                  </span>
                                  <div class="length">0/32</div>
@@ -245,7 +243,7 @@
                               </ul>
                               <!-- +++++++++++++++ 반복 예제입니다 ++++++++++++++++++++ -->
 
-							
+
 
                            </div>
                         </div>
@@ -254,16 +252,16 @@
                </div>
             </div>
       </div>
-      
       <!--=================================================================-->
       </section>
    </div>
-   </form>
    </main>
 
    <!-- <footer id="footer"></footer> -->
    </div>
 </body>
-<script src="../../assets/js/createproject/defaultInfo.js"></script>
-<script src="../../assets/js/createproject/cpHeader.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<%-- <script src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script> --%>
+<script src="${pageContext.request.contextPath}/assets/js/createproject/defaultInfo.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
 </html>

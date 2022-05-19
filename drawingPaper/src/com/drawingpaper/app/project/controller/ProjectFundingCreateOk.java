@@ -2,6 +2,7 @@ package com.drawingpaper.app.project.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.drawingpaper.app.action.Action;
 import com.drawingpaper.app.action.ActionForward;
@@ -23,19 +24,29 @@ public class ProjectFundingCreateOk implements Action {
 		ProjectVO project = new ProjectVO();
 		
 		ActionForward forward = new ActionForward();
+		HttpSession session = req.getSession(); // 세션으로 유저 아이디 와 프로젝트 넘버 저장
+		
+		int sessionUser_no =(Integer)session.getAttribute("sessionUser_no");	//세션 받아오기
+		int sessionPro_no = (Integer)session.getAttribute("sessionPro_no");    //세션 받아오기
+		
+		session.setAttribute("sessionUser_no",sessionUser_no); // 세션 한번 더 심기
+		session.setAttribute("sessionPro_no",sessionPro_no);   // 세션 한번 더 심기
 		
 //		MultipartRequest multi = null;
 //		multi = new MultipartRequest(req, saveFolder, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
-		project.setPro_no(Integer.parseInt(req.getParameter("pro_no")));
-		
-		
+		project.setPro_no(sessionPro_no);
 		project.setPro_goalprice(req.getParameter("pro_goalprice"));
 		project.setPro_ticketprice(req.getParameter("pro_ticketprice"));
 		project.setPro_start(req.getParameter("pro_start"));
 		project.setPro_end(req.getParameter("pro_end"));
 
-
+//		String user_no = req.getParameter("user_no");
+//		String pro_no = req.getParameter("pro_no");
+//		
+//		session.setAttribute("sessionUser_no",user_no);
+//		session.setAttribute("sessionPro_no",pro_no);
+		
 		projectDao.createFundingPlan(project);	
 
 		

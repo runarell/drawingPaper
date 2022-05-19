@@ -18,16 +18,23 @@
 <!-- SqlSssion Factory -->
 <mapper namespace="Project">
 
+<insert id="createNewPjt" parameterType="project">
+	INSERT INTO `project` (`user_no`) 
+	VALUES (#{user_no});
+</insert>
+
+<select id="getProNum" parameterType="_int" resultType="_int">
+	SELECT MAX(`pro_no`) FROM `project` WHERE `user_no` =#{user_no}
+</select>
+
 
 <insert id="createDefaultPjt" parameterType="project">
-	INSERT INTO project   
-	(	
-		user_no, pro_title, pro_category, pro_images 
-	)
-	VALUES
-	(
-		#{user_no}, #{pro_title}, #{pro_category}, #{pro_images}
-	)
+	UPDATE `project` SET   
+		
+	`user_no`=#{user_no},`pro_title`=#{pro_title}, `pro_category`=#{pro_category}, `pro_images`=#{pro_images}
+	
+	WHERE `pro_no`=#{pro_no};
+	
 	
 </insert>  
 
