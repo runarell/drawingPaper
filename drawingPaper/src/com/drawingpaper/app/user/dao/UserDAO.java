@@ -17,12 +17,22 @@ public class UserDAO {
 	}
 	
 	// 카카오 로그인
-	
-	// 일반 로그인
-	public boolean login(String user_email, String user_pw) {
-		HashMap<String, String> userMap = new HashMap<>();
-		userMap.put("user_email", user_email);
-		userMap.put("user_pw", user_pw);
-		return (Integer)(sqlSession.selectOne("user.login", userMap)) == 1;
+
+	// 일반 로그인 로그아웃 유효성이 모두 true면 로그인 성공
+	// 로그인 유효성 체크
+	public boolean emailCheck(String user_email) {
+		return (Integer)(sqlSession.selectOne("User.emailCheck", user_email)) == 1;
 	}
+	
+	// 비밀번호 유효성 체크
+	public boolean pwCheck(String user_pw) {
+		return (Integer)(sqlSession.selectOne("User.pwCheck", user_pw)) == 1;
+	}
+	
+	// 로그아웃
+	public boolean logout() {
+		return true;
+	}
+
+	// 메인 화면 세션(유저 이름)띄워주기
 }

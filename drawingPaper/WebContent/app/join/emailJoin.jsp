@@ -62,13 +62,15 @@
                             <div class="wrappermargin"><span class="inputwrapper">
                                 <input type="password" inputmode="password" id="password" placeholder="비밀번호를 입력해주세요." autocapitalize="off" autocomplete="off"
                                         class="inputDetail">
+                                <div class="checkArea">ㄴㄴㄴ</div>
                             </span></div>
-                            <div class="checkArea"></div>
+                         
                             <div class="wrappermargin passwordcheckdiv"><span class="inputwrapper">
                                 <input type="password" inputmode="password" id="passwordCheck" placeholder="비밀번호를 확인합니다." autocapitalize="off" autocomplete="off"
                                         class="inputDetail">
+                                <div class="checkArea"></div>
                             </span></div>
-                            <div class="checkArea"></div>
+                            
                         </div>
                         </div>
                         <!-- Input area -->
