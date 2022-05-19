@@ -26,6 +26,7 @@ public class UserFrontController extends HttpServlet {
 		String command = requestURI.substring(contextPath.length());
 		ActionForward af = null;
 		
+<<<<<<< HEAD
 		
 		if(command.equals("/user/userLoginOk.us")) {	// 로그인
 			System.out.println("front-c");
@@ -51,6 +52,19 @@ public class UserFrontController extends HttpServlet {
 		
 		
 		
+=======
+		if(command.equals("/user/UserCheckEmailOk.us")) {
+			try {
+				af = new UserCheckEmailOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("아이디 중복검사 오류" + e);
+			}
+		} else if(command.equals("/user/UserJoinEmailOk.us")) {
+			
+		} else {
+			
+		}
+>>>>>>> user/join
 		
 		if(af != null) {// af가 null이 아니라면
 			if(af.isRedirect()) {//redirect 방식이라면
