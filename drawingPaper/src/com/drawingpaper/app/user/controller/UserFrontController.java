@@ -44,6 +44,7 @@ public class UserFrontController extends HttpServlet {
 			af.setPath("/app/login/emailLogin.jsp");
 		}
 		
+		
 		if(af != null) {// af가 null이 아니라면
 			if(af.isRedirect()) {//redirect 방식이라면
 				resp.sendRedirect(af.getPath());//redirect로 전송
