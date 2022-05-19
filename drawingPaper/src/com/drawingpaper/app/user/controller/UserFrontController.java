@@ -26,17 +26,17 @@ public class UserFrontController extends HttpServlet {
 		String command = requestURI.substring(contextPath.length());
 		ActionForward af = null;
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		if(command.equals("/user/UserCheckEmailOk.us")) {
+			try {
+				af = new UserCheckEmailOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("아이디 중복검사 오류" + e);
+			}
+		} else if(command.equals("/user/UserJoinEmailOk.us")) {
+			
+		} else {
+			
+		}
 		
 		if(af != null) {// af가 null이 아니라면
 			if(af.isRedirect()) {//redirect 방식이라면

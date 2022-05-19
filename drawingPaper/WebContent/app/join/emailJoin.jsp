@@ -31,14 +31,14 @@
                 <div class="joinWrapper">
                     <h1>이메일로 가입하기</h1>
                     <!--Form start-->
-                    <form autocomplete="on" class="joinForm" id="joinForm">
+                    <form autocomplete="on" class="joinForm" id="joinForm" action="${pageContext.request.contextPath}/user/UserJoinEmailOk.us">
                         <!-- Input area -->
                         <div id="inputwrapper">
                         <div class="inputdiv">
                             <div class="inputkey">이름</div>
                             <div class="wrappermargin"><span class="inputwrapper">
                                 <input type="text" inputmode="text" id="inputname" placeholder="사용하실 이름을 입력해주세요." autocapitalize="off" autocomplete="off"
-                                        class="inputDetail">
+                                        class="inputDetail" name="user_name">
                             </span></div>
                             <div class="checkArea3"></div>
                         </div>
@@ -47,12 +47,12 @@
                             <div class="inputkey">이메일 주소</div>
                             <div class="wrappermargin"><span class="inputwrapper">
                                 <input type="text" inputmode="text" id="email" placeholder="이메일 주소를 입력해주세요." autocapitalize="off" autocomplete="off"
-                                        class="inputDetail">
+                                        class="inputDetail" name="user_email">
                             </span></div>
                             <div class="checkArea"></div>
                             <div class="wrappermargin"><span class="inputwrapper">
                                 <input type="text" inputmode="text" id="emailCheck" placeholder="이메일 주소를 확인합니다." autocapitalize="off" autocomplete="off"
-                                        class="inputDetail">
+                                        class="inputDetail" name="user_email--re">
                             </span></div>
                             <div class="checkArea"></div>
                         </div>
@@ -61,12 +61,12 @@
                             <div class="inputkey">비밀번호</div>
                             <div class="wrappermargin"><span class="inputwrapper">
                                 <input type="password" inputmode="password" id="password" placeholder="비밀번호를 입력해주세요." autocapitalize="off" autocomplete="off"
-                                        class="inputDetail">
+                                        class="inputDetail" name="user_pw">
                             </span></div>
                             <div class="checkArea"></div>
                             <div class="wrappermargin passwordcheckdiv"><span class="inputwrapper">
                                 <input type="password" inputmode="password" id="passwordCheck" placeholder="비밀번호를 확인합니다." autocapitalize="off" autocomplete="off"
-                                        class="inputDetail">
+                                        class="inputDetail" name="user_pw--re">
                             </span></div>
                             <div class="checkArea"></div>
                         </div>

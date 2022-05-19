@@ -259,4 +259,34 @@ function kakaoLogin() {
           
     }
   });
+  
+  
+  //ajax 이메일 중복검사
+  function checkEmail(email	){
+	  if(email == ""){
+		  $("#")
+	  }
+  }
+  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
