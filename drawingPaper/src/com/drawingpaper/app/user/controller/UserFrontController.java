@@ -60,11 +60,18 @@ public class UserFrontController extends HttpServlet {
 				System.out.println("아이디 중복검사 오류" + e);
 			}
 		} else if(command.equals("/user/UserJoinEmailOk.us")) {
-			
-		} else {
-			
+			try {
+				af = new UserJoinEmailOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("이메일로 회원가입 오류" + e);
+			}
+		} else if(command.equals("/user/UserEmailLogin.us")){
+			af = new ActionForward();
+			af.setRedirect(false);
+			af.setPath("/app/login/emailLogin.jsp");
 		}
 >>>>>>> user/join
+		
 		
 		if(af != null) {// af가 null이 아니라면
 			if(af.isRedirect()) {//redirect 방식이라면

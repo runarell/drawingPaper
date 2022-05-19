@@ -41,15 +41,16 @@ public class UserDAO {
 	}
 	
 	//이메일로 회원가입
-	public void joinEmail(String name, String email, String pw) {
+	public void joinEmail(String user_name, String user_email, String user_pw) {
 		HashMap<String, String> emailJoinInfo = new HashMap<>();
-		emailJoinInfo.put("user_email", email);
-		emailJoinInfo.put("user_name", name);
-		emailJoinInfo.put("user_pw", pw);
+		emailJoinInfo.put("user_email", user_email);
+		emailJoinInfo.put("user_name", user_name);
+		emailJoinInfo.put("user_pw", user_pw);
 		
 		sqlSession.insert("User.joinEmail", emailJoinInfo);
 >>>>>>> user/join
 	}
+<<<<<<< HEAD
 	
 	// 비밀번호 유효성 체크
 	public boolean pwCheck(String user_pw) {
@@ -62,4 +63,11 @@ public class UserDAO {
 	}
 
 	// 메인 화면 세션(유저 이름)띄워주기
+=======
+
+	//이메일로 유저번호 찾기
+	public int getUserNoByEmail(String user_email) {
+		return (Integer)sqlSession.selectOne("User.getUserNoByEmail", user_email);
+	}
+>>>>>>> user/join
 }
