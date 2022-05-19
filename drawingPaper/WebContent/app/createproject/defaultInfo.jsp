@@ -19,6 +19,7 @@
 
 
    <!-- 확대이미지 div 시작 -->
+   <form method="post" action="${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" name="createPj">
    <div class="large-img large-img--ready">
       <div class="large-img__box">
          <div class="large-img__x" onclick="exit();">
@@ -71,7 +72,7 @@
                               <p>카테고리</p>
                               <div>
                                  <span class="select_box"> <input type="text"
-                                    value="연극" readonly />
+                                    value="연극" name="pro_category" readonly />
                                     <div class="arrow ready">
                                        <svg viewBox="0 0 48 48">
                                 <path fill-rule="evenodd"
@@ -171,7 +172,7 @@
                            <div class="title_div input_div">
                               <p>제목</p>
                               <div>
-                                 <span class="title_box input_box"> <input type="text"
+                                 <span class="title_box input_box"> <input type="text" name="pro_title"
                                     placeholder="제목을 입력해주세요" />
                                  </span>
                                  <div class="length">0/32</div>
@@ -244,7 +245,7 @@
                               </ul>
                               <!-- +++++++++++++++ 반복 예제입니다 ++++++++++++++++++++ -->
 
-
+							
 
                            </div>
                         </div>
@@ -253,9 +254,11 @@
                </div>
             </div>
       </div>
+      
       <!--=================================================================-->
       </section>
    </div>
+   </form>
    </main>
 
    <!-- <footer id="footer"></footer> -->

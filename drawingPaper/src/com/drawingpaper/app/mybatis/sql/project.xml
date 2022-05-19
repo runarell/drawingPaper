@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 	private int user_no;
+	private String pro_title;
+	private String pro_category;
+	private String pro_start;
+	private String pro_end;
+	private String pro_addr;
+	private String pro_addrdetail;
+	private String pro_goalprice;
+	private String pro_ticketprice;
+	private String pro_repimage;
+	private String pro_images;
+	private String pro_content;
+	private boolean pro_ongoing;
+ -->
 
 <!-- SqlSssion Factory -->
 <mapper namespace="Project">
+
+
+<insert id="createDefaultPjt" parameterType="project">
+	INSERT INTO project   
+	(	
+		user_no, pro_title, pro_category, pro_images 
+	)
+	VALUES
+	(
+		#{user_no}, #{pro_title}, #{pro_category}, #{pro_images}
+	)
+	
+</insert>  
+
+<update id="createFundingPlan" parameterType="project">
+	UPDATE `project` SET 
+	
+	`pro_start`=#{pro_start}, `pro_end`=#{pro_end}, `pro_goalprice`=#{pro_goalprice}, `pro_ticketprice`=#{pro_ticketprice}
+	
+	 WHERE  `pro_no`=#{pro_no};
+	 	
+</update>
+
+<update id="createProjectPlan" parameterType="project">
+	UPDATE `project` SET 
+	
+	`pro_content`=#{pro_content}
+	
+	 WHERE  `pro_no`=#{pro_no};
+	
+</update> 
+
+<update id="createCreaterInfo" parameterType="project">
+<!--###############UserDAO 필요 나중에 작업할것!!!!####################-->
+	
+</update>   
 
 </mapper>

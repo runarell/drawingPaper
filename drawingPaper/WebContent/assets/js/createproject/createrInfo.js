@@ -120,8 +120,7 @@ function reSend(){
         time--;
     }, 1000);
 
-    }else{
-    }
+    }else{}
 }
 
 let certArea = document.getElementById("auth-wrap");

@@ -12,7 +12,7 @@ public class ProjectVO {
 	private String pro_goalprice;
 	private String pro_ticketprice;
 	private String pro_repimage;
-	private String pro_imges;
+	private String pro_images;
 	private String pro_content;
 	private boolean pro_ongoing;
 	private String pro_achieveprice;
@@ -107,12 +107,12 @@ public class ProjectVO {
 		this.pro_repimage = pro_repimage;
 	}
 
-	public String getPro_imges() {
-		return pro_imges;
+	public String getPro_images() {
+		return pro_images;
 	}
 
-	public void setPro_imges(String pro_imges) {
-		this.pro_imges = pro_imges;
+	public void setPro_images(String pro_images) {
+		this.pro_images = pro_images;
 	}
 
 	public String getPro_content() {

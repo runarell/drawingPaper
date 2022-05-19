@@ -36,6 +36,7 @@
           <section class="sec1">
             <!-- 메인 컨텐츠 -->
             <!--=================================================================-->
+             <form method="post" action="${pageContext.request.contextPath}/project/ProjectCreateOk.pj" name="createPj">
             <div class="main-content">
               <!-- ================================================================== -->
               <div class="content-row">
@@ -71,6 +72,7 @@
                           placeholder="창작자님의 이름을 입력해주세요"
                           autocomplete="off"
                           autocapitalize="off"
+                          name=""
                         />
                       </span>
                     </div>
@@ -126,7 +128,7 @@
                               ></path>
                             </svg>
                           </div>
-                          <input type="file" accept=".jpg, .png, .gif, .jpeg" />
+                          <input type="file" accept=".jpg, .png, .gif, .jpeg" name="pro_repimage" />
                           이미지 파일 업로드
                         </button>
                       </div>
@@ -294,7 +296,7 @@
                             ></path>
                           </svg>
                         </div>
-                        <p>본인인증을 완료해주세요</p>
+                        <p>본인인증을 완료해주세요!</p>
                       </div>
                       <div class="creater-auth__col">
                         <button class="creater-auth__btn" onclick="auth__btn()">인증하기</button>
@@ -362,7 +364,7 @@
               </div>
               <!-- ==================================================================== -->
             </div>
-
+			</form>
             <!--=================================================================-->
           </section>
         </div>

@@ -38,6 +38,7 @@
 			<section class="sec1">
 				<!-- 메인 컨텐츠 -->
 				<!--=================================================================-->
+				 <form method="post" action="${pageContext.request.contextPath}/project/ProjectCreateOk.pj" name="createPj">
 				<div class="main-content">
 					<div class="content-row">
 						<div class="content-col">
@@ -81,6 +82,7 @@
 						</div>
 					</div>
 				</div>
+				</form>
 				<!--=================================================================-->
 				
 			</section>

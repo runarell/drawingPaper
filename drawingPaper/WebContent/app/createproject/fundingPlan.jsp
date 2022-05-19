@@ -45,10 +45,11 @@
       <nav id="admnav"></nav>
 
       <main>
-        <div class="mainWrap">
+        <div class="mainWrap" >
           <section class="sec1">
             <!-- 메인 컨텐츠 -->
             <!--=================================================================-->
+            <form method="post" action="${pageContext.request.contextPath}/project/ProjectCreateOk.pj" name="createPj">
             <div class="main-content">
               <div class="content-row">
                 <!-- 목표 금액 행 -->
@@ -118,6 +119,7 @@
                           autocomplete="off"
                           autocapitalize="off"
                           class="input-goal"
+                          nmae="pro_goalprice"
                           numberonly
                           comma
                         />
@@ -190,6 +192,7 @@
                           autocomplete="off"
                           autocapitalize="off"
                           class="input-goal--ticket"
+                          name="pro_ticketprice"
                           comma
                         />
                         원
@@ -257,7 +260,7 @@
                                   <div class="date">
                                     시작 날짜를 선택해주세요
                                   </div>
-                                  <input class="date-picker start" />
+                                  <input class="date-picker start" name="pro_start" />
                                 </button>
                               </div>
                               <!-- 달력의 위치 달력이 포함된 가장 밖의 div에 속한다 -->
@@ -343,7 +346,7 @@
                                 </div>
                                 <!-- 선택된 날짜가 들어감 -->
                                 <div class="date">종료 날짜를 선택해주세요</div>
-                                <input class="date-picker" />
+                                <input class="date-picker" name="pro_end" />
                               </button>
                             </div>
                           </div>
@@ -377,7 +380,7 @@
                 </div>
               </div>
             </div>
-
+			</form>
             <!--=================================================================-->
           </section>
         </div>

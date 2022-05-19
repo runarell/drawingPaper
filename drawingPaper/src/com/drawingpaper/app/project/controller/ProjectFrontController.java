@@ -26,25 +26,82 @@ public class ProjectFrontController extends HttpServlet {
 		String command = requestURI.substring(contextPath.length());
 		ActionForward af = null;
 		
+		if(command.equals("/project/ProjectDefaultCreateOk.pj")) {
+			try {
+				af = new ProjectDefaultCreateOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("ProjectFrontController_ProjectDefaultCreateOkì˜¤ë¥˜, " + e);
+			}
+		}else if(command.equals("/project/ProjectFundingCreateOk.pj")){
+			try {
+				af = new ProjectFundingCreateOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("ProjectFrontController_ProjectFundingCreateOkì˜¤ë¥˜, " + e);
+			}
+			
+		}else if(command.equals("/project/ProjectPlanCreateOk.pj")){
+			try {
+				af = new ProjectPlanCreateOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("ProjectFrontController_ProjectPlanCreateOkì˜¤ë¥˜, " + e);
+			}
+			
+		}else if(command.equals("/project/ProjectCreatorInfoOk.pj")){
+			try {
+				//////////// ë¯¸ì™„ì„±/////////////////
+				af = new ProjectCreatorInfoOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("ProjectFrontController_ProjectCreatorInfoOkì˜¤ë¥˜, " + e);
+			
+			}
+			////////////////////////ë¯¸ì™„ì„±/////////////////
+		}else if(command.equals("/project/defaultInfo.pj")){
+			try {
+				af = new ActionForward();
+				af.setRedirect(false);
+				af.setPath("/app/createproject/defaultInfo.jsp");
+			} catch (Exception e) {
+				System.out.println("ProjectFrontController_defaultInfoì˜¤ë¥˜, " + e);
+			}
+			
+		}else if(command.equals("/project/fundingPlan.pj")){
+			try {
+				af = new ActionForward();
+				af.setRedirect(false);
+				af.setPath("/app/createproject/fundingPlan.jsp");
+			} catch (Exception e) {
+				System.out.println("ProjectFrontController_fundingPlanì˜¤ë¥˜, " + e);
+			}
+			
+		}else if(command.equals("/project/projectPlan.pj")){
+			try {
+				af = new ActionForward();
+				af.setRedirect(false);
+				af.setPath("/app/createproject/projectPlan.jsp");
+			} catch (Exception e) {
+				System.out.println("ProjectFrontController_projectPlanì˜¤ë¥˜, " + e);
+			}
+			
+		}else if(command.equals("/project/createrInfo.pj")){
+			try {
+				af = new ActionForward();
+				af.setRedirect(false);
+				af.setPath("/app/createproject/createrInfo.jsp");
+			} catch (Exception e) {
+				System.out.println("ProjectFrontController_createrInfoì˜¤ë¥˜, " + e);
+			}
+			
+		}
 		
+	
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		if(af != null) {// af°¡ nullÀÌ ¾Æ´Ï¶ó¸é
-			if(af.isRedirect()) {//redirect ¹æ½ÄÀÌ¶ó¸é
-				resp.sendRedirect(af.getPath());//redirect·Î Àü¼Û
+		if(af != null) {
+			if(af.isRedirect()) {
+				resp.sendRedirect(af.getPath());
 				
-			}else {//forward ¹æ½ÄÀÌ¶ó¸é
+			}else {
 				RequestDispatcher dispatcher = req.getRequestDispatcher(af.getPath());
-				dispatcher.forward(req, resp);//forward·Î Àü¼Û
+				dispatcher.forward(req, resp);
 			}
 		}
 	}
