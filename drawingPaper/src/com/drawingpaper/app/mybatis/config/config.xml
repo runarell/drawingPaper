@@ -8,7 +8,7 @@
 		<typeAlias type="com.drawingpaper.app.project.vo.ProjectVO" alias="project"/>
 		<typeAlias type="com.drawingpaper.app.user.vo.UserVO" alias="user"/>
 		<typeAlias type="com.drawingpaper.app.payment.vo.PaymentVO" alias="payment"/>
-		<typeAlias type="com.drawingpaper.app.support.vo.SupportVO" alias="support"/>
+		<typeAlias type="com.drawingpaper.app.supporter.vo.SupporterVO" alias="supporter"/>
 		<typeAlias type="com.drawingpaper.app.like.vo.LikeVO" alias="like"/>
 	</typeAliases>
 	<environments default="development">
@@ -27,7 +27,7 @@
 		<mapper resource="com/drawingpaper/app/mybatis/sql/project.xml"/>
 		<mapper resource="com/drawingpaper/app/mybatis/sql/user.xml"/>
 		<mapper resource="com/drawingpaper/app/mybatis/sql/payment.xml"/>
-		<mapper resource="com/drawingpaper/app/mybatis/sql/support.xml"/>
+		<mapper resource="com/drawingpaper/app/mybatis/sql/supporter.xml"/>
 		<mapper resource="com/drawingpaper/app/mybatis/sql/like.xml"/>
 	</mappers>
 </configuration>

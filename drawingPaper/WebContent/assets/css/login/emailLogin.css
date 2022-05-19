@@ -85,7 +85,7 @@
     font-size: 12px;
     font-weight: 500;
     color: rgb(61, 61, 61);
-    margin: 0px 0px 10px;
+    margin: 15px 0px 10px;
 }
 
 .left .contents .loginArea .top a{
@@ -175,3 +175,8 @@ div>input{
         top: 0px;
     }
     }
+    
+    
+.logincheck{
+	color: rgb(255, 87, 87);
+}
