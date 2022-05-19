@@ -8,17 +8,17 @@
     <div class="style_DcWJD">
         <div class="style_kQkrtf">
             <div class="style_jxLqaO">
-                <div class="style_dtkXPY"><img src="../../images/header/content.png" alt=""></div>
+                <div class="style_dtkXPY"><img src="../../images/header/logo.png" alt=""></div>
                 <div class="style_bgpTeU">
                     <div class="style_cfcgIZ">프로젝트 올리기</div>
                     <div class="style_hwZyFc">
                         <div class="style_kuGxgw">
-                            <img src="../../images/header/content.png" alt="" class="style_hart">
+                            <img src="../../images/header/hart.png" alt="" class="style_hart">
                         </div>
                     </div>
                     <div class="style_hwZyFc">
                         <div class="style_kuGxgw">
-                            <img src="../../images/header/content.png" alt="" class="style_bell">
+                            <img src="../../images/header/bell.png" alt="" class="style_bell">
                         </div>
                     </div>
                     <div class="style_UserButtonWrapper">
@@ -41,7 +41,7 @@
                                 <div class="SNB_BannerWrapperF">
                                     <div class="SNB_KakaoBanner"><span>플친 추가하고 <br>프로젝트 추천받기</span>
                                         <div class="SNB_KakaoIconWrapper">
-                                            <img src="../../images/header/content.png" alt="">
+                                            <img src="../../images/header/kakaologo.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="style_SearchInputWrapper"><input placeholder="검색어를 입력해주세요." class="style_SearchInput">
                         <div class="style_SearchButton">
-                            <img src="../../images/header/content.png" alt="" class="style_SearchIcon">
+                            <img src="../../images/header/search.png" alt="" class="style_SearchIcon">
                         </div>
                     </div>
                 </div>
@@ -84,27 +84,27 @@
                         <div class="style_Depth1CategoryGroup">
                             <div class="style_Depth1Category_cNAPbs">
                                 <div class="style_Depth1CategoryIcon">
-                                    <img src="../../images/header/content.png" alt="">
+                                    <img src="../../images/header/menu_all.png" alt="">
                                 </div>
                                 <div class="style_Depth1CategoryTextall">전체</div>
                             </div>
                             <div class="style_Depth1Category">
-                                <div class="style_Depth1CategoryIcon"><img src="../../images/header/content.png"
+                                <div class="style_Depth1CategoryIcon"><img src="../../images/header/artist.png"
                                         class="style_Depth1CategoryIconImage"></div>
                                 <div class="style_Depth1CategoryText">예술</div>
                             </div>
                             <div class="style_Depth1Category">
-                                <div class="style_Depth1CategoryIcon"><img src="../../images/header/content.png"
+                                <div class="style_Depth1CategoryIcon"><img src="../../images/header/music.png"
                                         class="style_Depth1CategoryIconImage"></div>
                                 <div class="style_Depth1CategoryText">음악</div>
                             </div>
                             <div class="style_Depth1Category">
-                                <div class="style_Depth1CategoryIcon"><img src="../../images/header/content.png"
+                                <div class="style_Depth1CategoryIcon"><img src="../../images/header/movie.png"
                                         class="style_Depth1CategoryIconImage"></div>
                                 <div class="style_Depth1CategoryText">영화 · 비디오</div>
                             </div>
                             <div class="style_Depth1Category">
-                                <div class="style_Depth1CategoryIcon"><img src="../../images/header/content.png"
+                                <div class="style_Depth1CategoryIcon"><img src="../../images/header/musical.png"
                                         class="style_Depth1CategoryIconImagem"></div>
                                 <div class="style_Depth1CategoryText">공연</div>
                             </div>

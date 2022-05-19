@@ -27,8 +27,22 @@ public class UserFrontController extends HttpServlet {
 		ActionForward af = null;
 		
 		
-		
-		
+		if(command.equals("/user/userLoginOk.us")) {	// 로그인
+			System.out.println("front-c");
+			try {
+				System.out.println("front-czzzz");
+				new userLoginOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("front-caxticj");
+				System.out.println("로그인 오류" + e);
+			}
+		} else if(command.equals("/user/userLogoutOk.us")) {	// 로그아웃
+			try {
+				new userLogoutOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("로그아웃 오류" + e);
+			}
+		}
 		
 		
 		
