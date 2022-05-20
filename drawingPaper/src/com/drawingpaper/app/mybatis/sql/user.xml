@@ -33,4 +33,11 @@
 		SELECT user_no FROM user
 		WHERE user_email = #{user_email}
 	</select>
+	
+	<!-- 카카오 회원가입 -->
+	<insert id="joinKakao" parameterType="map">
+	INSERT INTO user(user_no, user_name, user_email, user_kakao)
+	VALUES(NULL, #{userName}, #{userEmail}, #{userKakao})
+	</insert>
+	
 </mapper>

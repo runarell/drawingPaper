@@ -17,7 +17,9 @@
 			<p>로그인 하세여</p>
 		</c:otherwise>
 	</c:choose>
-	</form>
+
+	<a href='${pageContext.request.contextPath}/app/join/User'></a>	
+</form>
 
 	
 </body>
