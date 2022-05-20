@@ -42,6 +42,16 @@ public class UserFrontController extends HttpServlet {
 			af = new ActionForward();
 			af.setRedirect(false);
 			af.setPath("/app/login/emailLogin.jsp");
+		} else if(command.equals("/user/UserJoinKakaoOk.us")) {
+//			System.out.println("aa");
+//			System.out.println(req.getParameter("email"));
+//			System.out.println(req.getParameter("nickname"));
+//			System.out.println(req.getParameter("id"));
+			try {
+				af = new UserJoinKakaoOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("카카오로 회원가입 오류" + e);;
+			}
 		}
 		
 		

@@ -1,5 +1,7 @@
 package com.drawingpaper.app.user.controller;
 
+import java.util.HashMap;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -19,8 +21,13 @@ public class UserJoinEmailOk implements Action {
 		String userName = req.getParameter("user_name");
 		String userPw = req.getParameter("user_pw");
 		
+		HashMap<String, String> emailJoinInfo = new HashMap<>();
+		emailJoinInfo.put("user_email", userEmail);
+		emailJoinInfo.put("user_name", userName);
+		emailJoinInfo.put("user_pw", userPw);
+		
 		UserDAO dao = new UserDAO();
-		dao.joinEmail(userName, userEmail, userPw);
+		dao.joinEmail(emailJoinInfo);
 		
 		
 		//페이지 이동 홈으로? 로그인?
