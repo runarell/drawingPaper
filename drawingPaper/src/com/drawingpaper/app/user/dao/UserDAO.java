@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.drawingpaper.app.mybatis.config.MyBatisConfig;
+import com.drawingpaper.app.user.vo.UserVO;
 
 public class UserDAO {
 
@@ -17,12 +18,39 @@ public class UserDAO {
 	}
 	
 	// 카카오 로그인
+<<<<<<< HEAD
 
 	// 일반 로그인 로그아웃 유효성이 모두 true면 로그인 성공
 	// 로그인 유효성 체크
 	public boolean emailCheck(String user_email) {
 		return (Integer)(sqlSession.selectOne("User.emailCheck", user_email)) == 1;
+=======
+	
+	// 일반 로그인
+	public boolean login(String user_email, String user_pw) {
+		HashMap<String, String> userMap = new HashMap<>();
+		userMap.put("user_email", user_email);
+		userMap.put("user_pw", user_pw);
+		return (Integer)(sqlSession.selectOne("User.login", userMap)) == 1;
 	}
+	
+	
+	//이메일(id) 검사 	-> true(중복)
+	public boolean checkEmail(String user_email) {
+		return (Integer)(sqlSession.selectOne("User.checkEmail", user_email)) == 1;
+	}
+	
+	//이메일로 회원가입
+	public void joinEmail(String user_name, String user_email, String user_pw) {
+		HashMap<String, String> emailJoinInfo = new HashMap<>();
+		emailJoinInfo.put("user_email", user_email);
+		emailJoinInfo.put("user_name", user_name);
+		emailJoinInfo.put("user_pw", user_pw);
+		
+		sqlSession.insert("User.joinEmail", emailJoinInfo);
+>>>>>>> user/join
+	}
+<<<<<<< HEAD
 	
 	// 비밀번호 유효성 체크
 	public boolean pwCheck(String user_pw) {
@@ -35,4 +63,11 @@ public class UserDAO {
 	}
 
 	// 메인 화면 세션(유저 이름)띄워주기
+=======
+
+	//이메일로 유저번호 찾기
+	public int getUserNoByEmail(String user_email) {
+		return (Integer)sqlSession.selectOne("User.getUserNoByEmail", user_email);
+	}
+>>>>>>> user/join
 }

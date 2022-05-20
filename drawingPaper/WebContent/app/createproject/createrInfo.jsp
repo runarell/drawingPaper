@@ -370,7 +370,7 @@
 
       <!-- <footer id="footer"></footer> -->
     </div>
-    <script src="../../assets/js/createproject/createrInfo.js"></script>
+    <script src="../../assets/js/createproject/createrInfo.js?ver=1"></script>
     <script src="../../assets/js/createproject/area.js"></script>
     <script src="../../assets/js/createproject/cpHeader.js"></script>
   </body>
