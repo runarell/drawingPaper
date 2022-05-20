@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>µµÈ­Áö - Ã¢ÀÛÀÚ¸¦ À§ÇÑ Å©¶ó¿ìµåÆÝµù</title>
+    <title>ë„í™”ì§€ - ì°½ìž‘ìžë¥¼ ìœ„í•œ í¬ë¼ìš°ë“œíŽ€ë”©</title>
     <link rel="stylesheet" href="../../assets/css/main/main.css">
     <script type="text/javascript" src="../../assets/js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../../assets/js/main/main.js"></script>
@@ -15,24 +15,24 @@
 <body>
     <div class="gmYOwM">
         <div class="bIWUDq">
-            <div class="dBLJpo">
+            <div class="dBLJpo"> 
                 <div class="bDuFsb">
 
-                    <!--½½¶óÀÌµå -->
+                    <!--ìŠ¬ë¼ì´ë“œ -->
                     <div class="listWrap">
                         <div class="imgList">
-                            <!-- ÀÌ¹ÌÁö ÆäÀÌÁö ¹øÈ£ Ãâ·Â -->
+                            <!-- ì´ë¯¸ì§€ íŽ˜ì´ì§€ ë²ˆí˜¸ ì¶œë ¥ -->
                             <div class="movingLengBox">
                                 <span class="PageNo">1</span>
                                 <span>/</span>
                                 <span class="totalNo">5</span>
                             </div>
-                            <!-- ÀÌ¹ÌÁö ÀÌµ¿ ¹öÆ° -->
+                            <!-- ì´ë¯¸ì§€ ì´ë™ ë²„íŠ¼ -->
                             <div class="slidBtnList">
                                 <button class="leftBtn slidBtn"><span></span></button>
                                 <button class="rightBtn slidBtn"><span></span></button>
                             </div>
-                            <!-- ÀÌ¹ÌÁö ½½¶óÀÌµå ( ÀÌµ¿ÀÌ µÇ´Â ÆäÀÌÁö )-->
+                            <!-- ì´ë¯¸ì§€ ìŠ¬ë¼ì´ë“œ ( ì´ë™ì´ ë˜ëŠ” íŽ˜ì´ì§€ )-->
                             <div class="imgListWrap">
                                 <figure>
                                     <img src="../../images/main/slide1.jpg" alt="">
@@ -52,12 +52,12 @@
                             </div>
                         </div>
                     </div>
-                    <!--½½¶óÀÌµå -->
+                    <!--ìŠ¬ë¼ì´ë“œ -->
 
-                    <!--ÁÖ¸ñÇÒ ¸¸ÇÑ ÇÁ·ÎÁ§Æ® -->
+                    <!--ì£¼ëª©í•  ë§Œí•œ í”„ë¡œì íŠ¸ -->
                     <div
                         class="FrontProjectsSection__kLmlvM SpotlightContainer__goYsGO">
-                        <div class="FrontProjectsSection__ListTitle__gRQZNs">ÁÖ¸ñÇÒ ¸¸ÇÑ ÇÁ·ÎÁ§Æ®</div>
+                        <div class="FrontProjectsSection__ListTitle__gRQZNs">ì£¼ëª©í•  ë§Œí•œ í”„ë¡œì íŠ¸</div>
                         <div
                             class="ProjectListSliderWithCard__kwPNDl StyledProjectSlideListWithCard__kVxzjh">
                             <div
@@ -75,7 +75,7 @@
                                                             <div
                                                                 class="LikeButton__Wrapper__kiaOkh ProjectCardOnlyPercentage__StyledLikeButton__iUMvsh">
                                                                 <button type="button"
-                                                                    class="LikeButton__gylNpn"><span>ÁÁ¾Æ¿ä</span></button>
+                                                                    class="LikeButton__gylNpn"><span>ì¢‹ì•„ìš”</span></button>
                                                             </div>
                                                             <div class="image-wrapper"><img src="../../images/main/pro1.jpg"><a
                                                                     class="ProjectCardOnlyPercentage__StyledLink__kAjPuP"
@@ -84,15 +84,15 @@
                                                             <div class="info-wrapper">
                                                                 <dl>
                                                                     <dd class="project-sub-info"><span><a
-                                                                                href="/discover?category=publication">ÃâÆÇ</a></span><span><a
-                                                                                href="/u/donesazemijuhemu">µµ¼­ÃâÆÇ
-                                                                                ³ë¸¶µå</a></span></dd>
+                                                                                href="/discover?category=publication">ì¶œíŒ</a></span><span><a
+                                                                                href="/u/donesazemijuhemu">ë„ì„œì¶œíŒ
+                                                                                ë…¸ë§ˆë“œ</a></span></dd>
                                                                     <dt><a
-                                                                            href="/bookvllage14?ref=%EB%A9%94%EC%9D%B8%2F%EC%A3%BC%EB%AA%A9%ED%95%A0%EB%A7%8C%ED%95%9C%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8"><strong>»þ¸Ó´ÏÁò
-                                                                                Áö½Ä»çÀü &lt;¼¼°èÀÇ »þ¸Ó´ÏÁò&gt;</strong></a></dt>
+                                                                            href="/bookvllage14?ref=%EB%A9%94%EC%9D%B8%2F%EC%A3%BC%EB%AA%A9%ED%95%A0%EB%A7%8C%ED%95%9C%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8"><strong>ìƒ¤ë¨¸ë‹ˆì¦˜
+                                                                                ì§€ì‹ì‚¬ì „ &lt;ì„¸ê³„ì˜ ìƒ¤ë¨¸ë‹ˆì¦˜&gt;</strong></a></dt>
                                                                 </dl>
                                                                 <div class="funding-status"><span
-                                                                        class="percentage">375% ´Þ¼º</span></div>
+                                                                        class="percentage">375% ë‹¬ì„±</span></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -106,7 +106,7 @@
                                                         <div
                                                             class="LikeButton__Wrapper__kiaOkh ProjectCardOnlyPercentage__StyledLikeButton__iUMvsh">
                                                             <button type="button"
-                                                                class="LikeButton__gylNpn"><span>ÁÁ¾Æ¿ä</span></button>
+                                                                class="LikeButton__gylNpn"><span>ì¢‹ì•„ìš”</span></button>
                                                         </div>
                                                         <div class="image-wrapper"><img src="../../images/main/pro2.jpg"><a
                                                                 class="ProjectCardOnlyPercentage__StyledLink__kAjPuP"
@@ -115,15 +115,15 @@
                                                         <div class="info-wrapper">
                                                             <dl>
                                                                 <dd class="project-sub-info"><span><a
-                                                                            href="/discover?category=publication">ÃâÆÇ</a></span><span><a
-                                                                            href="/u/donesazemijuhemu">µµ¼­ÃâÆÇ
-                                                                            ³ë¸¶µå</a></span></dd>
+                                                                            href="/discover?category=publication">ì¶œíŒ</a></span><span><a
+                                                                            href="/u/donesazemijuhemu">ë„ì„œì¶œíŒ
+                                                                            ë…¸ë§ˆë“œ</a></span></dd>
                                                                 <dt><a
-                                                                        href="/bookvllage14?ref=%EB%A9%94%EC%9D%B8%2F%EC%A3%BC%EB%AA%A9%ED%95%A0%EB%A7%8C%ED%95%9C%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8"><strong>»þ¸Ó´ÏÁò
-                                                                            Áö½Ä»çÀü &lt;¼¼°èÀÇ »þ¸Ó´ÏÁò&gt;</strong></a></dt>
+                                                                        href="/bookvllage14?ref=%EB%A9%94%EC%9D%B8%2F%EC%A3%BC%EB%AA%A9%ED%95%A0%EB%A7%8C%ED%95%9C%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8"><strong>ìƒ¤ë¨¸ë‹ˆì¦˜
+                                                                            ì§€ì‹ì‚¬ì „ &lt;ì„¸ê³„ì˜ ìƒ¤ë¨¸ë‹ˆì¦˜&gt;</strong></a></dt>
                                                             </dl>
                                                             <div class="funding-status"><span
-                                                                    class="percentage">375% ´Þ¼º</span></div>
+                                                                    class="percentage">375% ë‹¬ì„±</span></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -137,7 +137,7 @@
                                                     <div
                                                         class="LikeButton__Wrapper__kiaOkh ProjectCardOnlyPercentage__StyledLikeButton__iUMvsh">
                                                         <button type="button"
-                                                            class="LikeButton__gylNpn"><span>ÁÁ¾Æ¿ä</span></button>
+                                                            class="LikeButton__gylNpn"><span>ì¢‹ì•„ìš”</span></button>
                                                     </div>
                                                     <div class="image-wrapper"><img src="../../images/main/pro3.jpg"><a
                                                             class="ProjectCardOnlyPercentage__StyledLink__kAjPuP"
@@ -146,15 +146,15 @@
                                                     <div class="info-wrapper">
                                                         <dl>
                                                             <dd class="project-sub-info"><span><a
-                                                                        href="/discover?category=publication">ÃâÆÇ</a></span><span><a
-                                                                        href="/u/donesazemijuhemu">µµ¼­ÃâÆÇ
-                                                                        ³ë¸¶µå</a></span></dd>
+                                                                        href="/discover?category=publication">ì¶œíŒ</a></span><span><a
+                                                                        href="/u/donesazemijuhemu">ë„ì„œì¶œíŒ
+                                                                        ë…¸ë§ˆë“œ</a></span></dd>
                                                             <dt><a
-                                                                    href="/bookvllage14?ref=%EB%A9%94%EC%9D%B8%2F%EC%A3%BC%EB%AA%A9%ED%95%A0%EB%A7%8C%ED%95%9C%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8"><strong>»þ¸Ó´ÏÁò
-                                                                        Áö½Ä»çÀü &lt;¼¼°èÀÇ »þ¸Ó´ÏÁò&gt;</strong></a></dt>
+                                                                    href="/bookvllage14?ref=%EB%A9%94%EC%9D%B8%2F%EC%A3%BC%EB%AA%A9%ED%95%A0%EB%A7%8C%ED%95%9C%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8"><strong>ìƒ¤ë¨¸ë‹ˆì¦˜
+                                                                        ì§€ì‹ì‚¬ì „ &lt;ì„¸ê³„ì˜ ìƒ¤ë¨¸ë‹ˆì¦˜&gt;</strong></a></dt>
                                                         </dl>
                                                         <div class="funding-status"><span
-                                                                class="percentage">375% ´Þ¼º</span></div>
+                                                                class="percentage">375% ë‹¬ì„±</span></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -165,16 +165,16 @@
                             </div>
                         </div>
                     </div>
-                    <!--ÁÖ¸ñÇÒ ¸¸ÇÑ ÇÁ·ÎÁ§Æ® -->
+                    <!--ì£¼ëª©í•  ë§Œí•œ í”„ë¡œì íŠ¸ -->
 
-                    <!--ÀÎ±â ÇÁ·ÎÁ§Æ®-->
+                    <!--ì¸ê¸° í”„ë¡œì íŠ¸-->
                     <div class="FrontPage__StyledPopularProjectsSection__ccGCBK">
                         <div class="FrontPage__IconWithTitle__cVoHRL">
                             <div class="FrontPage__ListTitle__gaOYfh"><a
-                                    href="/discover?sort=popular&amp;ongoing=onGoing">ÀÎ±â ÇÁ·ÎÁ§Æ®</a><span
-                                    class="FrontPage__StyledTime__hfGRkH">22.05.15 18:57 ±âÁØ</span><a title="ÀüÃ¼º¸±â"
+                                    href="/discover?sort=popular&amp;ongoing=onGoing">ì¸ê¸° í”„ë¡œì íŠ¸</a><span
+                                    class="FrontPage__StyledTime__hfGRkH">22.05.15 18:57 ê¸°ì¤€</span><a title="ì „ì²´ë³´ê¸°"
                                     class="FrontPage__ViewTotalProjectsTopLink__bVJxne"
-                                    href="/discover?sort=popular&amp;ongoing=onGoing">ÀüÃ¼º¸±â</a></div>
+                                    href="/discover?sort=popular&amp;ongoing=onGoing">ì „ì²´ë³´ê¸°</a></div>
                         </div>
                         <div class="ProjectListWithCard_cdPnXO">
                             <div class="FrontPage_dBqxoz ProjectListWithCard_UspVI">
@@ -190,14 +190,14 @@
                                             <div class="info-wrapper">
                                                 <dl>
                                                     <dd class="project-sub-info"><span><a
-                                                                href="/discover?category=film-and-video">¿µÈ­ ¡¤
-                                                                ºñµð¿À</a></span><span><a href="/u/zpxctmuytlqimyjt">ÁÖ½ÄÈ¸»ç
-                                                                ÄÌºóÅ¬·¹ÀÎÇÁ·ÎÁ§Æ®</a></span></dd>
-                                                    <dt><a href="/ckp2022?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>´ÙÅ¥¸àÅÍ¸®
-                                                                ¿µÈ­
-                                                                &lt;±×´ë°¡ Á¶±¹&gt;</strong></a></dt>
+                                                                href="/discover?category=film-and-video">ì˜í™” Â·
+                                                                ë¹„ë””ì˜¤</a></span><span><a href="/u/zpxctmuytlqimyjt">ì£¼ì‹íšŒì‚¬
+                                                                ì¼ˆë¹ˆí´ë ˆì¸í”„ë¡œì íŠ¸</a></span></dd>
+                                                    <dt><a href="/ckp2022?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>ë‹¤íë©˜í„°ë¦¬
+                                                                ì˜í™”
+                                                                &lt;ê·¸ëŒ€ê°€ ì¡°êµ­&gt;</strong></a></dt>
                                                 </dl>
-                                                <div class="funding-status"><span class="percentage">5142% ´Þ¼º</span>
+                                                <div class="funding-status"><span class="percentage">5142% ë‹¬ì„±</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -215,13 +215,13 @@
                                             <div class="info-wrapper">
                                                 <dl>
                                                     <dd class="project-sub-info"><span><a
-                                                                href="/discover?category=publication">ÃâÆÇ</a></span><span><a
-                                                                href="/u/yeonwonbooks">µµ¼­ÃâÆÇ ¿¬¿ø</a></span></dd>
-                                                    <dt><a href="/runes?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>½ÅÈ­
-                                                                ¼Ó ¸¶¹ýÀÇ
-                                                                ¹®ÀÚ, ·é ¹®ÀÚ °¡ÀÌµåºÏ</strong></a></dt>
+                                                                href="/discover?category=publication">ì¶œíŒ</a></span><span><a
+                                                                href="/u/yeonwonbooks">ë„ì„œì¶œíŒ ì—°ì›</a></span></dd>
+                                                    <dt><a href="/runes?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>ì‹ í™”
+                                                                ì† ë§ˆë²•ì˜
+                                                                ë¬¸ìž, ë£¬ ë¬¸ìž ê°€ì´ë“œë¶</strong></a></dt>
                                                 </dl>
-                                                <div class="funding-status"><span class="percentage">900% ´Þ¼º</span>
+                                                <div class="funding-status"><span class="percentage">900% ë‹¬ì„±</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,13 +240,13 @@
                                             <div class="info-wrapper">
                                                 <dl>
                                                     <dd class="project-sub-info"><span><a
-                                                                href="/discover?category=publication">ÃâÆÇ</a></span><span><a
-                                                                href="/u/cvyqyozvgwiqytnt">¾Æ¿Ã</a></span></dd>
+                                                                href="/discover?category=publication">ì¶œíŒ</a></span><span><a
+                                                                href="/u/cvyqyozvgwiqytnt">ì•„ì˜¬</a></span></dd>
                                                     <dt><a
-                                                            href="/winniethepooh_1st?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>±×Åä·Ï
-                                                                ±â´Ù¸®´ø [°õµ¹ÀÌ Çª] ÃÊÆÇ º¹°¢ ÇÁ·ÎÁ§Æ®</strong></a></dt>
+                                                            href="/winniethepooh_1st?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>ê·¸í† ë¡
+                                                                ê¸°ë‹¤ë¦¬ë˜ [ê³°ëŒì´ í‘¸] ì´ˆíŒ ë³µê° í”„ë¡œì íŠ¸</strong></a></dt>
                                                 </dl>
-                                                <div class="funding-status"><span class="percentage">1115% ´Þ¼º</span>
+                                                <div class="funding-status"><span class="percentage">1115% ë‹¬ì„±</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -265,14 +265,14 @@
                                             <div class="info-wrapper">
                                                 <dl>
                                                     <dd class="project-sub-info"><span><a
-                                                                href="/discover?category=design-stationery">µðÀÚÀÎ
-                                                                ¹®±¸</a></span><span><a href="/u/block">BLOCK</a></span>
+                                                                href="/discover?category=design-stationery">ë””ìžì¸
+                                                                ë¬¸êµ¬</a></span><span><a href="/u/block">BLOCK</a></span>
                                                     </dd>
-                                                    <dt><a href="/collect?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>³ª´Â
-                                                                ¿À´Ãµµ
-                                                                ³ª¸¸ÀÇ ¹®ÀåÀ» ¼öÁýÇÕ´Ï´Ù. </strong></a></dt>
+                                                    <dt><a href="/collect?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>ë‚˜ëŠ”
+                                                                ì˜¤ëŠ˜ë„
+                                                                ë‚˜ë§Œì˜ ë¬¸ìž¥ì„ ìˆ˜ì§‘í•©ë‹ˆë‹¤. </strong></a></dt>
                                                 </dl>
-                                                <div class="funding-status"><span class="percentage">918% ´Þ¼º</span>
+                                                <div class="funding-status"><span class="percentage">918% ë‹¬ì„±</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -291,14 +291,14 @@
                                             <div class="info-wrapper">
                                                 <dl>
                                                     <dd class="project-sub-info"><span><a
-                                                                href="/discover?category=perfumes-and-beauty">Çâ¼ö ¡¤
-                                                                ºäÆ¼</a></span><span><a href="/u/campusblossom">Ä·ÆÛ½º
-                                                                ºí¶ó½æ</a></span></dd>
+                                                                href="/discover?category=perfumes-and-beauty">í–¥ìˆ˜ Â·
+                                                                ë·°í‹°</a></span><span><a href="/u/campusblossom">ìº í¼ìŠ¤
+                                                                ë¸”ë¼ì¸</a></span></dd>
                                                     <dt><a
-                                                            href="/campusblossomeco?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>[ºñ°Ç¼±¹ã]
-                                                                ²öÀûÀÓ ¹éÅ¹¾ø´Â ÀúÀÚ±Ø ¼±¹ã! °Ñº¸¼Û ¼ÓÃËÃË!</strong></a></dt>
+                                                            href="/campusblossomeco?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>[ë¹„ê±´ì„ ë°¤]
+                                                                ëˆì ìž„ ë°±íƒì—†ëŠ” ì €ìžê·¹ ì„ ë°¤! ê²‰ë³´ì†¡ ì†ì´‰ì´‰!</strong></a></dt>
                                                 </dl>
-                                                <div class="funding-status"><span class="percentage">3099% ´Þ¼º</span>
+                                                <div class="funding-status"><span class="percentage">3099% ë‹¬ì„±</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -317,13 +317,13 @@
                                             <div class="info-wrapper">
                                                 <dl>
                                                     <dd class="project-sub-info"><span><a
-                                                                href="/discover?category=publication">ÃâÆÇ</a></span><span><a
-                                                                href="/u/cxleejzqrmbvychf">ÇÏ·çÇÑÆí</a></span></dd>
+                                                                href="/discover?category=publication">ì¶œíŒ</a></span><span><a
+                                                                href="/u/cxleejzqrmbvychf">í•˜ë£¨í•œíŽ¸</a></span></dd>
                                                     <dt><a
-                                                            href="/dailyideanote?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>²ÙÁØÇÑ
-                                                                ÁýÇÊÀ» À§ÇÑ ¸¶¹ý°°Àº ³ëÆ® [µ¥ÀÏ¸® ¾ÆÀÌµð¾î ³ëÆ®]</strong></a></dt>
+                                                            href="/dailyideanote?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>ê¾¸ì¤€í•œ
+                                                                ì§‘í•„ì„ ìœ„í•œ ë§ˆë²•ê°™ì€ ë…¸íŠ¸ [ë°ì¼ë¦¬ ì•„ì´ë””ì–´ ë…¸íŠ¸]</strong></a></dt>
                                                 </dl>
-                                                <div class="funding-status"><span class="percentage">409% ´Þ¼º</span>
+                                                <div class="funding-status"><span class="percentage">409% ë‹¬ì„±</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -342,14 +342,14 @@
                                             <div class="info-wrapper">
                                                 <dl>
                                                     <dd class="project-sub-info"><span><a
-                                                                href="/discover?category=perfumes-and-beauty">Çâ¼ö ¡¤
-                                                                ºäÆ¼</a></span><span><a
-                                                                href="/u/mzuaxujvhgoeogeg">½ºÆ©µð¿À¿Àµµ¸£</a></span></dd>
-                                                    <dt><a href="/airystar?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>¼Ø»çÅÁ
-                                                                ±¸¸§,
-                                                                ¹ÝÂ¦ÀÌ´Â º° Å¸Åõ¸¦ Çâ±â·Î ±×·ÁÁÙ°Ô¿ä.</strong></a></dt>
+                                                                href="/discover?category=perfumes-and-beauty">í–¥ìˆ˜ Â·
+                                                                ë·°í‹°</a></span><span><a
+                                                                href="/u/mzuaxujvhgoeogeg">ìŠ¤íŠœë””ì˜¤ì˜¤ë„ë¥´</a></span></dd>
+                                                    <dt><a href="/airystar?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>ì†œì‚¬íƒ•
+                                                                êµ¬ë¦„,
+                                                                ë°˜ì§ì´ëŠ” ë³„ íƒ€íˆ¬ë¥¼ í–¥ê¸°ë¡œ ê·¸ë ¤ì¤„ê²Œìš”.</strong></a></dt>
                                                 </dl>
-                                                <div class="funding-status"><span class="percentage">914% ´Þ¼º</span>
+                                                <div class="funding-status"><span class="percentage">914% ë‹¬ì„±</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -368,13 +368,13 @@
                                             <div class="info-wrapper">
                                                 <dl>
                                                     <dd class="project-sub-info"><span><a
-                                                                href="/discover?category=publication">ÃâÆÇ</a></span><span><a
-                                                                href="/u/doniwoguyuheduni">ÇÑºû¹Ìµð¾î</a></span></dd>
+                                                                href="/discover?category=publication">ì¶œíŒ</a></span><span><a
+                                                                href="/u/doniwoguyuheduni">í•œë¹›ë¯¸ë””ì–´</a></span></dd>
                                                     <dt><a
-                                                            href="/welovegame?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>[°ÔÀÓ¿¡
-                                                                ¹ÌÄ¡´Ù] ¿ì¸®°¡ »ç¶ûÇÑ ÇÑ±¹ PC °ÔÀÓ 94</strong></a></dt>
+                                                            href="/welovegame?ref=%EB%A9%94%EC%9D%B8%2F%EC%9D%B8%EA%B8%B0"><strong>[ê²Œìž„ì—
+                                                                ë¯¸ì¹˜ë‹¤] ìš°ë¦¬ê°€ ì‚¬ëž‘í•œ í•œêµ­ PC ê²Œìž„ 94</strong></a></dt>
                                                 </dl>
-                                                <div class="funding-status"><span class="percentage">2159% ´Þ¼º</span>
+                                                <div class="funding-status"><span class="percentage">2159% ë‹¬ì„±</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -383,7 +383,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--ÀÎ±â ÇÁ·ÎÁ§Æ®-->
+                    <!--ì¸ê¸° í”„ë¡œì íŠ¸-->
 
                 </div>
             </div>
