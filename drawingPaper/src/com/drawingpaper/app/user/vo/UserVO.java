@@ -9,7 +9,7 @@ public class UserVO {
 	private boolean user_status;
 	private String user_images;
 	private String user_content;
-	private String user_bank;
+	private String user_creatorname;
 	private String user_accountnum;
 	private boolean user_msgcheck;
 	private boolean user_secret;
@@ -80,12 +80,12 @@ public class UserVO {
 		this.user_content = user_content;
 	}
 
-	public String getUser_bank() {
-		return user_bank;
+	public String getUser_creatorname() {
+		return user_creatorname;
 	}
 
-	public void setUser_bank(String user_bank) {
-		this.user_bank = user_bank;
+	public void setUser_creatorname(String user_creatorname) {
+		this.user_creatorname = user_creatorname;
 	}
 
 	public String getUser_accountnum() {

@@ -62,7 +62,7 @@ $("document")
                                           eval(area0),
                                           function() {
                                              $selsido
-                                                   .append("<li><button value='"
+                                                   .append("<li><button class='area' type='button' value='"
                                                          + this
                                                          + "'>"
                                                          + this
@@ -70,7 +70,7 @@ $("document")
                                           });
                               $("div[name^=gugun] > ul")
                                     .append(
-                                          "<li><button value=''>구/군 선택</button></li>");
+                                          "<li><button type='button' value=''>구/군 선택</button></li>");
                            });
 
                $("div[name^=sido]")
@@ -78,14 +78,14 @@ $("document")
                            function() {
                               if (area == "area0")
                                  $gugun
-                                       .append("<li><button value=''>구/군 선택</button></li>");
+                                       .append("<li><button type='button' value=''>구/군 선택</button></li>");
                               else {
                                  $
                                        .each(
                                              eval(area),
                                              function() {
                                                 $gugun
-                                                      .append("<li><button value='"
+                                                      .append("<li><button type='button' value='"
                                                             + this
                                                             + "'>"
                                                             + this
@@ -94,7 +94,7 @@ $("document")
                               }
                            });
 
-               $("button").on(
+               $("button.area").on(
                      "click",
                      function() {
                         let text = $(this).attr("value");
@@ -107,7 +107,7 @@ $("document")
                         $(".gugun").append("<div></div");
                         $.each(resultArr, function() {
                            $(".gugun > div").append(
-                                 "<li><button value='" + this + "'>"
+                                 "<li><button type='button' value='" + this + "'>"
                                        + this + "</button></li>");
                         });
                      });

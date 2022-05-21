@@ -127,7 +127,7 @@ let certArea = document.getElementById("auth-wrap");
 let certAreaOri = document.getElementById("auth-wrap").innerHTML;
 
 function auth__btn() {
-	certArea.innerHTML = "<div class='certForm'><div class='certInput'><input type='text' placeholder='전화번호 입력 (-를 제외하고 입력해 주세요)' onfocus='this.placeholder=\"\"' onblur='this.placeholder=\"전화번호 입력 (-를 제외하고 입력해 주세요)\"'></div><div class='certBtnWrap'><button onclick='pnCert()' class='certInputBtn' id='certSendBtn'>인증번호 전송</button></div></div><div class='certBtnOut'><div id=\"certInputTarget\"></div><div class='timer' id='timer'></div><div id=\"certInputBtnTarget1\"></div><div id=\"certInputBtnTarget2\"></div><div><button class='certOutBtn' onclick='reSetBtn()'>취소</button></div></div>";
+   certArea.innerHTML = "<div class='certForm'><div class='certInput'><input type='text' placeholder='전화번호 입력 (-를 제외하고 입력해 주세요)' onfocus='this.placeholder=\"\"' onblur='this.placeholder=\"전화번호 입력 (-를 제외하고 입력해 주세요)\"'></div><div class='certBtnWrap'><button onclick='pnCert()' class='certInputBtn' id='certSendBtn'>인증번호 전송</button></div></div><div class='certBtnOut'><div id=\"certInputTarget\"></div><div class='timer' id='timer'></div><div id=\"certInputBtnTarget1\"></div><div id=\"certInputBtnTarget2\"></div><div><button class='certOutBtn' onclick='reSetBtn()'>취소</button></div></div>";
 };
 
 function reSetBtn(){   
@@ -144,7 +144,7 @@ let accountAreaOri = document.getElementById("account-wrap").innerHTML;
 
 function account__btn() {
 
-    accountArea.innerHTML = "<div class='accountForm'><div class='accountInput'><input type='text' placeholder='계좌번호 입력' onfocus='this.placeholder=\"\"'onblur='this.placeholder=\"계좌번호 입력\"'></div><div class='accountBtnWrap'><button onclick='acCert()' class='accountInputBtn' id='accountSendBtn'>계좌 등록</button></div></div><div class='accountBtnOut'><div><button class='accountOutBtn' onclick='acreSetBtn()'>취소</button></div></div>";
+    accountArea.innerHTML = "<div class='accountForm'><div class='accountInput'><input type='text' name='user_accountnum' placeholder='계좌번호 입력' onfocus='this.placeholder=\"\"'onblur='this.placeholder=\"계좌번호 입력\"'></div></div>";
 
 };
 
@@ -156,6 +156,6 @@ function acCert(){
     if(confirm('계좌를 등록하시겠습니까?')){
 
     }else{
-    	
+       
     }
 }

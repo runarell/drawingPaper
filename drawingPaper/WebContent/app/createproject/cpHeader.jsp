@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    <form action="${pageContext.request.contextPath}/project/CreatePjtCompleteOK.pj" method="post">
 <div class="create-project__header">
 	<div class="outer_frm">
 		<!-- 1 -->
@@ -16,23 +18,26 @@
 						</div>
 					</a>
 				</div>
-
+				
 				<div class="top_buttons flex">
-					<button class="my_button">
+					
+					<button class="my_button" id="save" type="button">
 						<div class="icon-eye">
 							<svg viewBox="0 0 48 48">
                     <path fill-rule="evenodd" clip-rule="evenodd"
 									d="M13.7 23.9943C13.8 29.506 18.4 34.0342 24 33.935C29.6 34.0342 34.2 29.506 34.3 23.9943C34.2 18.4826 29.6 13.9563 24 14.0545C18.4 13.9563 13.8 18.4826 13.7 23.9943ZM2 23.9943C5.5 15.2355 14.4 9.62552 24 10.0195C33.6 9.62552 42.5 15.2355 46 23.9943C42.5 32.8523 33.6 38.4623 24 37.97C14.4 38.364 5.5 32.7541 2 23.9943ZM30.6 23.9944C30.6 20.4614 27.646 17.5974 24 17.5974C20.355 17.5974 17.4 20.4614 17.4 23.9944C17.4 27.5274 20.355 30.3913 24 30.3913C27.646 30.3913 30.6 27.5274 30.6 23.9944Z"></path>
                   </svg>
 						</div>
-						<span>미리보기</span>
+						<span >저장하기</span>
 						<!-- 이부분 어떻게 살릴지 고민해야함 -->
 					</button>
-					<button class="my_button btn_font_color-red">
-						<span>저장하기</span>
+					
+					<button class="my_button btn_font_color-red" id="complete" >
+						<span>프로젝트 생성</span>
 						<!-- 이부분 어떻게 살릴지 고민해야함 -->
 					</button>
 				</div>
+			
 			</div>
 		</div>
 
@@ -44,20 +49,17 @@
 			<div class="tab-menu">
 				<ul>
 					<!-- 현재 페이지 cur_page로 변경 -->
-					<li class="default-info"><a href="defaultInfo.jsp">기본정보</a></li>
-					<li class="funding-plan"><a href="fundingPlan.jsp">펀딩 계획</a></li>
-					<li class="project-plan"><a href="projectPlan.jsp">프로젝트 계획</a></li>
-					<li class="creater-info"><a href="createrInfo.jsp">창작자 정보</a></li>
+					<li class="default-info"><a href="${pageContext.request.contextPath}/project/defaultInfo.pj">기본정보</a></li>
+					<li class="funding-plan"><a href="${pageContext.request.contextPath}/project/fundingPlan.pj">펀딩 계획</a></li>
+					<li class="project-plan"><a href="${pageContext.request.contextPath}/project/projectPlan.pj">프로젝트 계획</a></li>
+					<li class="creater-info"><a href="${pageContext.request.contextPath}/project/createrInfo.pj">창작자 정보</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </div>
 
-
-
-
-
+	</form>
 
 
 

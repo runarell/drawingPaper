@@ -1,7 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
+<!-- 	private int user_no;
+	private String pro_title;
+	private String pro_category;
+	private String pro_start;
+	private String pro_end;
+	private String pro_addr;
+	private String pro_addrdetail;
+	private String pro_goalprice;
+	private String pro_ticketprice;
+	private String pro_repimage;
+	private String pro_images;
+	private String pro_content;
+	private boolean pro_ongoing;
+ -->
 <!-- SqlSssion Factory -->
 <mapper namespace="Project">
+
+<select id="projectNullCheck" parameterType="Map" resultType="_int">
+	SELECT COUNT(*) FROM `project` WHERE (user_no=1 AND pro_no=2) 
+	AND (
+	NULLIF(pro_title,'') IS NULL OR NULLIF(pro_category,'') IS NULL OR NULLIF(pro_start,'') IS NULL OR NULLIF(pro_end,'') IS NULL
+	OR NULLIF(pro_addr,'') IS NULL OR NULLIF(pro_addrdetail,'') IS NULL OR NULLIF(pro_goalprice,'') IS NULL OR NULLIF(pro_ticketprice,'') IS NULL
+	OR NULLIF(pro_repimage,'') IS NULL OR NULLIF(pro_images,'') IS NULL OR NULLIF(pro_content,'') IS NULL
+	)
+</select>
+
+
+<insert id="createNewPjt" parameterType="project">
+	INSERT INTO `project` (`user_no`) 
+	VALUES (#{user_no});
+</insert>
+
+<select id="getProNum" parameterType="_int" resultType="_int">
+	SELECT MAX(`pro_no`) FROM `project` WHERE `user_no` =#{user_no}
+</select>
+
+
+<insert id="createDefaultPjt" parameterType="project">
+	UPDATE `project` SET   
+		
+	`pro_title`=#{pro_title}, `pro_category`=#{pro_category}, `pro_images`=#{pro_images}
+	
+	WHERE `pro_no`=#{pro_no};
+	
+	
+</insert>  
+
+<update id="createFundingPlan" parameterType="project">
+	UPDATE `project` SET 
+	
+	`pro_goalprice`=#{pro_goalprice}, `pro_ticketprice`=#{pro_ticketprice}, `pro_start`=#{pro_start}, `pro_end`=#{pro_end}
+	
+	 WHERE  `pro_no`=#{pro_no};
+	 	
+</update>
+
+<update id="createProjectPlan" parameterType="project">
+	UPDATE `project` SET 
+	
+	`pro_content`=#{pro_content}
+	
+	 WHERE  `pro_no`=#{pro_no};
+	
+</update> 
+
+<update id="newProjectComplete" parameterType="Map">
+	UPDATE `project` SET 
+	
+	`pro_ongoing`= 1
+	
+	 WHERE  `pro_no`=#{sessionPro_no} AND `pro_no`=#{sessionUser_no} ;
+	
+</update> 
+
+<select id="getDetail" parameterType="_int" resultType="project">
+		SELECT pro_goalprice, pro_ticketprice, pro_start, pro_end
+		FROM project WHERE pro_no = #{pro_no}
+</select>
+
+
+<update id="createCreatorPjt" parameterType="project">
+	UPDATE `project` SET 
+	
+	`pro_addr`=#{pro_addr}, `pro_addrdetail`=#{pro_addrdetail}, `pro_repimage`=#{pro_repimage}
+	
+	 WHERE  `pro_no`=#{pro_no};
+	
+</update>   
+	
+<update id="createCreatorUser" parameterType="user">
+	UPDATE `user` SET 
+	
+	`user_creartorname`=#{user_creartorname}, `user_content`=#{user_content}, `user_accountnum`=#{user_accountnum}
+	
+	 WHERE  `user_no`=#{user_no};
+	
+</update>   
 
 </mapper>
