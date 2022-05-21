@@ -4,6 +4,7 @@ package com.drawingpaper.app.action;
 		private String path;
 		private boolean isRedirect;
 		
+
 		public String getPath() {
 			return path;
 		}

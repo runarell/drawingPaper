@@ -138,7 +138,5 @@ public class ProjectVO {
 	public void setPro_achieveprice(String pro_achieveprice) {
 		this.pro_achieveprice = pro_achieveprice;
 	}
-	
-	
 
 }

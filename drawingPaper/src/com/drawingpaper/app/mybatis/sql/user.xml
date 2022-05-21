@@ -4,4 +4,40 @@
 <!-- SqlSssion Factory -->
 <mapper namespace="User">
 
+	<!-- 로그인  유효성 체크-->
+	<select id="emailCheck" parameterType="string" resultType="_int">
+		SELECT COUNT(user_email) FROM user
+		WHERE user_email = #{user_email}
+	</select>
+
+	<!-- 로그아웃 유효성 체크-->
+	<select id="pwCheck" parameterType="string" resultType="_int">
+		SELECT COUNT(user_pw) FROM user
+		WHERE user_pw = #{user_pw}
+	</select>
+	
+	<!-- 이메일(아이디) 중복체크 -->
+	<select id="checkEmail" parameterType="string" resultType="_int">
+		SELECT COUNT(user_email) FROM user
+		WHERE user_email = #{user_email}
+	</select>
+	
+	<!-- 이메일로 회원가입 -->
+	<insert id="joinEmail" parameterType="map">
+		INSERT INTO user(user_no, user_name, user_email, user_pw) 
+		VALUES(NULL, #{user_name}, #{user_email}, #{user_pw})
+	</insert>
+	
+	<!-- 이메일로 유저번호 얻기 -->
+	<select id="getUserNoByEmail" parameterType="string" resultType="_int">
+		SELECT user_no FROM user
+		WHERE user_email = #{user_email}
+	</select>
+	
+	<!-- 카카오 회원가입 -->
+	<insert id="joinKakao" parameterType="map">
+	INSERT INTO user(user_no, user_name, user_email, user_kakao)
+	VALUES(NULL, #{userName}, #{userEmail}, #{userKakao})
+	</insert>
+	
 </mapper>

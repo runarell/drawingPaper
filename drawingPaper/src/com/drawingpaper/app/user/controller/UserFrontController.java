@@ -15,30 +15,90 @@ public class UserFrontController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doProcess(req, resp);
 	}
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doProcess(req, resp);
 	}
-	
+
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String requestURI = req.getRequestURI();
 		String contextPath = req.getContextPath();
 		String command = requestURI.substring(contextPath.length());
 		ActionForward af = null;
-		
-		if(command.equals("/test/Test.us")) {
+
+		if (command.equals("/user/userLoginOk.us")) { // ÀÏ¹Ý ·Î±×ÀÎ
+			System.out.println("userLoginOk frontController");
+			try {
+				af = new userLoginOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("front-caxticj");
+				System.out.println("·Î±×ÀÎ ¿À·ù" + e);
+			}
+		} else if (command.equals("/user/userLogoutOk.us")) { // ·Î±×¾Æ¿ô
+			System.out.println("userLogoutOk frontController");
+			try {
+				af = new userLogoutOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("·Î±×¾Æ¿ô ¿À·ù" + e);
+			}
+		} else if (command.equals("/user/userKakaoJoin.us")) { // Ä«Ä«¿À È¸¿ø°¡ÀÔ
+			System.out.println("userKakaoJoin frontController");
+			try {
+				af = new userKakaoLoginOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("Ä«Ä«¿À È¸¿ø°¡ÀÔ ¿À·ù" + e);
+			}
+		} else if (command.equals("/user/userKakaoLogin.us")) { // Ä«Ä«¿À ·Î±×ÀÎ
+			System.out.println("userKakaoLogin frontController");
+			try {
+				af = new userKakaoLoginOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("Ä«Ä«¿À ·Î±×ÀÎ ¿À·ù" + e);
+			}
+		} else if (command.equals("/user/mainTest.us")) { // Ä«Ä«¿À ·Î±×ÀÎ ¸ÞÀÎ ¶ç¿öÁÖ±â
+			System.out.println("mainTest frontController");
+			try {
+				af = new userKakaoLoginOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("Ä«Ä«¿À ·Î±×ÀÎ ¸ÞÀÎ ÀÌµ¿ ¿À·ù" + e);
+			}
+		} else if (command.equals("/user/UserCheckEmailOk.us")) {
+			try {
+				af = new UserCheckEmailOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("¾ÆÀÌµð Áßº¹°Ë»ç ¿À·ù" + e);
+			}
+		} else if (command.equals("/user/UserJoinEmailOk.us")) {
+			try {
+				af = new UserJoinEmailOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("ÀÌ¸ÞÀÏ·Î È¸¿ø°¡ÀÔ ¿À·ù" + e);
+			}
+		} else if (command.equals("/user/UserEmailLogin.us")) {
 			af = new ActionForward();
 			af.setRedirect(false);
-			af.setPath("/test/test2.jsp");
+			af.setPath("/app/login/emailLogin.jsp");
+		} else if (command.equals("/user/UserJoinKakaoOk.us")) {
+//			System.out.println("aa");
+//			System.out.println(req.getParameter("email"));
+//			System.out.println(req.getParameter("nickname"));
+//			System.out.println(req.getParameter("id"));
+			try {
+				af = new UserJoinKakaoOk().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("Ä«Ä«¿À·Î È¸¿ø°¡ÀÔ ¿À·ù" + e);
+				;
+			}
 		}
-		
-		if(af != null) {// afï¿½ï¿½ nullï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ï¿½
-			if(af.isRedirect()) {//redirect ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½
-				resp.sendRedirect(af.getPath());//redirectï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
-				
-			}else {//forward ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½
+
+		if (af != null) {// af°¡ nullÀÌ ¾Æ´Ï¶ó¸é
+			if (af.isRedirect()) {// redirect ¹æ½ÄÀÌ¶ó¸é
+				resp.sendRedirect(af.getPath());// redirect·Î Àü¼Û
+
+			} else {// forward ¹æ½ÄÀÌ¶ó¸é
 				RequestDispatcher dispatcher = req.getRequestDispatcher(af.getPath());
-				dispatcher.forward(req, resp);//forwardï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+				dispatcher.forward(req, resp);// forward·Î Àü¼Û
 			}
 		}
 	}

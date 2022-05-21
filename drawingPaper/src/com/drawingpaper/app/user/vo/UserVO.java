@@ -111,7 +111,5 @@ public class UserVO {
 	public void setUser_secret(boolean user_secret) {
 		this.user_secret = user_secret;
 	}
-	
-	
 
 }

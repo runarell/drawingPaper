@@ -19,7 +19,7 @@ public class MyBatisConfig {
 			reader.close(); 
 		} catch (IOException e) {
 			e.printStackTrace();
-			throw new RuntimeException("ì´ˆê¸°í™” ë¬¸ì œ ë°œìƒ, MybatisConfig.java");
+			throw new RuntimeException("ÃÊ±âÈ­ ¹®Á¦ ¹ß»ı, MybatisConfig.java");
 		}
 	}
 

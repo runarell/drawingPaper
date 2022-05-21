@@ -46,4 +46,13 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 /.metadata/
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> user/join
+#my
+/boardMVC.zip_expanded/
+/boardMVC/
+/board_mvc/
 /.recommenders/
