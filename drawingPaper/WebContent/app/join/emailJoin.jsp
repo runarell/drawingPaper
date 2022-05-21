@@ -61,33 +61,6 @@
 							<div class="checkArea"></div>
 						</div>
 
-<<<<<<< HEAD
-                        <div class="inputdiv">
-                            <div class="inputkey">비밀번호</div>
-                            <div class="wrappermargin"><span class="inputwrapper">
-                                <input type="password" inputmode="password" id="password" placeholder="비밀번호를 입력해주세요." autocapitalize="off" autocomplete="off"
-<<<<<<< HEAD
-                                        class="inputDetail">
-                                <div class="checkArea">ㄴㄴㄴ</div>
-=======
-                                        class="inputDetail" name="user_pw">
->>>>>>> user/join
-                            </span></div>
-                         
-                            <div class="wrappermargin passwordcheckdiv"><span class="inputwrapper">
-                                <input type="password" inputmode="password" id="passwordCheck" placeholder="비밀번호를 확인합니다." autocapitalize="off" autocomplete="off"
-<<<<<<< HEAD
-                                        class="inputDetail">
-                                <div class="checkArea"></div>
-=======
-                                        class="inputDetail" name="user_pw--re">
->>>>>>> user/join
-                            </span></div>
-                            
-                        </div>
-                        </div>
-                        <!-- Input area -->
-=======
 						<div class="inputdiv">
 							<div class="inputkey">비밀번호</div>
 							<div class="wrappermargin">
@@ -103,7 +76,6 @@
 						</div>
 					</div>
 					<!-- Input area -->
->>>>>>> user/join
 
 					<!--Agree area-->
 					<div class="styleFormContent">
