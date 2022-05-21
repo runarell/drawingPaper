@@ -6,7 +6,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.drawingpaper.app.mybatis.config.MyBatisConfig;
-import com.drawingpaper.app.user.vo.UserVO;
 
 public class UserDAO {
 
