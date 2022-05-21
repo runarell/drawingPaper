@@ -9,7 +9,7 @@ import com.drawingpaper.app.action.ActionForward;
 import com.drawingpaper.app.project.dao.ProjectDAO;
 import com.drawingpaper.app.project.vo.ProjectVO;
 
-public class CreatePjtCompleteOK implements Action {
+public class CreatePjtCompleteOk implements Action {
 	
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
@@ -19,7 +19,7 @@ public class CreatePjtCompleteOK implements Action {
 
 		ProjectDAO projectDao = new ProjectDAO();
 		ActionForward forward = new ActionForward();
-		HttpSession session = req.getSession(); // 세션으로 유저 아이디 와 프로젝트 넘버 저장
+//		HttpSession session = req.getSession(); // 세션으로 유저 아이디 와 프로젝트 넘버 저장
 		
 //		int sessionUser_no =(Integer)session.getAttribute("sessionUser_no");	//세션 받아오기
 //		int sessionPro_no = (Integer)session.getAttribute("sessionPro_no"); 

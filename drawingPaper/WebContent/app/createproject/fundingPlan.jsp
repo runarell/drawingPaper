@@ -31,7 +31,7 @@
       <nav id="admnav"></nav>
 
       <main>
-      <form action="${pageContext.request.contextPath}/project/ProjectFundingCreateOk.pj" name="fundingPlanSave" method="post" id="fundingPlanSave" >
+      <form action="${pageContext.request.contextPath}/project/ProjectFundingCreateOk.pj"  method="post" id="fundingPlanSave" >
         <div class="mainWrap">
           <section class="sec1">
             <!-- 메인 컨텐츠 -->

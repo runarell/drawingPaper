@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    <form action="${pageContext.request.contextPath}/project/CreatePjtCompleteOK.pj" method="post">
 <div class="create-project__header">
 	<div class="outer_frm">
 		<!-- 1 -->
@@ -16,9 +18,10 @@
 						</div>
 					</a>
 				</div>
-
+				
 				<div class="top_buttons flex">
-					<button class="my_button" id="save">
+					
+					<button class="my_button" id="save" type="button">
 						<div class="icon-eye">
 							<svg viewBox="0 0 48 48">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -28,11 +31,13 @@
 						<span >저장하기</span>
 						<!-- 이부분 어떻게 살릴지 고민해야함 -->
 					</button>
-					<button class="my_button btn_font_color-red" id="complete">
+					
+					<button class="my_button btn_font_color-red" id="complete" >
 						<span>프로젝트 생성</span>
 						<!-- 이부분 어떻게 살릴지 고민해야함 -->
 					</button>
 				</div>
+			
 			</div>
 		</div>
 
@@ -54,7 +59,7 @@
 	</div>
 </div>
 
-
+	</form>
 
 
 

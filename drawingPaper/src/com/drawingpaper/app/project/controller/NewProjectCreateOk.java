@@ -9,7 +9,7 @@ import com.drawingpaper.app.action.ActionForward;
 import com.drawingpaper.app.project.dao.ProjectDAO;
 import com.drawingpaper.app.project.vo.ProjectVO;
 
-public class NewProjectCreateOK implements Action {
+public class NewProjectCreateOk implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
@@ -23,10 +23,7 @@ public class NewProjectCreateOK implements Action {
 //		int sessionUser_no =(Integer)session.getAttribute("sessionUser_no");
 //		session.setAttribute("sessionUser_no",sessionUser_no);
 		
-		int sessionUser_no =1;  //이거 테스트 번호임 테스트번호임
-		
-		//이거 세션으로 유저, 프로젝트 번호 받아오는거 알아내야함
-		
+		int sessionUser_no =1;  //이거 테스트 번호임 테스트번호임	
 		
 		projectDao.createNewPjt(sessionUser_no);
 		

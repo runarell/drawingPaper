@@ -24,6 +24,7 @@
       <nav id="admnav"></nav>
 
       <main>
+     <form action="${pageContext.request.contextPath}/project/ProjectCreatorInfoOk.pj"  method="post" id="creatorSave" >
         <div class="mainWrap">
           <section class="sec1">
             <!-- 메인 컨텐츠 -->
@@ -63,6 +64,7 @@
                           placeholder="창작자님의 이름을 입력해주세요"
                           autocomplete="off"
                           autocapitalize="off"
+                          name="user_creatorname"
                         />
                       </span>
                     </div>
@@ -108,7 +110,7 @@
                     <div>
                       <div class="creater-img__upload-btn">
                         <!-- 버튼 -->
-                        <button>
+                        <button type="button">
                           <div class="icon__upload">
                             <svg viewBox="0 0 48 48">
                               <path
@@ -118,7 +120,7 @@
                               ></path>
                             </svg>
                           </div>
-                          <input type="file" accept=".jpg, .png, .gif, .jpeg" />
+                          <input type="file" accept=".jpg, .png, .gif, .jpeg" name="pro_repimage" />
                           이미지 파일 업로드
                         </button>
                       </div>
@@ -199,7 +201,7 @@
                         <!-- input -->
                         <div class="creater-area__select">
                           <span>
-                            <input type="text" value="서울" readonly />
+                            <input type="text" value="서울" name="pro_addr" readonly />
                             <div class="icon__arrow">
                               <svg viewBox="0 0 48 48">
                                 <path
@@ -228,6 +230,7 @@
                             <input
                               type="text"
                               value="시/군/구를 선택해주세요"
+                              name="pro_addrdetail"
                               readonly
                             />
                             <div class="icon__arrow">
@@ -289,7 +292,7 @@
                         <p>본인인증을 완료해주세요!</p>
                       </div>
                       <div class="creater-auth__col">
-                        <button class="creater-auth__btn" onclick="auth__btn()">인증하기</button>
+                        <button class="creater-auth__btn" onclick="auth__btn()" type="button">인증하기</button>
                       </div>
                     </div>
                   </div>
@@ -346,7 +349,7 @@
                         <p>입금 받으실 계좌를 등록해 주세요!</p>
                       </div>
                       <div class="creater-acount__col">
-                        <button class="creater-acount__btn"  onclick="account__btn()">계좌등록</button>
+                        <button class="creater-acount__btn"  onclick="account__btn()" type="button">계좌등록</button>
                       </div>
                     </div>
                   </div>
@@ -358,14 +361,15 @@
             <!--=================================================================-->
           </section>
         </div>
+  </form> 
       </main>
 
       <!-- <footer id="footer"></footer> -->
     </div>
    <script src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/createproject/createrInfo.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/createproject/createrInfoSubmit.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/createproject/area.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/createproject/createrInfo.js?ver=1"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/createproject/createrInfoSubmit.js?ver=1"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/createproject/area.js?ver=1"></script>
     <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
     <script>
 var completePjt= "${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" // 변경 필요

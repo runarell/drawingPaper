@@ -144,7 +144,7 @@ let accountAreaOri = document.getElementById("account-wrap").innerHTML;
 
 function account__btn() {
 
-    accountArea.innerHTML = "<div class='accountForm'><div class='accountInput'><input type='text' placeholder='계좌번호 입력' onfocus='this.placeholder=\"\"'onblur='this.placeholder=\"계좌번호 입력\"'></div><div class='accountBtnWrap'><button onclick='acCert()' class='accountInputBtn' id='accountSendBtn'>계좌 등록</button></div></div><div class='accountBtnOut'><div><button class='accountOutBtn' onclick='acreSetBtn()'>취소</button></div></div>";
+    accountArea.innerHTML = "<div class='accountForm'><div class='accountInput'><input type='text' name='user_accountnum' placeholder='계좌번호 입력' onfocus='this.placeholder=\"\"'onblur='this.placeholder=\"계좌번호 입력\"'></div></div>";
 
 };
 

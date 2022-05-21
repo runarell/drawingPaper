@@ -33,7 +33,7 @@
 		<!-- <nav id="admnav"></nav> -->
 
 		<main>
-		<form method="post" action="${pageContext.request.contextPath}/project/ProjectPlanCreateOk.pj" name="projectPlanSave" id="projectPlanSave">
+		<form method="post" action="${pageContext.request.contextPath}/project/ProjectPlanCreateOk.pj" id="projectPlanSave">
 		<div class="mainWrap">
 			<section class="sec1">
 				<!-- 메인 컨텐츠 -->

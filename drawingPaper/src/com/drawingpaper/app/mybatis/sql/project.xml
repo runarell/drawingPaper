@@ -18,11 +18,11 @@
 <mapper namespace="Project">
 
 <select id="projectNullCheck" parameterType="Map" resultType="_int">
-	SELECT COUNT(*) FROM `project` WHERE (user_no=#{sessionUser_no} AND pro_no=#{sessionPro_no}) 
+	SELECT COUNT(*) FROM `project` WHERE (user_no=1 AND pro_no=2) 
 	AND (
-	ISNULL(pro_title) OR ISNULL(pro_category) OR ISNULL(pro_start) OR ISNULL(pro_end) OR ISNULL(pro_addr)
-	OR ISNULL(pro_addrdetail) OR ISNULL(pro_goalprice) OR ISNULL(pro_ticketprice) OR ISNULL(pro_repimage) 
-	OR ISNULL(pro_images) OR ISNULL(pro_content)
+	NULLIF(pro_title,'') IS NULL OR NULLIF(pro_category,'') IS NULL OR NULLIF(pro_start,'') IS NULL OR NULLIF(pro_end,'') IS NULL
+	OR NULLIF(pro_addr,'') IS NULL OR NULLIF(pro_addrdetail,'') IS NULL OR NULLIF(pro_goalprice,'') IS NULL OR NULLIF(pro_ticketprice,'') IS NULL
+	OR NULLIF(pro_repimage,'') IS NULL OR NULLIF(pro_images,'') IS NULL OR NULLIF(pro_content,'') IS NULL
 	)
 </select>
 
@@ -78,9 +78,23 @@
 		SELECT pro_goalprice, pro_ticketprice, pro_start, pro_end
 		FROM project WHERE pro_no = #{pro_no}
 </select>
+
+
+<update id="createCreatorPjt" parameterType="project">
+	UPDATE `project` SET 
 	
-<update id="createCreaterInfo" parameterType="project">
-<!--###############UserDAO 필요 나중에 작업할것!!!!####################-->
+	`pro_addr`=#{pro_addr}, `pro_addrdetail`=#{pro_addrdetail}, `pro_repimage`=#{pro_repimage}
+	
+	 WHERE  `pro_no`=#{pro_no};
+	
+</update>   
+	
+<update id="createCreatorUser" parameterType="user">
+	UPDATE `user` SET 
+	
+	`user_creartorname`=#{user_creartorname}, `user_content`=#{user_content}, `user_accountnum`=#{user_accountnum}
+	
+	 WHERE  `user_no`=#{user_no};
 	
 </update>   
 

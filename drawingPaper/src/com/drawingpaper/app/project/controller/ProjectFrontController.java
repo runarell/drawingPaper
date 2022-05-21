@@ -25,36 +25,42 @@ public class ProjectFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String command = requestURI.substring(contextPath.length());
 		ActionForward af = null;
-		
+			//프로젝트 디폴트 저장
 		if(command.equals("/project/ProjectDefaultCreateOk.pj")) {
 			try {
 				af = new ProjectDefaultCreateOk().execute(req, resp);
 			} catch (Exception e) {
 				System.out.println("ProjectFrontController_ProjectDefaultCreateOk오류, " + e);
 			}
-		}else if(command.equals("/project/ProjectFundingCreateOk.pj")){
+		}
+			//펀딩 계획 저장
+		else if(command.equals("/project/ProjectFundingCreateOk.pj")){
 			try {
 				af = new ProjectFundingCreateOk().execute(req, resp);
 			} catch (Exception e) {
 				System.out.println("ProjectFrontController_ProjectFundingCreateOk오류, " + e);
 			}
 			
-		}else if(command.equals("/project/ProjectPlanCreateOk.pj")){
+		}
+			//프로젝트 계획 저장
+		else if(command.equals("/project/ProjectPlanCreateOk.pj")){
 			try {
 				af = new ProjectPlanCreateOk().execute(req, resp);
 			} catch (Exception e) {
 				System.out.println("ProjectFrontController_ProjectPlanCreateOk오류, " + e);
 			}
 			
-		}else if(command.equals("/project/CreatePjtCompleteOK.pj")){
+		}
+			//프로젝트 완성
+		else if(command.equals("/project/CreatePjtCompleteOk.pj")){
 			try {
-				af = new CreatePjtCompleteOK().execute(req, resp);
+				af = new CreatePjtCompleteOk().execute(req, resp);
 			} catch (Exception e) {
-				System.out.println("ProjectFrontController_CreatePjtCompleteOK오류, " + e);
+				System.out.println("ProjectFrontController_CreatePjtCompleteOk오류, " + e);
 			}
 			
 		}
-			////////////미완성/////////////////
+			//크리에이터 정보 저장
 		else if(command.equals("/project/ProjectCreatorInfoOk.pj")){
 			try {
 				
@@ -62,10 +68,10 @@ public class ProjectFrontController extends HttpServlet {
 			} catch (Exception e) {
 				System.out.println("ProjectFrontController_ProjectCreatorInfoOk오류, " + e);
 			
-			}
-			////////////////////////미완성/////////////////
-			
-		}else if(command.equals("/project/defaultInfo.pj")){
+			}	
+		}
+			//디폴트로 이동
+		else if(command.equals("/project/defaultInfo.pj")){
 			try {
 				af = new ActionForward();
 				af.setRedirect(false);
@@ -74,13 +80,17 @@ public class ProjectFrontController extends HttpServlet {
 				System.out.println("ProjectFrontController_defaultInfo오류, " + e);
 			}
 			
-		}else if(command.equals("/project/fundingPlan.pj")) {
+		}
+			//펀딩계획으로 이동
+		else if(command.equals("/project/fundingPlan.pj")) {
 			 try {
 				af = new FundingPlanViewOk().execute(req, resp);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}else if(command.equals("/project/projectPlan.pj")){
+		}
+			//프로젝트 계획으로 이동
+		else if(command.equals("/project/projectPlan.pj")){
 			try {
 				af = new ActionForward();
 				af.setRedirect(false);
@@ -89,7 +99,9 @@ public class ProjectFrontController extends HttpServlet {
 				System.out.println("ProjectFrontController_projectPlan오류, " + e);
 			}
 			
-		}else if(command.equals("/project/createrInfo.pj")){
+		}
+			//창작자 정보 이동
+		else if(command.equals("/project/createrInfo.pj")){
 			try {
 				af = new ActionForward();
 				af.setRedirect(false);
@@ -98,9 +110,11 @@ public class ProjectFrontController extends HttpServlet {
 				System.out.println("ProjectFrontController_createrInfo오류, " + e);
 			}
 			
-		}else if(command.equals("/project/NewProjectCreateOK.pj")){
+		}
+		//새로운 프로젝트 만들기
+		else if(command.equals("/project/NewProjectCreateOk.pj")){
 			try {
-				af = new NewProjectCreateOK().execute(req, resp);
+				af = new NewProjectCreateOk().execute(req, resp);
 			} catch (Exception e) {
 				System.out.println("ProjectFrontController_createrInfo오류, " + e);
 			}

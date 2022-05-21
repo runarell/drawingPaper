@@ -30,7 +30,7 @@ public class ProjectFundingCreateOk implements Action {
 		
 		session.setAttribute("sessionUser_no",sessionUser_no); // 세션 한번 더 심기
 		session.setAttribute("sessionPro_no",sessionPro_no);   // 세션 한번 더 심기
-		
+	
 
 		project.setPro_no(sessionPro_no);
 		
@@ -38,12 +38,6 @@ public class ProjectFundingCreateOk implements Action {
 		project.setPro_ticketprice(req.getParameter("pro_ticketprice"));
 		project.setPro_start(req.getParameter("pro_start"));
 		project.setPro_end(req.getParameter("pro_end"));
-
-//		String user_no = req.getParameter("user_no");
-//		String pro_no = req.getParameter("pro_no");
-//		
-//		session.setAttribute("sessionUser_no",user_no);
-//		session.setAttribute("sessionPro_no",pro_no);
 		
 		projectDao.createFundingPlan(project);	
 

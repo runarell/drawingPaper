@@ -45,7 +45,7 @@
       <nav id="admnav"></nav>
 
       <main>
-      <form action="${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" name="defaultSave" method="post" id="defaultSave" >
+      <form action="${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" method="post" id="defaultSave" >
       <div class="mainWrap">
          <section class="sec1">
             <!-- 메인 컨텐츠 -->
@@ -269,7 +269,7 @@
 
 <%-- <script src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script> --%>
 <script src="${pageContext.request.contextPath}/assets/js/createproject/defaultInfo.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/createproject/defaultInfoSubmit.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/createproject/defaultInfoSubmit.js?ver=1"></script>
 <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
 <script>
 var completePjt= "${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" // 변경 필요

@@ -2,12 +2,14 @@ package com.drawingpaper.app.project.dao;
 
 import java.util.HashMap;
 
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 
 import com.drawingpaper.app.mybatis.config.MyBatisConfig;
 import com.drawingpaper.app.project.vo.ProjectVO;
+import com.drawingpaper.app.user.vo.UserVO;
 
 
 public class ProjectDAO {
@@ -32,6 +34,14 @@ public class ProjectDAO {
 	//펀딩계획 업데이트
 	public void createFundingPlan(ProjectVO project) {
 		sqlSession.update("Project.createFundingPlan", project);  
+	}
+	//크리에이터 정보 업데이트 (프로젝트 부분)
+	public void createCreatorPjt(ProjectVO project) {
+		sqlSession.update("Project.createCreatorPjt", project);  
+	}
+	//크리에이터 정보 업데이트 (유저 부분)
+	public void createCreatorUser(UserVO user) {
+		sqlSession.update("Project.createCreatorUser", user);  
 	}
 	//프로젝트 계획 업데이트
 	public void createProjectPlan(ProjectVO project) {
