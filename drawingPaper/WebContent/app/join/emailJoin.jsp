@@ -173,7 +173,6 @@
 				<button class="kakaoButton" onclick="kakaoLogin()">카카오로 가입하기</button>
 			</div>
 		</div>
-
 	</article>
 	<!-- article -->
 

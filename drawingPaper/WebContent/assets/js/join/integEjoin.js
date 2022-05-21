@@ -173,7 +173,6 @@ $('.inputDetail').on('keyup',function(){
           
           document.getElementById("warning").innerHTML ="";
       }else{
-
           document.getElementById("warning").innerHTML ="팔수 동의 내용을 체크해주세요";
       }
 
@@ -296,26 +295,34 @@ function submitCheck() {
 
 
 
-// 카카오로그인
-Kakao.init("a22622a82bb2b46baf683ee0d15a21c5");
+// 카카오로그인===================================
+Kakao.init('40d43d31106b52ee3697f5b4bc8ee509');
 
 function kakaoLogin() {
-  window.Kakao.Auth.login({
-    // 카카오 개발자 사이트의 동의항목에서 설정한 ID와 반드시 일치해야함
-    scope: 'profile_nickname,account_email,gender,birthday',
-    success: function (authObj) {
-          console.log(authObj);
-          window.Kakao.API.request({
-          url:'/v2/user/me',
-          success: res => {
-              const kakaoAccount = res.kakao_account;
-              console.log(kakaoAccount);
-          }
+	//1. 로그인 시도
+	Kakao.Auth.login({
+		success : function(authObj) {
 
-          });
-          
-    }
-  });
+			//2. 로그인 성공시, API 호출
+			Kakao.API.request({
+				url : '/v2/user/me',
+				success : function(res) {
+					var ac = res.kakao_account
+//					console.log(ac.email);
+//					console.log(ac.profile.nickname);
+//					console.log('id : ' + id)
+					var id = res.id;
+					scope: 'account_email';
+					alert('회원가입 성공');
+					location.href = contextPath + "/user/UserJoinKakaoOk.us?id=" + id + "&email=" + ac.email + "&nickname=" + ac.profile.nickname;
+				}
+			})
+			var token = authObj.access_token;
+		},
+		fail : function(err) {
+			alert(JSON.stringify(err));
+		}
+	});
 }
 
 

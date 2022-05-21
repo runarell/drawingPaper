@@ -41,12 +41,7 @@ public class UserDAO {
 	}
 	
 	//이메일로 회원가입
-	public void joinEmail(String user_name, String user_email, String user_pw) {
-		HashMap<String, String> emailJoinInfo = new HashMap<>();
-		emailJoinInfo.put("user_email", user_email);
-		emailJoinInfo.put("user_name", user_name);
-		emailJoinInfo.put("user_pw", user_pw);
-		
+	public void joinEmail(HashMap<String, String> emailJoinInfo) {
 		sqlSession.insert("User.joinEmail", emailJoinInfo);
 >>>>>>> user/join
 	}
@@ -68,6 +63,14 @@ public class UserDAO {
 	//이메일로 유저번호 찾기
 	public int getUserNoByEmail(String user_email) {
 		return (Integer)sqlSession.selectOne("User.getUserNoByEmail", user_email);
+	}
+<<<<<<< HEAD
+>>>>>>> user/join
+=======
+	
+	//카카오 회원가입
+	public void joinKakao(HashMap<String, String> kakaoJoinInfo) {
+		sqlSession.insert("User.joinKakao", kakaoJoinInfo);
 	}
 >>>>>>> user/join
 }
