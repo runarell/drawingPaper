@@ -28,9 +28,6 @@ public class ProjectCreatorInfoOk implements Action{
 		int sessionUser_no =(Integer)session.getAttribute("sessionUser_no");	//세션 받아오기
 		int sessionPro_no = (Integer)session.getAttribute("sessionPro_no");    //세션 받아오기
 		
-		session.setAttribute("sessionUser_no",sessionUser_no); // 세션 한번 더 심기
-		session.setAttribute("sessionPro_no",sessionPro_no);   // 세션 한번 더 심기
-		
 //		MultipartRequest multi = null;
 //		multi = new MultipartRequest(req, saveFolder, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		

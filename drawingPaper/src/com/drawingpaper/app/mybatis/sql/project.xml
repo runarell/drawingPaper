@@ -14,9 +14,18 @@
 	private String pro_content;
 	private boolean pro_ongoing;
  -->
-
 <!-- SqlSssion Factory -->
 <mapper namespace="Project">
+
+<select id="projectNullCheck" parameterType="Map" resultType="_int">
+	SELECT COUNT(*) FROM `project` WHERE (user_no=#{sessionUser_no} AND pro_no=#{sessionPro_no}) 
+	AND (
+	ISNULL(pro_title) OR ISNULL(pro_category) OR ISNULL(pro_start) OR ISNULL(pro_end) OR ISNULL(pro_addr)
+	OR ISNULL(pro_addrdetail) OR ISNULL(pro_goalprice) OR ISNULL(pro_ticketprice) OR ISNULL(pro_repimage) 
+	OR ISNULL(pro_images) OR ISNULL(pro_content)
+	)
+</select>
+
 
 <insert id="createNewPjt" parameterType="project">
 	INSERT INTO `project` (`user_no`) 
@@ -41,7 +50,7 @@
 <update id="createFundingPlan" parameterType="project">
 	UPDATE `project` SET 
 	
-	`pro_start`=#{pro_start}, `pro_end`=#{pro_end}, `pro_goalprice`=#{pro_goalprice}, `pro_ticketprice`=#{pro_ticketprice}
+	`pro_goalprice`=#{pro_goalprice}, `pro_ticketprice`=#{pro_ticketprice}, `pro_start`=#{pro_start}, `pro_end`=#{pro_end}
 	
 	 WHERE  `pro_no`=#{pro_no};
 	 	
@@ -56,6 +65,20 @@
 	
 </update> 
 
+<update id="newProjectComplete" parameterType="Map">
+	UPDATE `project` SET 
+	
+	`pro_ongoing`= 1
+	
+	 WHERE  `pro_no`=#{sessionPro_no} AND `pro_no`=#{sessionUser_no} ;
+	
+</update> 
+
+<select id="getDetail" parameterType="_int" resultType="project">
+		SELECT pro_goalprice, pro_ticketprice, pro_start, pro_end
+		FROM project WHERE pro_no = #{pro_no}
+</select>
+	
 <update id="createCreaterInfo" parameterType="project">
 <!--###############UserDAO 필요 나중에 작업할것!!!!####################-->
 	

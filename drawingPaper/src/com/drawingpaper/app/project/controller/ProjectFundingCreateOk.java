@@ -17,8 +17,7 @@ public class ProjectFundingCreateOk implements Action {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		
-//		String saveFolder = "C:\\aigb_0900_lyw\\git\\drawingPaper\\drawingPaper\\WebContent\\images\\upload";
-//		int fileSize = 1024 * 1024 * 5; 
+
 		
 		ProjectDAO projectDao = new ProjectDAO();
 		ProjectVO project = new ProjectVO();
@@ -32,10 +31,9 @@ public class ProjectFundingCreateOk implements Action {
 		session.setAttribute("sessionUser_no",sessionUser_no); // 세션 한번 더 심기
 		session.setAttribute("sessionPro_no",sessionPro_no);   // 세션 한번 더 심기
 		
-//		MultipartRequest multi = null;
-//		multi = new MultipartRequest(req, saveFolder, fileSize, "UTF-8", new DefaultFileRenamePolicy());
-		
+
 		project.setPro_no(sessionPro_no);
+		
 		project.setPro_goalprice(req.getParameter("pro_goalprice"));
 		project.setPro_ticketprice(req.getParameter("pro_ticketprice"));
 		project.setPro_start(req.getParameter("pro_start"));
@@ -50,10 +48,11 @@ public class ProjectFundingCreateOk implements Action {
 		projectDao.createFundingPlan(project);	
 
 		
-//		fDao.insertFile(multi, bDao.getSeq());
+
 		
 		forward.setRedirect(true); //어떻게 보낼까
 		forward.setPath(req.getContextPath() + "/project/fundingPlan.pj"); 
+		
 		//어디로 보낼까, 다시 디폴트로 보내고 SELECT로 보여주면 되지 않을까?
 		
 		return forward;

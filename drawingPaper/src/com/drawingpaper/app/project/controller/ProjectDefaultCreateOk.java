@@ -21,7 +21,6 @@ public class ProjectDefaultCreateOk implements Action  {
 		
 		ProjectDAO projectDao = new ProjectDAO();
 		ProjectVO project = new ProjectVO();
-		
 		ActionForward forward = new ActionForward();
 		HttpSession session = req.getSession(); // 세션으로 유저 아이디 와 프로젝트 넘버 저장
 		

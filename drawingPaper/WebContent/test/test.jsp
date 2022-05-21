@@ -16,6 +16,12 @@
 <br>
 <br>
 
+<form method="post" action="${pageContext.request.contextPath}/project/CreatePjtCompleteOK.pj" name="Pj">
+프젝 디폴트 확인<button>클릭</button>
+</form>
+<br>
+<br>
+
 <form method="post" action="${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" name="createPj">
 user_no: <input type="text" name ="user_no">
 pro_title: <input type="text" name ="pro_title" placeholder="a">

@@ -15,7 +15,11 @@
 </head>
 
 <body>
-
+	<c:if test="${param.result eq 1}">
+		<script>
+			alert("모든 항목을 작성하여 저장해주세요.");
+		</script>
+	</c:if>
 
    <!-- 확대이미지 div 시작 -->
    <div class="large-img large-img--ready">
@@ -267,5 +271,8 @@
 <script src="${pageContext.request.contextPath}/assets/js/createproject/defaultInfo.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/createproject/defaultInfoSubmit.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
+<script>
+var completePjt= "${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" // 변경 필요
+</script>
 
 </html>

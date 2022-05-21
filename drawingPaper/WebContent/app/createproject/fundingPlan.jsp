@@ -20,10 +20,11 @@
   </head>
 
   <body>
+<%--   <c:set var="funding" value="${funding}"/> --%>
     <div class="wrap">
       <!-- header-->
-      <header id="admheader">
-      	<jsp:include page="${pageContext.request.contextPath}/app/createproject/cpHeader.jsp"/>
+      <<header id="admheader">
+         <jsp:include page="/app/createproject/cpHeader.jsp"/>
       </header>
 
       <!-- hidden nav-->
@@ -105,6 +106,7 @@
                           autocapitalize="off"
                           class="input-goal"
                           name="pro_goalprice"
+                          value="${funding.getPro_goalprice()}"
                           numberonly
                           comma
                         />
@@ -178,6 +180,7 @@
                           autocapitalize="off"
                           class="input-goal--ticket"
                           name="pro_ticketprice"
+                          value="${funding.getPro_ticketprice()}"
                           comma
                         />
                         원
@@ -245,7 +248,7 @@
                                   <div class="date">
                                     시작 날짜를 선택해주세요
                                   </div>
-                                  <input class="date-picker start" name="pro_start"/>
+                                  <input class="date-picker start" name="pro_start" value="${funding.getPro_start()}"/>
                                 </button>
                               </div>
                               <!-- 달력의 위치 달력이 포함된 가장 밖의 div에 속한다 -->
@@ -331,7 +334,7 @@
                                 </div>
                                 <!-- 선택된 날짜가 들어감 -->
                                 <div class="date">종료 날짜를 선택해주세요</div>
-                                <input class="date-picker" name="pro_end" />
+                                <input class="date-picker" name="pro_end" value="${funding.getPro_end()}" />
                               </button>
                             </div>
                           </div>
@@ -393,4 +396,7 @@
   <script src="${pageContext.request.contextPath}/assets/js/createproject/fundingPlan.js"></script>
   <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
   <script src="${pageContext.request.contextPath}/assets/js/createproject/fundingPlanSubmit.js"></script>
+  <script>
+	var completePjt= "${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" // 변경 필요
+	</script>
 </html>

@@ -46,8 +46,14 @@ public class ProjectFrontController extends HttpServlet {
 				System.out.println("ProjectFrontController_ProjectPlanCreateOk오류, " + e);
 			}
 			
+		}else if(command.equals("/project/CreatePjtCompleteOK.pj")){
+			try {
+				af = new CreatePjtCompleteOK().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("ProjectFrontController_CreatePjtCompleteOK오류, " + e);
+			}
+			
 		}
-		
 			////////////미완성/////////////////
 		else if(command.equals("/project/ProjectCreatorInfoOk.pj")){
 			try {
@@ -68,15 +74,12 @@ public class ProjectFrontController extends HttpServlet {
 				System.out.println("ProjectFrontController_defaultInfo오류, " + e);
 			}
 			
-		}else if(command.equals("/project/fundingPlan.pj")){
-			try {
-				af = new ActionForward();
-				af.setRedirect(false);
-				af.setPath("/app/createproject/fundingPlan.jsp");
+		}else if(command.equals("/project/fundingPlan.pj")) {
+			 try {
+				af = new FundingPlanViewOk().execute(req, resp);
 			} catch (Exception e) {
-				System.out.println("ProjectFrontController_fundingPlan오류, " + e);
+				e.printStackTrace();
 			}
-			
 		}else if(command.equals("/project/projectPlan.pj")){
 			try {
 				af = new ActionForward();

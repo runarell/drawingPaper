@@ -1,31 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>    
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <title></title>
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/cpHeader.css" />
+    <link type="text/css" rel="stylesheet"
+   href="${pageContext.request.contextPath}/assets/css/createproject/cpHeader.css" />
     
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/default.css" />
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/createrInfo.css"/>
+
   </head>
 
   <body>
     <div class="wrap">
       <!-- header-->
-      <header id="admheader">
-        <jsp:include page="cpHeader.jsp"/>
+     <header id="admheader">
+         <jsp:include page="/app/createproject/cpHeader.jsp"/>
       </header>
 
       <!-- hidden nav-->
       <nav id="admnav"></nav>
 
       <main>
-      <!-- 크리에이터 DAO 및 다른거 만들고 수정할 것 -->
-      <form action="${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" name="creatorSave" method="post" id="creatorSave" >
         <div class="mainWrap">
           <section class="sec1">
             <!-- 메인 컨텐츠 -->
@@ -324,7 +322,7 @@
                 </div>
                 <div class="content-col">
                   <!-- 2열(입력 양식) -->
-                  <div class="creater-acount-wrap">
+                  <div class="creater-acount-wrap" id="account-wrap">
                     <div class="creater-acount__box flex">
                       <div class="creater-acount__col">
                         <div class="icon__w">
@@ -345,10 +343,10 @@
                             ></path>
                           </svg>
                         </div>
-                        <p>입금 받으실 계좌를 등록해 주세요</p>
+                        <p>입금 받으실 계좌를 등록해 주세요!</p>
                       </div>
                       <div class="creater-acount__col">
-                        <button class="creater-acount__btn">인증하기</button>
+                        <button class="creater-acount__btn"  onclick="account__btn()">계좌등록</button>
                       </div>
                     </div>
                   </div>
@@ -360,15 +358,17 @@
             <!--=================================================================-->
           </section>
         </div>
-        </form>
       </main>
 
       <!-- <footer id="footer"></footer> -->
     </div>
-    <script src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script>
+   <script src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/createproject/createrInfo.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/createproject/createrInfoSubmit.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/createproject/area.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
+    <script>
+var completePjt= "${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" // 변경 필요
+</script>
   </body>
 </html>

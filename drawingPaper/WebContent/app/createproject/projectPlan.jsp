@@ -26,8 +26,8 @@
 	<div class="wrap">
 		<!-- header-->
 		<header id="admheader">
-			<jsp:include page="cpHeader.jsp"/>
-		</header>
+         <jsp:include page="/app/createproject/cpHeader.jsp"/>
+      </header>
 
 		<!-- hidden nav-->
 		<!-- <nav id="admnav"></nav> -->
@@ -98,5 +98,8 @@
 <script src="${pageContext.request.contextPath}/assets/js/createproject/projectPlan.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/createproject/projectPlanSubmit.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
+<script>
+var completePjt= "${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" // 변경 필요
+</script>
 
 </html>

@@ -1,11 +1,14 @@
 package com.drawingpaper.app.project.dao;
 
+import java.util.HashMap;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 
 import com.drawingpaper.app.mybatis.config.MyBatisConfig;
 import com.drawingpaper.app.project.vo.ProjectVO;
+
 
 public class ProjectDAO {
 	SqlSessionFactory sessionFactory = MyBatisConfig.getSqlsession_f();
@@ -14,7 +17,6 @@ public class ProjectDAO {
 	public ProjectDAO(){
 		sqlSession = sessionFactory.openSession(true); //오토 커밋
 	}
-	
 	//새로운 프로젝트 만들기
 	public void createNewPjt(int user_no ){
 		sqlSession.insert("Project.createNewPjt",user_no);
@@ -35,6 +37,24 @@ public class ProjectDAO {
 	public void createProjectPlan(ProjectVO project) {
 		sqlSession.update("Project.createProjectPlan", project);  
 	}
+	// 생성 완료할떄 널 체크 1or0
+	public int projectNullCheck(int sessionUser_no, int sessionPro_no) {
+		HashMap<String,Integer> sessionMap = new HashMap<>();
+		sessionMap.put("sessionUser_no", sessionUser_no);
+		sessionMap.put("sessionPro_no", sessionPro_no);
+		return (Integer)sqlSession.selectOne("Project.projectNullCheck", sessionMap);
+	}
+	//프로젝트 생성 완료
+	public void createPjtComplete(int sessionUser_no, int sessionPro_no) {
+		HashMap<String,Integer> sessionMap = new HashMap<>();
+		sessionMap.put("sessionUser_no", sessionUser_no);
+		sessionMap.put("sessionPro_no", sessionPro_no);
+		sqlSession.update("Project.newProjectComplete", sessionMap);
+	}
+	//fundingPlan 보기
+		public ProjectVO getDetail(int sessionPro_no) {
+			return sqlSession.selectOne("Project.getDetail", sessionPro_no);
+		}
 	
 	
 }
