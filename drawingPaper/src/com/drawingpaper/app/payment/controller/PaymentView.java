@@ -18,12 +18,8 @@ public class PaymentView implements Action {
 		PaymentVO vo = new PaymentVO();
 		PaymentDAO dao = new PaymentDAO();
 		ActionForward forward = new ActionForward();
-<<<<<<< HEAD
-	
-=======
-		
+
 		int proNum = Integer.parseInt(req.getParameter("pro_no"));
->>>>>>> parent of 9f7e98d (20220522_1)
 		req.setAttribute("payment", dao.PaymentView(proNum));
 		
 		forward.setRedirect(false);

@@ -57,7 +57,7 @@
 
 
 				<div class="totalProject">
-					<span class="ft_Color2">526</span>개의 프로젝트가 있습니다.
+					<span class="ft_Color2">${totalCount}</span>개의 프로젝트가 있습니다.
 				</div>
 			</div>
 			<!-- 이미지 리스트 -->
