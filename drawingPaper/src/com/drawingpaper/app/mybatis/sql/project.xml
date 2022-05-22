@@ -98,4 +98,21 @@
 	
 </update>   
 
+<select id="getTotal" resultType="_int">
+	SELECT COUNT(*) FROM project
+</select>
+
+<select id="getList" resultType="project" >
+	SELECT * FROM project WHERE pro_ongoing = 1 ORDER BY pro_ongoing DESC
+</select>
+
+<select id="getView" parameterType="_int" resultType="project">
+	SELECT * FROM project WHERE pro_no = ${proNum}
+</select>
+
+<update id="setOngogin" parameterType="_int">
+	UPDATE project SET pro_ongoing = 2 WHERE pro_no = ${prono}
+</update>
+
+
 </mapper>
