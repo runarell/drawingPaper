@@ -14,8 +14,11 @@ public class ProjectVO {
 	private String pro_repimage;
 	private String pro_images;
 	private String pro_content;
-	private boolean pro_ongoing;
+	private int pro_ongoing;
 	private String pro_achieveprice;
+	private int percent;
+	private String diffDay;
+	private String userName;
 	
 	public ProjectVO() {;}
 
@@ -123,11 +126,11 @@ public class ProjectVO {
 		this.pro_content = pro_content;
 	}
 
-	public boolean isPro_ongoing() {
+	public int getPro_ongoing() {
 		return pro_ongoing;
 	}
 
-	public void setPro_ongoing(boolean pro_ongoing) {
+	public void setPro_ongoing(int pro_ongoing) {
 		this.pro_ongoing = pro_ongoing;
 	}
 
@@ -138,5 +141,33 @@ public class ProjectVO {
 	public void setPro_achieveprice(String pro_achieveprice) {
 		this.pro_achieveprice = pro_achieveprice;
 	}
+
+	public int getPercent() {
+		return percent;
+	}
+
+	public void setPercent(int percent) {
+		this.percent = percent;
+	}
+
+	public String getDiffDay() {
+		return diffDay;
+	}
+
+	public void setDiffDay(String diffDay) {
+		this.diffDay = diffDay;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
+	
+
+	
 
 }
