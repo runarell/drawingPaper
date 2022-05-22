@@ -113,4 +113,5 @@
 	<update id="setOngogin" parameterType="_int">
 		UPDATE project SET pro_ongoing = 2 WHERE pro_no = ${prono}
 	</update>
+	
 </mapper>

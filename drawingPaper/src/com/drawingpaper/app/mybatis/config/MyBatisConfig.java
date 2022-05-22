@@ -20,6 +20,8 @@ public class MyBatisConfig {
 		} catch (IOException e) {
 			e.printStackTrace();
 			throw new RuntimeException("초기화 문제 발생, MybatisConfig.java");
+		} catch (Exception e) {
+			System.out.println(e);
 		}
 	}
 

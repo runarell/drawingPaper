@@ -1,8 +1,6 @@
 package com.drawingpaper.app.project.controller;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -14,8 +12,6 @@ import com.drawingpaper.app.action.ActionForward;
 import com.drawingpaper.app.project.dao.ProjectDAO;
 import com.drawingpaper.app.project.vo.ProjectVO;
 import com.drawingpaper.app.user.dao.UserDAO;
-import com.drawingpaper.app.user.vo.UserVO;
-
 public class ProjectListOk implements Action {
 
 	@Override
@@ -39,7 +35,7 @@ public class ProjectListOk implements Action {
 			
 			Date now = new Date();
 	        String eday = per.getPro_end();
-	        String strFormat = "yyyyMMdd";    //strStartDate 년일월 셋
+	        String strFormat = "yyyy-MM-dd";    //strStartDate 년일월 셋
 	        
 	        SimpleDateFormat sdf = new SimpleDateFormat(strFormat);
 	        //SimpleDateFormat 현재 날짜를 위에 설정한 셋으로 바궈주기
