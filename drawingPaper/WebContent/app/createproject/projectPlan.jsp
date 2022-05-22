@@ -1,39 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>	
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8" />
 <title></title>
 <link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/createproject/default.css" />
+	href="../../assets/css/createproject/default.css" />
 <link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/createproject/projectPlan.css" />
+	href="../../assets/css/createproject/projectPlan.css" />
 
 <!-- Include stylesheet -->
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
 	rel="stylesheet">
 
 
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+	integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+	crossorigin="anonymous"></script>
 <!-- <script type="text/javascript" src="/js/default.js"></script> -->
 <link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/createproject/cpHeader.css" />
+	href="../../assets/css/createproject/cpHeader.css" />
 </head>
 
 <body>
 	<div class="wrap">
 		<!-- header-->
 		<header id="admheader">
-         <jsp:include page="/app/createproject/cpHeader.jsp"/>
-      </header>
+			<link rel="import" href="cpHeader.jsp" />
+		</header>
 
 		<!-- hidden nav-->
 		<!-- <nav id="admnav"></nav> -->
 
 		<main>
-		<form method="post" action="${pageContext.request.contextPath}/project/ProjectPlanCreateOk.pj" id="projectPlanSave">
 		<div class="mainWrap">
 			<section class="sec1">
 				<!-- 메인 컨텐츠 -->
@@ -85,7 +85,6 @@
 				
 			</section>
 		</div>
-		</form>
 		</main>
 
 		<!-- <footer id="footer"></footer> -->
@@ -93,13 +92,8 @@
 </body>
 
 <!-- Include the Quill library -->
-<script src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/createproject/projectPlan.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/createproject/projectPlanSubmit.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
-<script>
-var completePjt= "${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" // 변경 필요
-</script>
 
+<script src="../../assets/js/createproject/projectPlan.js"></script>
+<script src="../../assets/js/createproject/cpHeader.js"></script>
 </html>

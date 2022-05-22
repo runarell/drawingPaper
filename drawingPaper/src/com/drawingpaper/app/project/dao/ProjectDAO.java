@@ -1,16 +1,14 @@
 package com.drawingpaper.app.project.dao;
 
 import java.util.HashMap;
-
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-
 import com.drawingpaper.app.mybatis.config.MyBatisConfig;
 import com.drawingpaper.app.project.vo.ProjectVO;
 import com.drawingpaper.app.user.vo.UserVO;
-
 
 public class ProjectDAO {
 	SqlSessionFactory sessionFactory = MyBatisConfig.getSqlsession_f();
@@ -19,6 +17,7 @@ public class ProjectDAO {
 	public ProjectDAO(){
 		sqlSession = sessionFactory.openSession(true); //오토 커밋
 	}
+	
 	//새로운 프로젝트 만들기
 	public void createNewPjt(int user_no ){
 		sqlSession.insert("Project.createNewPjt",user_no);
@@ -62,10 +61,10 @@ public class ProjectDAO {
 		sqlSession.update("Project.newProjectComplete", sessionMap);
 	}
 	//fundingPlan 보기
-		public ProjectVO getDetail(int sessionPro_no) {
-			return sqlSession.selectOne("Project.getDetail", sessionPro_no);
-		}
-
+	public ProjectVO getDetail(int sessionPro_no) {
+		return sqlSession.selectOne("Project.getDetail", sessionPro_no);
+	}
+	
 	// 프로젝트 총 개수
 	public int getTotal() {
 		return sqlSession.selectOne("Project.getTotal");
@@ -85,6 +84,7 @@ public class ProjectDAO {
 	public void setOngogin(int prono) {
 		sqlSession.update("setOngogin", prono);
 	}
+
 	
 	
 }

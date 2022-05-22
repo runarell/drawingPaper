@@ -1,355 +1,362 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 *:before, *:after {
-	-webkit-box-sizing: inherit;
-	box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
-a {
-	text-decoration: none;
+a{
+    text-decoration: none;
+
 }
 /*############## 헤더############# */
 .header {
-	width: 100%;
-	height: 65px;
-	background-color: rgb(255, 255, 255);
-	display: flex;
-	-webkit-box-align: center;
-	align-items: center;
-	position: relative;
-	box-shadow: rgb(10 10 10/ 10%) 0px 1px 2px 0px;
-	z-index: 999;
+    width: 100%;
+    height: 65px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    box-shadow: rgb(10 10 10 / 10%) 0px 1px 2px 0px;
+    z-index: 999;
 }
 /*############# 헤더############# */
-.joinContainer {
-	position: relative;
-	display: block;
-	width: 100%;
-	-webkit-box-flex: 1;
-	flex-grow: 1;
-	background: rgb(255, 255, 255);
+
+
+.joinContainer{
+    position: relative;
+    display: block;
+    width: 100%;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    background: rgb(255, 255, 255);
 }
 
-.joinWrapper {
-	width: 400px;
-	margin: auto;
-	margin-top: 80px;
-	padding: 32px;
-	border-radius: 5px;
-	border: 1px solid rgb(228, 228, 228);
+
+
+.joinWrapper{
+    width: 400px;
+    margin: auto;
+    margin-top: 80px;
+    padding: 32px;
+    border-radius: 5px;
+    border: 1px solid rgb(228, 228, 228);
 }
 
-.joinWrapper>h1 {
-	font-size: 24px;
-	line-height: 36px;
-	letter-spacing: -0.025em;
-	text-align: left;
-	margin: 0px 0px 32px;
+.joinWrapper > h1{
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.025em;
+    text-align: left;
+    margin: 0px 0px 32px;
 }
 
-.wrappermargin {
-	margin-top: 10px;
-	margin-bottom: 10px;
+.wrappermargin{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.inputdiv {
-	font-size: 12px;
-	font-weight: 500;
-	margin-bottom: 10px;
+.inputdiv{
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+
 }
 
-.inputkey {
-	color: rgb(0, 0, 0);
-	font-weight: 500;
-	margin-bottom: 10px;
+
+.inputkey{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
-.inputwrapper {
-	border-radius: 1px;
-	border: 1px solid rgb(230, 230, 230);
-	color: rgb(13, 13, 13);
-	background: rgb(255, 255, 255);
-	padding: 0px 12px;
-	max-height: 44px;
-	min-width: 100px;
-	display: flex;
-	font-size: 14px;
-	line-height: 24px;
-	letter-spacing: -0.015em;
-	-webkit-box-align: center;
-	align-items: center;
-	border-radius: 4px;
+.inputwrapper{
+    border-radius: 1px;
+    border: 1px solid rgb(230, 230, 230);
+    color: rgb(13, 13, 13);
+    background: rgb(255, 255, 255);
+    padding: 0px 12px;
+    max-height: 44px;
+    min-width: 100px;
+    display: flex;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 4px;
 }
 
-.inputDetail {
-	width: 100%;
-	background: transparent;
-	border: 0px;
-	padding: 11px 0px;
-	box-sizing: border-box;
-	height: 100%;
-	outline: none;
-	margin: 0px;
-	appearance: none !important;
+.inputDetail{
+    width: 100%;
+    background: transparent;
+    border: 0px;
+    padding: 11px 0px;
+    box-sizing: border-box;
+    height: 100%;
+    outline: none;
+    margin: 0px;
+    appearance: none !important;
 }
 
-.formSubmit {
-	width: 100%;
-	text-align: center;
+.formSubmit{
+    width: 100%;
+    text-align: center;
 }
 
-.haveid {
-	text-align: center;
-	font-size: 12px;
-	line-height: 19px;
-	letter-spacing: -0.01em;
+.haveid{
+    text-align: center;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: -0.01em; 
 }
 
-.haveid>a {
-	color: rgb(39, 163, 255);
-	text-decoration: underline;
+.haveid > a {
+    color: rgb(39, 163, 255);
+    text-decoration: underline;
 }
 
-.line1 {
-	overflow: hidden;
-	text-align: center;
-	padding: 20px 0px;
-	position: relative;
+.line1{
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 0px;
+    position: relative;
 }
 
-.line1::before {
-	content: "";
-	position: absolute;
-	border-bottom: 1px solid rgb(240, 240, 240);
-	left: 0px;
-	top: 50%;
-	width: 5000px;
+
+.line1::before{
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    left: 0px;
+    top: 50%;
+    width: 5000px;
 }
 
-.warning {
-	color: rgb(255, 87, 87);
-	font-size: 12px;
-	line-height: 20px;
-	letter-spacing: -0.015em;
+.warning{
+        color: rgb(255, 87, 87);
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: -0.015em;
 }
 
-.styleFormContent {
-	text-align: left;
+.styleFormContent{
+    text-align: left;
+}
+.agreeDetail{
+    cursor: pointer;
+    font-size: 12px;
+    position: relative;
+    padding: 0px 0px 0px 29px;
+    color: rgb(61, 61, 61);
+    display: inline-flex;
 }
 
-.agreeDetail {
-	cursor: pointer;
-	font-size: 12px;
-	position: relative;
-	padding: 0px 0px 0px 29px;
-	color: rgb(61, 61, 61);
-	display: inline-flex;
-}
-
-.selectAll {
-	font-weight: bold;
-	font-size: 16px;
+.selectAll{
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .agreeDetail input[type="checkbox"] {
-	visibility: hidden;
-	z-index: 1;
-	position: absolute;
-	left: 10px;
-	width: 0px;
-	height: 0px;
-	top: 90%;
-	margin: -1px 0px 0px;
+    visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    left: 10px;
+    width: 0px;
+    height: 0px;
+    top: 90%;
+    margin: -1px 0px 0px;
 }
 
-.agreeDetail::before {
-	content: "";
-	display: block;
-	position: absolute;
-	box-sizing: border-box;
-	border-radius: 2px;
-	z-index: 2;
-	left: 0px;
-	top: 0.14em;
-	width: 20px;
-	height: 20px;
-	border: 1px solid rgb(189, 189, 189);
-	background: rgb(255, 255, 255);
+.agreeDetail::before{
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 2px;
+    z-index: 2;
+    left: 0px;
+    top: 0.14em;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(189, 189, 189);
+    background: rgb(255, 255, 255);
 }
+
+
 
 .agreediv ul li {
-	position: relative;
-	padding: 0px 55px 0px 0px;
-	margin: 0px 0px 14px;
+    position: relative;
+    padding: 0px 55px 0px 0px;
+    margin: 0px 0px 14px;
 }
 
-ul {
-	list-style: none;
+ul{
+    list-style: none;
 }
 
 li {
-	list-style: none;
-	display: list-item;
-	text-align: -webkit-match-parent;
+    list-style: none;
+    display: list-item;
+    text-align: -webkit-match-parent;
 }
 
+
 input[type="checkbox"], input[type="radio"] {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
 }
 
 input {
-	line-height: normal;
+    line-height: normal;
 }
 
-.formSubmit {
-	border-radius: 1px;
-	font-size: 16px;
-	line-height: 27px;
-	letter-spacing: -0.02em;
-	width: 100%;
-	cursor: pointer;
-	display: inline-flex;
-	-webkit-box-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	justify-content: center;
-	height: 52px;
-	white-space: nowrap;
-	margin: 35px 0 0 0;
-	border: 0px;
-	outline: none;
-	font-weight: bold;
-	box-sizing: border-box;
-	padding: 0px 24px;
-	background-color: rgb(248, 100, 83);
-	color: rgb(255, 255, 255);
+.formSubmit{
+    border-radius: 1px;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+
+    width: 100%;
+    cursor: pointer;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 52px;
+    white-space: nowrap;
+    margin: 35px 0 0 0;
+    border: 0px;
+    outline: none;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 0px 24px;
+    background-color: rgb(248, 100, 83);
+    color: rgb(255, 255, 255);
+
 }
 
-.IsSignInOrSignUp {
-	display: flex;
-	justify-content: left;
-	flex-direction: column;
-	text-align: center;
-	margin: 20px 0px 0px;
-	margin: 20px 0px 0px;
-	font-size: 12px;
-	line-height: 19px;
-	letter-spacing: -0.01em;
-	font-weight: 500;
-	color: rgb(158, 158, 158);
+.IsSignInOrSignUp{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0px 0px;
+    margin: 20px 0px 0px;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+    color: rgb(158, 158, 158);
 }
 
-.line2 {
-	padding: 10px 0px;
-	overflow: hidden;
-	text-align: center;
+.line2{
+    padding: 10px 0px;
+    overflow: hidden;
+    text-align: center;
 }
 
-.line2>span {
-	position: relative;
-	padding: 16px;
-	color: rgb(158, 158, 158);
-	font-size: 12px;
+.line2>span{
+    position: relative;
+    padding: 16px;
+    color: rgb(158, 158, 158);
+    font-size: 12px;
 }
 
-.agreeContent {
-	background: transparent;
-	border: 0px;
-	padding: 0px;
-	cursor: pointer;
-	color: rgb(39, 163, 255);
-	font-weight: normal;
-	text-decoration: underline;
-	position: absolute;
-	right: 0px;
-	text-decoration: none;
-	font-size: 12px;
+.agreeContent{
+    background: transparent;
+    border: 0px;
+    padding: 0px;
+    cursor: pointer;
+    color: rgb(39, 163, 255);
+    font-weight: normal;
+    text-decoration: underline;
+    position: absolute;
+    right: 0px;
+    text-decoration: none;
+    font-size: 12px;
 }
 
-.line2>span::before {
-	right: 100%;
+.line2 > span::before {
+    right: 100%;
+}
+.line2 > span::after {
+    left: 100%;
 }
 
-.line2>span::after {
-	left: 100%;
+.line2 > span::before, .line2 > span::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    top: 50%;
+    width: 5000px;
 }
 
-.line2>span::before, .line2>span::after {
-	content: "";
-	position: absolute;
-	border-bottom: 1px solid rgb(240, 240, 240);
-	top: 50%;
-	width: 5000px;
-}
 
 .footer {
-	display: block;
-	width: 100%;
-	color: rgb(158, 158, 158);
-	font-size: 13px;
-	line-height: 20px;
-	margin-top: 15px;
+    display: block;
+    width: 100%;
+    color: rgb(158, 158, 158);
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 15px;
 }
 
-.kakaoButton {
-	display: block;
-	width: 100%;
-	height: 60px;
-	margin: 5px 0;
-	background: rgb(254, 229, 0) url(../../../images/join/kakao.png) 20px 50% no-repeat;
-	background-size: 24px;
-	text-align: center;
-	line-height: 60px;
-	text-decoration: none;
-	border: none;
-	cursor: pointer;
+.kakaoButton{
+    display: block; 
+    width: 100%; 
+    height: 60px; 
+    margin: 5px 0;
+    background: rgb(254, 229, 0) url(../../../images/join/kakao.png) 20px 50% no-repeat; 
+    background-size: 24px; 
+    text-align: center; 
+    line-height: 60px; 
+    text-decoration: none; 
+    border: none;
+    cursor: pointer;
 }
 
 /* check box clicked */
 .clicked {
-	position: absolute;
-	z-index: 3;
-	left: 0px;
-	top: 0.14em;
-	width: 20px;
-	height: 20px;
-	border-radius: 2px;
-	color: rgb(255, 255, 255);
-	background: rgb(255, 87, 87);
-	display: flex;
-	-webkit-box-pack: center;
-	justify-content: center;
+    position: absolute;
+    z-index: 3;
+    left: 0px;
+    top: 0.14em;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    color: rgb(255, 255, 255);
+    background: rgb(255, 87, 87);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
 }
 
+
 .cicon {
-	display: inline-flex;
-	align-self: center;
+    display: inline-flex;
+    align-self: center;
 }
 
 .clicked svg {
-	fill: rgb(255, 255, 255);
+    fill: rgb(255, 255, 255);
 }
 
 .cicon svg {
-	width: 1em;
-	height: 1em;
+    width: 1em;
+    height: 1em;
 }
 
 /* check box clicked */
-.formWarning {
-	margin: 0 0 12px;
-}
 
-/* email 중복검사 결과 (ajax)*/
-.checkOk {
-	color: #0080ff;
-	font-size: 12px;
-	line-height: 20px;
-	letter-spacing: -0.015em;
+
+.formWarning{
+    margin: 0 0 12px;
 }

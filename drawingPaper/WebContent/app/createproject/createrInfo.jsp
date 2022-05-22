@@ -6,25 +6,32 @@
     <meta charset="UTF-8" />
     <title></title>
     <link type="text/css" rel="stylesheet"
-   href="${pageContext.request.contextPath}/assets/css/createproject/cpHeader.css" />
+   href="../../assets/css/createproject/cpHeader.css" />
     
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/default.css" />
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/createproject/createrInfo.css"/>
-
+    <link type="text/css" rel="stylesheet" href="../../assets/css/createproject/default.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../assets/css/createproject/createrInfo.css"/>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    
   </head>
 
   <body>
     <div class="wrap">
       <!-- header-->
-     <header id="admheader">
-         <jsp:include page="/app/createproject/cpHeader.jsp"/>
+      <header id="admheader">
+        <link rel="import" href="cpHeader.jsp" />
       </header>
 
       <!-- hidden nav-->
       <nav id="admnav"></nav>
 
       <main>
-     <form action="${pageContext.request.contextPath}/project/ProjectCreatorInfoOk.pj"  method="post" id="creatorSave" >
         <div class="mainWrap">
           <section class="sec1">
             <!-- 메인 컨텐츠 -->
@@ -64,7 +71,6 @@
                           placeholder="창작자님의 이름을 입력해주세요"
                           autocomplete="off"
                           autocapitalize="off"
-                          name="user_creatorname"
                         />
                       </span>
                     </div>
@@ -110,7 +116,7 @@
                     <div>
                       <div class="creater-img__upload-btn">
                         <!-- 버튼 -->
-                        <button type="button">
+                        <button>
                           <div class="icon__upload">
                             <svg viewBox="0 0 48 48">
                               <path
@@ -120,7 +126,7 @@
                               ></path>
                             </svg>
                           </div>
-                          <input type="file" accept=".jpg, .png, .gif, .jpeg" name="pro_repimage" />
+                          <input type="file" accept=".jpg, .png, .gif, .jpeg" />
                           이미지 파일 업로드
                         </button>
                       </div>
@@ -201,7 +207,7 @@
                         <!-- input -->
                         <div class="creater-area__select">
                           <span>
-                            <input type="text" value="서울" name="pro_addr" readonly />
+                            <input type="text" value="서울" readonly />
                             <div class="icon__arrow">
                               <svg viewBox="0 0 48 48">
                                 <path
@@ -230,7 +236,6 @@
                             <input
                               type="text"
                               value="시/군/구를 선택해주세요"
-                              name="pro_addrdetail"
                               readonly
                             />
                             <div class="icon__arrow">
@@ -292,7 +297,7 @@
                         <p>본인인증을 완료해주세요!</p>
                       </div>
                       <div class="creater-auth__col">
-                        <button class="creater-auth__btn" onclick="auth__btn()" type="button">인증하기</button>
+                        <button class="creater-auth__btn" onclick="auth__btn()">인증하기</button>
                       </div>
                     </div>
                   </div>
@@ -349,7 +354,7 @@
                         <p>입금 받으실 계좌를 등록해 주세요!</p>
                       </div>
                       <div class="creater-acount__col">
-                        <button class="creater-acount__btn"  onclick="account__btn()" type="button">계좌등록</button>
+                        <button class="creater-acount__btn"  onclick="account__btn()">계좌등록</button>
                       </div>
                     </div>
                   </div>
@@ -361,18 +366,12 @@
             <!--=================================================================-->
           </section>
         </div>
-  </form> 
       </main>
 
       <!-- <footer id="footer"></footer> -->
     </div>
-   <script src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/createproject/createrInfo.js?ver=1"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/createproject/createrInfoSubmit.js?ver=1"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/createproject/area.js?ver=1"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/createproject/cpHeader.js"></script>
-    <script>
-var completePjt= "${pageContext.request.contextPath}/project/ProjectDefaultCreateOk.pj" // 변경 필요
-</script>
+    <script src="../../assets/js/createproject/createrInfo.js"></script>
+    <script src="../../assets/js/createproject/area.js"></script>
+    <script src="../../assets/js/createproject/cpHeader.js"></script>
   </body>
 </html>
