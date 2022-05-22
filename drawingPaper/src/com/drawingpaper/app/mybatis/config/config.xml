@@ -18,7 +18,7 @@
 				<property name="driver" value="com.mysql.cj.jdbc.Driver"/> <!-- 드라이버 경로 -->
 				<property name="url" value="jdbc:mysql://localhost/drawingpaper?serverTimezone=UTC"/> <!-- jdbc 경로 -->
 				<property name="username" value="root"/> <!-- id -->
-				<property name="password" value="0000"/> <!-- pw -->			
+				<property name="password" value="root"/> <!-- pw -->			
 			</dataSource>
 		</environment>
 	</environments>
