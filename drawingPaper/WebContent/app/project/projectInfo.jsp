@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html lang="kr">
 
@@ -8,14 +10,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link type="text/css" rel="stylesheet" href="../../assets/css/default.css" />
-    <link type="text/css" rel="stylesheet" href="../../assets/css/project/projectInfo.css" />
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/default.css" />
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/project/projectInfo.css" />
     <style>
 
     </style>
 </head>
 
 <body>
+
+	<c:set var="projcet" value="${project}" />
+	<c:set var="percent" value="${percent}" />
+	<c:set var="diffDay" value="${diffDay}" />
+	<c:set var="userName" value="${userName}" />
+	<c:set var="userCon" value="${userCon}" />
+	
     <div class="wrap">
         <header id="header"></header>
 
@@ -25,29 +34,20 @@
 
                     <div>
                         <div class="info_titel">
-                            <div><span>영화.비디오</span></div>
+                            <div><span>${project.getPro_category()}</span></div>
                             <div>
                                 <h1>
-                                    다큐멘터리 영화 그대가 조국
+                                   	 ${project.getPro_title()}
                                 </h1>
                             </div>
-                            <div><span>주식회사 켈빈클레인프로젝트</span></div>
+                            <div><span>${userName}</span></div>
                         </div>
                     </div>
                     <div class="top_img">
                         <div class="imgList">
                             <div class="imgListWrap">
                                 <figure>
-                                    <img src="../../images/project/bg/indi01.webp" alt="">
-                                </figure>
-                                <figure>
-                                    <img src="../../images/project/bg/indi02.webp" alt="">
-                                </figure>
-                                <figure>
-                                    <img src="../../images/project/bg/indi03.webp" alt="">
-                                </figure>
-                                <figure>
-                                    <img src="../../images/project/bg/indi04.webp" alt="">
+                                    <img src="${pageContext.request.contextPath}${project.getPro_images()}" alt="">
                                 </figure>
                             </div>
                         </div>
@@ -59,22 +59,19 @@
                             <div>
                                 <div class="title1">모인금액</div>
                                 <div>
-                                    <span class="font_1">48,618</span>
-                                    명
-                                    <span class="font_2">4964%</span>
+                                    <span class="font_1">${project.getPro_achieveprice()}</span>원
+                                    <span class="font_2">${percent}%</span>
                                 </div>
                             </div>
                             <div>
                                 <div class="title1">남은시간</div>
                                 <div>
-                                    <span class="font_1">1</span>
-                                    일
+                                    <span class="font_1">${diffDay}</span>
                                 </div>
                             </div>
                             <div class="title1">후원자</div>
                             <div>
-                                <span class="font_1">48,618</span>
-                                명
+                                <span class="font_1">48,618</span>명
                             </div>
                         </div>
 
@@ -82,18 +79,18 @@
                         <div class="dataCell2">
                             <dl>
                                 <dt>목표금액</dt>
-                                <dd>50,000,000원</dd>
+                                <dd>${project.getPro_goalprice()}원</dd>
                             </dl>
                             <dl>
                                 <dt>펀딩기간</dt>
                                 <dd>
-                                    2022.04.25~20220515
-                                    <span>1일남음</span>
+                                    ${project.getPro_start()}~${project.getPro_end()}
+                                    <span>${diffDay}일남음</span>
                                 </dd>
                             </dl>
                             <dl>
                                 <dt>결제</dt>
-                                <dd>목표금액 달성시 2022.05.16에 결제 진행</dd>
+                                <dd>목표금액 달성시 ${project.getPro_end()}에 결제 진행</dd>
                             </dl>
                         </div>
 
@@ -253,12 +250,11 @@
                                             src="https://tumblbug-psi.imgix.net/6b5b3c386e1e8ace1b1f37a341fc374facbd0c6a/e4bc92c4d6b5c3f1117f01b125803635c57dbcd8/534422e6045667af033fb853c7667296612765db/8e76fe2c-440a-46a2-b34d-375c7e894ff2.jpg?ixlib=rb-1.1.0&amp;w=1240&amp;auto=format%2C%20compress&amp;lossless=true&amp;ch=save-data&amp;s=634c42286844df23ade1bdff8fe56bdd">
                                     </p>
                                     <p>A3 사이즈로 확대하고 컬러와 패브릭 질감 처리를 했어요.&nbsp;<br>접힌 자국은 용서할 수 없습니다. 지관통을 따로 구매해 포장할
-                                        거예요.<br>제작 과정에서 포장과 배송 단가가 좀 오르긴 하겠지만... 뭐 어쩌겠어요.<br>(이것 때문에 가격 올리지 않아요. 처음 설정한
-                                        그대로 갑니다.)</p>
+				                                         거예요.<br>제작 과정에서 포장과 배송 단가가 좀 오르긴 하겠지만... 뭐 어쩌겠어요.<br>(이것 때문에 가격 올리지 않아요. 처음 설정한
+				                                        그대로 갑니다.)</p>
                                     <p>&nbsp;</p>
                                     <p><u><strong>2. 삽화 콜렉션 엽서 7종</strong></u></p>
-                                    <p><u><strong><img
-                                                    src="https://tumblbug-psi.imgix.net/6b5b3c386e1e8ace1b1f37a341fc374facbd0c6a/e4bc92c4d6b5c3f1117f01b125803635c57dbcd8/534422e6045667af033fb853c7667296612765db/973d9309-1ed3-42f2-ad9c-4556cf8ef893.jpg?ixlib=rb-1.1.0&amp;w=1240&amp;auto=format%2C%20compress&amp;lossless=true&amp;ch=save-data&amp;s=9b2faa323a7fecc7ba8680bfdc8754f0"></strong></u>
+                                    <p><u><strong><img src="https://tumblbug-psi.imgix.net/6b5b3c386e1e8ace1b1f37a341fc374facbd0c6a/e4bc92c4d6b5c3f1117f01b125803635c57dbcd8/534422e6045667af033fb853c7667296612765db/973d9309-1ed3-42f2-ad9c-4556cf8ef893.jpg?ixlib=rb-1.1.0&amp;w=1240&amp;auto=format%2C%20compress&amp;lossless=true&amp;ch=save-data&amp;s=9b2faa323a7fecc7ba8680bfdc8754f0"></strong></u>
                                     </p>
                                     <p>제 원픽 삽화는 포스터가 되었으니,<br>(지극히 개인적 기준이긴 합니다만) 2위부터 쭉 줄 세워 엽서로 만들어보았습니다.</p>
                                     <p>처음에는 얇은 붓으로 디테일하게 채색해보려 했는데, 특유의 거친 펜화 느낌이 다채로운 색감에 묻히는 것 같았어요. 오래된 흑백 사진을 컬러 복원한
@@ -299,32 +295,28 @@
                     <div class="sidecontent">
                         <div class="sideBox">
                             <div>
-                                <div class="sideTitel">
-                                    창작자소개
+                                <div class="sideTitel">창작자소개
                                 </div>
                                 <div class="contentCell">
                                     <div class="imgHeader">
                                         <a href="">
                                             <span>
-                                            	<img src="../../images/project/bg/indi01.webp">
+                                            	<img src="${pageContext.request.contextPath}/images/project/bg/indi01.webp">
                                             </span>
                                         </a>
                                     </div>
                                     <div class="content1">
-                                        <span>
-                                            주식회사 켈빈클레인프로젝트
+                                        <span>${userName}
                                         </span><br>
-                                        <span>
-                                            마지막 로그인
+                                        <span>마지막 로그인
                                             <b>
                                                 12시간 전
                                             </b>
                                         </span>
-
                                     </div>
                                 </div>
                                 <div class="content2">
-                                    영화 '그대가 조국' 제작을 위해 다큐멘터리 전문 감독 및 프로듀서 들이 모였습니다.
+                                    ${userCon}
                                 </div>
                                 <!-- <div class="sideBtnCell">
                                     <div>
@@ -374,9 +366,9 @@
         <footer id="footer"></footer>
     </div>
    
-    <script type="text/javascript" src="../../assets/js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/default.js"></script>
-    <script type="text/javascript" src="../../assets/js/project/projects.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/default.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/project/projects.js"></script>
 </body>
 
 </html>

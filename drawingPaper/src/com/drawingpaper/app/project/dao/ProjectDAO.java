@@ -65,6 +65,26 @@ public class ProjectDAO {
 		public ProjectVO getDetail(int sessionPro_no) {
 			return sqlSession.selectOne("Project.getDetail", sessionPro_no);
 		}
+
+	// 프로젝트 총 개수
+	public int getTotal() {
+		return sqlSession.selectOne("Project.getTotal");
+	}
+	
+	// 프로젝트 리스트로 가져오기
+	public List<ProjectVO> getList() {
+		return sqlSession.selectList("Project.getList");
+	}
+	
+	// 프로젝트 디테일
+	public ProjectVO getView(int proNum) {
+		return sqlSession.selectOne("Project.getView", proNum);
+	}
+	
+	// 프로젝트 마감처리
+	public void setOngogin(int prono) {
+		sqlSession.update("setOngogin", prono);
+	}
 	
 	
 }

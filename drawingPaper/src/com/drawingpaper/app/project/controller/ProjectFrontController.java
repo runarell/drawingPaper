@@ -25,8 +25,25 @@ public class ProjectFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String command = requestURI.substring(contextPath.length());
 		ActionForward af = null;
+
+
+		// 프로젝트 리스트
+		if(command.equals("/project/ProjectListOk.pj")) {
+			try {
+			af = new ProjectListOk().execute(req, resp);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+			// 프로젝트 디테일
+		}else if(command.equals("/project/ProjectViewOk.pj")) {
+			try {
+				af = new ProjectVIewOk().execute(req, resp);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} 
 			//프로젝트 디폴트 저장
-		if(command.equals("/project/ProjectDefaultCreateOk.pj")) {
+		else if(command.equals("/project/ProjectDefaultCreateOk.pj")) {
 			try {
 				af = new ProjectDefaultCreateOk().execute(req, resp);
 			} catch (Exception e) {
