@@ -24,27 +24,31 @@ public class PaymentFrontController  extends HttpServlet {
 		String requestURI = req.getRequestURI();
 		String contextPath = req.getContextPath();
 		String command = requestURI.substring(contextPath.length());
-		ActionForward af = null;
+		ActionForward forward = null;
 		
+		if(command.equals("/payment/PaymentComplete.pm")) { // ê²°ì œ ì •ë³´ ì—…ë¡œë“œ ì´ë™
+			try {
+				forward = new PaymentComplete().execute(req, resp);
+			} catch (Exception e) {
+				System.out.println("ê²°ì œ ì •ë³´ ë“±ë¡ ì‹¤íŒ¨" + e);
+			}
+		}else if(command.equals("/payment/Payment.pm")) {  // ê²°ì œ ìƒì„¸ 
+			try {
+				forward = new PaymentView().execute(req, resp);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else {
+			System.out.println("ê²°ì œì²˜ë¦¬ last");
+		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		if(af != null) {// af°¡ nullÀÌ ¾Æ´Ï¶ó¸é
-			if(af.isRedirect()) {//redirect ¹æ½ÄÀÌ¶ó¸é
-				resp.sendRedirect(af.getPath());//redirect·Î Àü¼Û
+		if(forward != null) { 
+			if(forward.isRedirect()) {
+				resp.sendRedirect(forward.getPath());
 				
-			}else {//forward ¹æ½ÄÀÌ¶ó¸é
-				RequestDispatcher dispatcher = req.getRequestDispatcher(af.getPath());
-				dispatcher.forward(req, resp);//forward·Î Àü¼Û
+			}else {
+				RequestDispatcher dispatcher = req.getRequestDispatcher(forward.getPath());
+				dispatcher.forward(req, resp);
 			}
 		}
 	}
