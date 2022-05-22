@@ -28,8 +28,8 @@
 
 	<form id="paymentForm">
 	<!-- 결제 api 필요값 -->
-	<input name="project_name" type="hidden" value="${payment.getPro_title}}"><!-- 프로젝트명 -->	
-	<input name="user_email" type="hidden" value="유저이메일1"><!-- 사용자 이메일 -->
+	<input name="project_name" type="hidden" value="${payment.getPro_title}"><!-- 프로젝트명 -->	
+	<input name="user_email" type="hidden" value="${payment.getPro_title}"><!-- 사용자 이메일 -->
 	<input name="user_name" type="hidden" value="이재원1"><!-- 사용자 이름 -->
 	<input name="user_tel" type="hidden" value="010-0000-0000"><!-- 사용자 번호 -->
 	<input name="pay_price" type="hidden" value="1000"><!-- 결제금액  -->
