@@ -1,4 +1,10 @@
 
+//페이지 링크
+$(document).ready(function () {
+//  $("#header").load("../html/pieceHeader.html");
+  $("#footer").load( contextPath+"/app/footer.jsp");
+});	
+
 
 // 티켓 변경 팝업창 - 후원 금액 계산
 var res = 0;
@@ -159,10 +165,10 @@ function ticketChange() {
     //payticketchange.css 불러오기
     const alert2 = document.getElementsByTagName('link')[0]
 
-    if (alert2.getAttribute('href') == '../../assets/css/payment/addressAdd.css') {
-        alert2.setAttribute('href', '../../assets/css/payment/payticketchange.css');
+    if (alert2.getAttribute('href') == contextPath+'/assets/css/payment/addressAdd.css') {
+        alert2.setAttribute('href', contextPath+'/assets/css/payment/payticketchange.css');
     } else {
-        alert2.setAttribute('href', '../../assets/css/payment/payticketchange.css');
+        alert2.setAttribute('href', contextPath+'/assets/css/payment/payticketchange.css');
     }
 
 

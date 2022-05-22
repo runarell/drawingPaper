@@ -1,5 +1,8 @@
 package com.drawingpaper.app.payment.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -17,13 +20,22 @@ public class PaymentView implements Action {
 		resp.setCharacterEncoding("UTF-8");
 		PaymentVO vo = new PaymentVO();
 		PaymentDAO dao = new PaymentDAO();
+		HashMap<String, Integer> subData = new HashMap<>();
 		ActionForward forward = new ActionForward();
-
+		
 		int proNum = Integer.parseInt(req.getParameter("pro_no"));
+//		vo = dao.PaymentView(proNum);
+//				
+//		int goalprice = vo.getPro_goalprice();
+//		int achieveprice = vo.getPro_achieveprice();
+//		int percent =  (int) ((Integer)achieveprice / (goalprice * 1.0)*100);
+		
+		
 		req.setAttribute("payment", dao.PaymentView(proNum));
+		req.setAttribute("paydata1", subData);
 		
 		forward.setRedirect(false);
-		forward.setPath("/app/payment/Payment.jsp");
+		forward.setPath("/app/payment/payment.jsp");
 		
 		return forward;
 	}

@@ -10,9 +10,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>결제페이지</title>
-    <link rel="stylesheet" id="alert2" href="../../assets/css/payment/addressAdd.css">
-    <link rel="stylesheet" href="../../assets/css/payment/sweetalert2.min.css">
-    <link rel="stylesheet" href="../../assets/css/payment/payment.css">
+    <link rel="stylesheet" id="alert2" href="${pageContext.request.contextPath}/assets/css/payment/addressAdd.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/payment/sweetalert2.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/payment/payment.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css">
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -23,21 +24,20 @@
 	console.log("결제페이지 입니다.");
 	</script>
 </head>
-<body style="height:2000px">
-<c:set car="pay" value="${payment}"/>
+<body>
+<c:set var="pay" value="${payment}"/>
 
 	<form id="paymentForm">
 	<!-- 결제 api 필요값 -->
-	<input name="project_name" type="hidden" value="${payment.getPro_title}"><!-- 프로젝트명 -->	
-	<input name="user_email" type="hidden" value="${payment.getPro_title}"><!-- 사용자 이메일 -->
-	<input name="user_name" type="hidden" value="이재원1"><!-- 사용자 이름 -->
-	<input name="user_tel" type="hidden" value="010-0000-0000"><!-- 사용자 번호 -->
-	<input name="pay_price" type="hidden" value="1000"><!-- 결제금액  -->
+	<input name="project_name" type="hidden" value="${payment.getPro_title()}"><!-- 프로젝트명 -->	
+	<input name="user_email" type="hidden" value="${payment.getPro_title()}"><!-- 사용자 이메일 -->
+	<input name="user_name" type="hidden" value="${payment.getUser_name()}"><!-- 사용자 이름 -->
+	<input name="user_tel" type="hidden" value=""><!-- 사용자 번호 -->
+	<input name="pay_price" type="hidden" value="${payment.getPay_price()}"><!-- 결제금액  -->
 	<!-- 결제 성공시 추가 보내줘야할 값  -->
-	<input name="user_no" type="hidden" value="22"><!-- 사용자 번호 -->
-	<input name="pro_no" type="hidden" value="55"><!-- 프로젝트 번호 -->
-	<input name="pay_merchantuid" type="hidden" value="1245"><!-- pay_merchantuid 결제 코드 -->
-		
+	<input name="user_no" type="hidden" value="${payment.getUser_no()}"><!-- 사용자 번호 -->
+	<input name="pro_no" type="hidden" value="${payment.getPro_no()}"><!-- 프로젝트 번호 -->
+	<input name="pay_merchantuid" type="hidden" value=""><!-- pay_merchantuid 결제 코드 -->		
 	</form>
 	
     <div class="payheader">
@@ -57,26 +57,28 @@
                         <div class="titleText">
                             <div class="titlecontent">
                                 <span class="intro">
-                                    카테고리
+                                    ${payment.getPro_category()}
                                     |
-                                    창작자
+                                    ${payment.getUser_name()}
                                 </span>
                             </div>
                             <div>
                                 <h3 class="h3title">
-                                    <a href="/welovegame">프로젝트 명</a>
+                                    <a href="/welovegame">${payment.getPro_title()}</a>
                                 </h3>
                             </div>
                             <div style="display: flex;">
                                 <strong class="account">
-                                    51,010,190원
+                                    ${payment.getPro_achieveprice()}원
                                 </strong>
+                                <!--
                                 <span class="achivement">
                                     1700%
                                 </span>
                                 <span class="state">
                                     10일 남음
                                 </span>
+                                -->
                         </div>
                         </div>
                 </div>
@@ -102,7 +104,7 @@
                                 <tr>
                                     <th class="th">티켓 금액</th>
                                     <td style="display: flex; margin-top: 2.5px;">
-                                        <div id="ticketprice">35,100</div> 원
+                                        <div id="ticketprice">${payment.getPro_ticketprice()}원</div> 
                                     </td>
                                 </tr>
                                 <tr>
@@ -124,13 +126,15 @@
                     <div class="info2">
                     <table class="table">
                         <tbody>
+                        <!-- 
                             <tr>
                                 <th class="th">연락처</th>
                                 <td class="td">010-1234-5678</td>
                             </tr>
+                         -->
                             <tr>
                                 <th class="th">이메일</th>
-                                <td>lje1234@gmail.com</td>
+                                <td>${payment.getUser_emall()}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -169,8 +173,7 @@
                 <div class="infotitle2">
                     <div class="infotitle22">최종 후원 금액</div>
                     <div class="infotitle22money">
-                        <span id="ticketprice2">35,100</span>
-                        원
+                        <span id="ticketprice2">${payment.getPro_ticketprice()}원</span>
                     </div>
                 </div>
                 <div class="infotitle33">
@@ -219,11 +222,14 @@
             </div>
         </div>
     </div>
+    
+    <footer id="footer"></footer>
+    
 
-    <script defer src="../../assets/js/sweetalert2.min.js"></script>
-    <script defer src="../../assets/js/jquery-3.6.0.min.js"></script>
+    <script defer src="${pageContext.request.contextPath}/assets/js/sweetalert2.min.js"></script>
+    <script defer src="${pageContext.request.contextPath}/assets/js/jquery-3.6.0.min.js"></script>
     <script>var contextPath = "${pageContext.request.contextPath}";</script>
-    <script defer src="../../assets/js/payment/payment.js"></script>
+    <script defer src="${pageContext.request.contextPath}/assets/js/payment/payment.js"></script>
 
 
 </body>

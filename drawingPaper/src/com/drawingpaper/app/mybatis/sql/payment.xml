@@ -4,7 +4,7 @@
 <!-- SqlSssion Factory -->
 <mapper namespace="Payment">
 
-	<select id="PaymentView" parameterType="_int" resultType="pament">
+	<select id="PaymentView" parameterType="_int" resultType="payment">
 		SELECT   
 		u.user_no,  u.user_name,  u.user_email,  u.user_status,  
 		u.user_images, u.user_bank,  u.user_accountnum, 
@@ -13,7 +13,7 @@
 		p.pro_images, p.pro_ongoing, p.pro_achieveprice
 		FROM user u, project p
 		WHERE u.user_no =  p.user_no
-		AND p.pro_no = ${user_no};
+		AND p.pro_no = ${pro_no};
 	</select>
 
 	<insert id="payComplete" parameterType="payment">

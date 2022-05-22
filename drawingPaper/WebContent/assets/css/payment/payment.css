@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
-
+*{
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .payheader{
     display: flex;
     min-height: 58px;
@@ -273,6 +277,7 @@ div{
 .titleText{
     flex-direction: row;
     margin-left: 24px;
+    line-height: 230%;
 }
 
 

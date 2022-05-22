@@ -1,14 +1,16 @@
 @charset "UTF-8";
 
-
 #footerWrap {
-  height: 260px;
   width: 100%;
+  border-top: 1px solid rgb(240, 240, 240);
 }
 #footerWrap >div{
+	width: 100%;
+}
+
+#footerWrap >div>div{
   margin: auto;
   width: 1080px;
-  border-top: 1px solid rgb(240, 240, 240);
 }
 #footerWrap >div:nth-child(1){
   display: flex;
