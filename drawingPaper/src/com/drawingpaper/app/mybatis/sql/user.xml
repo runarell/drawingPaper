@@ -39,7 +39,7 @@
 	INSERT INTO user(user_no, user_name, user_email, user_kakao)
 	VALUES(NULL, #{userName}, #{userEmail}, #{userKakao})
 	</insert>
-
+	
 	<!-- 프로젝트에서 유저번호를 받아 프로젝트로 유저이름 전달 -->
 	<select id="getName" parameterType="int" resultType="string">
 		SELECT user_name FROM user WHERE user_no = ${user_no}

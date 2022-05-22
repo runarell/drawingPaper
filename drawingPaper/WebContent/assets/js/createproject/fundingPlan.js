@@ -251,8 +251,3 @@ $(document).on("click", ".list-box button", function () {
 // });
 
 $("#admheader").load("cpHeader.jsp");
-
-window.onload = function() {
-    document.getElementById('save').onclick = function() {
-        document.getElementById('fundingPlanSave').submit();
-    }}
